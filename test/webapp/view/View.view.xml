@@ -10,6 +10,7 @@
 				<Page id="page" title="{i18n>title}">
 					<content>
 						<Button text="press me" press=".press"></Button>
+						<Input value="{/user/name}" description="hello {/user/name}" width="60%"></Input>
 					</content>
 				</Page>
 			</pages>
