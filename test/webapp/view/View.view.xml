@@ -7,9 +7,9 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}" >
+				<Page id="page" title="{i18n>title}">
 					<content>
-						<Button></Button>
+						<Button text="press me" press=".press"></Button>
 					</content>
 				</Page>
 			</pages>

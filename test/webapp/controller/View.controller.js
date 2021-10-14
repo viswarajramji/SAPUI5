@@ -10,6 +10,10 @@ sap.ui.define([
 		return Controller.extend("test.controller.View", {
 			onInit: function () {
 
+			},
+
+			press:function(){
+				alert("hello dude");
 			}
 		});
 	});
