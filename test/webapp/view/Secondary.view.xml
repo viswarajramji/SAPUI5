@@ -4,29 +4,11 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-<Page id="page" title="{i18n>title}">
-    <content>
-        <Panel headerText="{i18n>panelHeader}" class="sapUiResponsiveMargin">
-            <content>
-                <Button text="press me" press=".press"></Button>
-                <Input id="username" value="{/user/name}" description="hello {/user/name}" width="60%"></Input>
-            </content>
-            
-        </Panel>
-    </content>
-    <footer>
-        <Toolbar>
-            <content>
-                <ToolbarSpacer ></ToolbarSpacer>
-                <OverflowToolbar >
-                    <content>
-                        <Button text="{i18n>reject}" type="Reject"/>
-                        <Button text="{i18n>accept}" type="Accept"/>
-                    </content>
-                </OverflowToolbar>
-            </content>
-        </Toolbar>
-    
-    </footer>
-</Page>
+
+    <Panel headerText="{i18n>panelHeader}">
+        <content>
+            <Button text="press me" press=".press"></Button>
+            <Input id="username" value="{/user/name}" description="hello {/user/name}" width="60%"></Input>
+        </content>
+    </Panel>
 </mvc:View>

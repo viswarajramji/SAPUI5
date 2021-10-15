@@ -1,0 +1,30 @@
+<mvc:View
+	controllerName="test.controller.ListItems"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+<Panel>
+    <content>
+        <List items="{invoices>/Invoices}" headerText="{i18n>listItems}">
+            <headerToolbar>
+                <Toolbar >
+                    <ToolbarSpacer></ToolbarSpacer>
+                   <Text text="{i18n>search}"/>
+                   <SearchField  width="60%" placeholder="search." enableSuggestions="true" liveChange="liveChange"></SearchField>
+                </Toolbar>
+            </headerToolbar>
+            <items>
+                <ObjectListItem title="{invoices>ProductName} * {invoices>Quantity}"
+                    number="{invoices>ExtendedPrice}" numberUnit="{currency>/name}" numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Success' : 'Error' }">
+                    <firstStatus>
+                        <ObjectStatus title="{
+                            path: 'invoices>Status',
+                            formatter: '.formatter.statusText'
+                        }"></ObjectStatus>
+                    </firstStatus>
+                </ObjectListItem>
+            </items>
+        </List>
+    </content>
+</Panel>
+</mvc:View>

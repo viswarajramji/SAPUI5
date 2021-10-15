@@ -7,7 +7,23 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<mvc:XMLView viewName="test.view.Secondary"/>
+				<Page  title="{i18n>title}">
+					<mvc:XMLView viewName="test.view.Secondary"/>
+					<mvc:XMLView viewName="test.view.ListItems"/>
+					<footer>
+						<Toolbar>
+							<content>
+								<ToolbarSpacer ></ToolbarSpacer>
+								<OverflowToolbar >
+									<content>
+										<Button text="{i18n>reject}" type="Reject"/>
+										<Button text="{i18n>accept}" type="Accept"/>
+									</content>
+								</OverflowToolbar>
+							</content>
+						</Toolbar>
+					</footer>
+				</Page>
 			</pages>
 		</App>
 	</Shell>
