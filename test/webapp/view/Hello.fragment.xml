@@ -1,0 +1,17 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+    <Dialog
+        draggable="true"
+        icon="sap-icon://map"
+        resizable="true"
+        state="Success"
+        title="{i18n>dialogTitle}">
+        <content>
+            <Text text="madness is like a gravity all it needs is a push"></Text>
+        </content>
+        <beginButton> 
+            <Button type="Accept" text="close" press=".fragementClose"></Button>
+        </beginButton>
+    </Dialog>
+</c:FragmentDefinition>

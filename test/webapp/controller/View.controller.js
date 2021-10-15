@@ -18,12 +18,6 @@ sap.ui.define([
 
 				var jsonModel=new JSONModel(oData);
 				this.getView().setModel(jsonModel);
-			},
-
-			press:function(){
-				var oBundle=this.getView().getModel("i18n").getResourceBundle();
-				var text=oBundle.getText("hello");
-				alert(text);
 			}
 		});
 	});
