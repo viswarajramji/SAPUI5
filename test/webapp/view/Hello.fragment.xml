@@ -6,8 +6,10 @@
         icon="sap-icon://map"
         resizable="true"
         state="Success"
-        title="{i18n>dialogTitle}">
+        title="{i18n>dialogTitle}"
+        id="dialogId">
         <content>
+            <c:Icon src="sap-icon://measurement-document"  size="8rem" ></c:Icon>
             <Text text="madness is like a gravity all it needs is a push"></Text>
         </content>
         <beginButton> 
