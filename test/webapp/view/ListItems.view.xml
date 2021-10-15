@@ -5,12 +5,12 @@
 	xmlns:c="sap.ui.core">
 <Panel>
     <content>
-        <List items="{invoices>/Invoices}" headerText="{i18n>listItems}">
+        <List id="listItem" items="{invoices>/Invoices}" headerText="{i18n>listItems}">
             <headerToolbar>
                 <Toolbar >
                     <ToolbarSpacer></ToolbarSpacer>
                    <Text text="{i18n>search}"/>
-                   <SearchField  width="60%" placeholder="search." enableSuggestions="true" liveChange="liveChange"></SearchField>
+                   <SearchField   width="60%" placeholder="search." enableSuggestions="true" liveChange="liveChange" search=".search"></SearchField>
                 </Toolbar>
             </headerToolbar>
             <items>
