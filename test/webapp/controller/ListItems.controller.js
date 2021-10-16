@@ -44,6 +44,14 @@ sap.ui.define([
            var listItems= this.getView().byId("listItem").getBinding("items")
            listItems.filter(filter);
 
+        },
+        changePage:function(oEvent){
+            var item= oEvent.getSource();
+            var bindingContext=item.getBindingContext("invoices");
+            this.getOwnerComponent().getRouter().navTo("detailsView",{
+                id :window.encodeURIComponent(bindingContext.getPath())
+            });
+            
         }
 	});
 });

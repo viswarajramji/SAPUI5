@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="test.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Shell title="{i18n>page2}">
+        <Page title="{i18n>welcome}">
+            <content>
+                <Text text="{invoice>productName}" ></Text>
+            </content>   
+        </Page>
+    </Shell>
+</mvc:View>

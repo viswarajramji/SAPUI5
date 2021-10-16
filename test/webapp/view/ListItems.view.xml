@@ -1,11 +1,16 @@
 <mvc:View
 	controllerName="test.controller.ListItems"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core">
+	xmlns="sap.m">
 <Panel>
     <content>
-        <List id="listItem" items="{invoices>/Invoices}" headerText="{i18n>listItems}">
+        <List id="listItem" items="{
+            path:'invoices>/Invoices',
+            sorter: {
+                path: 'Status',
+                group:true
+            }
+        }" headerText="{i18n>listItems}">
             <headerToolbar>
                 <Toolbar >
                     <ToolbarSpacer></ToolbarSpacer>
@@ -15,12 +20,12 @@
             </headerToolbar>
             <items>
                 <ObjectListItem title="{invoices>ProductName} * {invoices>Quantity}"
-                    number="{invoices>ExtendedPrice}" numberUnit="{currency>/name}" numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Success' : 'Error' }">
-                    <firstStatus>
+                    number="{invoices>ExtendedPrice}" numberUnit="{currency>/name}" numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Success' : 'Error' }" type="Navigation" press="changePage" >
+                    <firstStatus >
                         <ObjectStatus title="{
                             path: 'invoices>Status',
                             formatter: '.formatter.statusText'
-                        }"></ObjectStatus>
+                        }"  ></ObjectStatus>
                     </firstStatus>
                 </ObjectListItem>
             </items>
