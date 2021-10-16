@@ -7,8 +7,23 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content />
+				<Page
+					enableScrolling="false"
+					title="{i18n>title}" >
+					<content >
+						<mvc:XMLView viewName="hiring.view.ListPanel"  ></mvc:XMLView>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button
+								activeIcon="sap-icon://add"
+								icon="sap-icon://add"
+								type="Accept" text="Add User">
+							</Button>
+						</OverflowToolbar>
+					</footer>
+			
 				</Page>
 			</pages>
 		</App>

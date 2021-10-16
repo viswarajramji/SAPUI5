@@ -1,0 +1,14 @@
+{
+    "UsersList": [
+      {
+        "UserName": "shan",
+        "Gender": "Male",
+        "Country": "India"
+      },
+      {
+        "UserName": "Micheal",
+        "Gender": "Female",
+        "Country": "India"
+      }
+    ]
+  }

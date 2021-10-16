@@ -1,0 +1,28 @@
+<mvc:View
+	controllerName="hiring.controller.ListPanel"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+    <Panel headerText="{i18n>listItems}" expandable="true" expanded="true">
+        <content>
+            <List id="listItems" items="{userModel>/UsersList}" >
+                <headerToolbar>
+                    <Toolbar>
+                    <ToolbarSpacer />
+                        <SearchField width="40%" search=".search"></SearchField>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                   <ObjectListItem
+                       numberState="Error"
+                       title="{userModel>UserName}" type="Navigation"  >
+                       <attributes>
+                          <ObjectAttribute title="Gender" text="{userModel>Gender}"></ObjectAttribute>
+                          <ObjectAttribute title="Country" text="{userModel>Country}"></ObjectAttribute>
+                       </attributes>
+                   </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Panel>
+</mvc:View>
