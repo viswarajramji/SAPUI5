@@ -1,7 +1,7 @@
 {
   "_version": "1.32.0",
   "sap.app": {
-    "id": "test",
+    "id": "hiring",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -32,10 +32,10 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "test.view.View",
+      "viewName": "hiring.view.view",
       "type": "XML",
       "async": true,
-      "id": "View"
+      "id": "view"
     },
     "dependencies": {
 			"minUI5Version": "1.95.0",
@@ -54,12 +54,8 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "test.i18n.i18n"
+          "bundleName": "hiring.i18n.i18n"
         }
-      },
-      "invoices":{
-        "type":"sap.ui.model.json.JSONModel",
-        "uri": "Invoices.json"
       }
     },
     "resources": {
@@ -74,37 +70,25 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "test.view",
+        "viewPath": "hiring.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "TargetView",
-          "pattern": "TargetView",
-          "target": ["TargetView"]
-        },
-        {
-          "name": "detailsView",
-          "pattern": "detailsView/{id}",
-          "target": ["detailsView"]
+          "name": "Routeview",
+          "pattern": "Routeview",
+          "target": ["Targetview"]
         }
       ],
       "targets": {
-        "TargetView": {
+        "Targetview": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View",
-          "viewName": "View"
-        },
-        "detailsView": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Detail",
-          "viewName": "Detail"
+          "viewId": "view",
+          "viewName": "view"
         }
       }
     }

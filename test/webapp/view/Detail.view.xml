@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
     <Shell title="{i18n>page2}">
-        <Page title="{i18n>welcome}">
+        <Page title="{i18n>welcome}" showNavButton="true" navButtonPress=".goBack">
             <content>
                 <Text text="{invoice>productName}" ></Text>
             </content>   

@@ -1,7 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+	"sap/ui/core/mvc/Controller",
+        "sap/ui/core/routing/History"
 ], function(
-	Controller
+	Controller,
+	History
 ) {
 	"use strict";
 
@@ -20,6 +22,19 @@ sap.ui.define([
               path:id,
               model:"invoice"
           });
-        }
+        },
+
+        goBack:function(){
+                        var oHistory = History.getInstance();
+                        var sPreviousHash = oHistory.getPreviousHash();
+                
+                        if (sPreviousHash !== undefined) {
+                                window.history.go(-1);
+                        } else {
+                                var oRouter = this.getOwnerComponent().getRouter();
+                                oRouter.navTo("overview", {}, true);
+                        }
+                }
 	});
 });
+
