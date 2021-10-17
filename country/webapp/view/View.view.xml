@@ -1,0 +1,16 @@
+<mvc:View xmlns:f="sap.f"
+    controllerName="country.controller.View"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+
+	<Shell id="shell">
+		<f:FlexibleColumnLayout id="app"  backgroundDesign="Translucent">
+			<f:beginColumnPages>
+				<mvc:XMLView viewName="country.view.Master"></mvc:XMLView>
+			</f:beginColumnPages>
+		</f:FlexibleColumnLayout>
+
+	</Shell>
+</mvc:View>

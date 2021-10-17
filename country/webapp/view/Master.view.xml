@@ -1,0 +1,31 @@
+<mvc:View xmlns:f="sap.f"
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<f:DynamicPage>
+    <f:title>
+        <f:DynamicPageTitle >
+            <f:heading>
+                <Title text="Products ({products>/ProductCollectionStats/Counts/Total})"/>
+            </f:heading>
+        </f:DynamicPageTitle>
+    </f:title>
+    <f:content>
+        <VBox>
+            <OverflowToolbar >
+                <ToolbarSpacer/>
+                    <SearchField width="30%"> </SearchField>
+                    <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
+					<OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
+            </OverflowToolbar>
+        </VBox>
+    </f:content>
+    <f:footer>
+    </f:footer>
+    <f:header>
+    </f:header>
+   
+</f:DynamicPage>
+</mvc:View>

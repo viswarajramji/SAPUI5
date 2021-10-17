@@ -1,8 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"country/model/models"
-], function (UIComponent, Device, models) {
+	"country/model/models",
+	"sap/ui/model/json/JSONModel"
+], function (UIComponent,
+	Device,
+	models,
+	JSONModel) {
 	"use strict";
 
 	return UIComponent.extend("country.Component", {

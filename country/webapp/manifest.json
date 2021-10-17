@@ -32,10 +32,10 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "country.view.Main",
+      "viewName": "country.view.View",
       "type": "XML",
       "async": true,
-      "id": "Main"
+      "id": "View"
     },
     "dependencies": {
 			"minUI5Version": "1.95.0",
@@ -56,6 +56,10 @@
         "settings": {
           "bundleName": "country.i18n.i18n"
         }
+      },
+      "products":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"products.json"
       }
     },
     "resources": {
@@ -77,18 +81,18 @@
       },
       "routes": [
         {
-          "name": "RouteMain",
-          "pattern": "RouteMain",
-          "target": ["TargetMain"]
+          "name": "RouteView",
+          "pattern": "RouteView",
+          "target": ["TargetView"]
         }
       ],
       "targets": {
-        "TargetMain": {
+        "TargetView": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Main",
-          "viewName": "Main"
+          "viewId": "View",
+          "viewName": "View"
         }
       }
     }
