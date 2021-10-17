@@ -1,4 +1,4 @@
-<mvc:View xmlns:f="sap.f"
+<mvc:View xmlns:control="sap.gantt.control" xmlns:f="sap.f"
 	controllerName=""
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
@@ -20,10 +20,43 @@
                     <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
 					<OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
             </OverflowToolbar>
+            <Table alternateRowColors="true"  items="{products>/ProductCollection}">
+                <columns>
+                    <Column>
+                        <Text text="Product"></Text>
+                    </Column>
+                    <Column hAlign="Center">
+                        <Text text="Price"></Text>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation">
+                        <cells>
+                            <ObjectIdentifier title="{products>Name}" text="{products>ProductId}"/>
+                                <ObjectNumber
+                                number="{
+                                    parts:[
+                                        {path:'products>Price'},
+                                        {path:'products>CurrencyCode'}
+                                    ],
+                                    type: 'sap.ui.model.type.Currency',
+                                    formatOptions: {showMeasure: false}
+                                }"
+                                unit="{products>CurrencyCode}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </VBox>
     </f:content>
-    <f:footer>
-    </f:footer>
+	<!-- DynamicPage Footer -->
+    <!-- <f:footer >
+        <OverflowToolbar >
+            <ToolbarSpacer/>
+            <Button type="Accept" text="Accept" icon="sap-icon://save"/>
+            <Button type="Reject" text="Reject"/>
+        </OverflowToolbar>
+    </f:footer> -->
     <f:header>
     </f:header>
    
