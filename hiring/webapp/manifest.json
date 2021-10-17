@@ -60,6 +60,10 @@
       "userModel":{
         "type":"sap.ui.model.json.JSONModel",
         "uri": "users.json"
+      },
+      "countryModel":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"country.json"
       }
     },
     "resources": {

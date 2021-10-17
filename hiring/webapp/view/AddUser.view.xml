@@ -1,0 +1,58 @@
+<mvc:View xmlns:smartform="sap.ui.comp.smartform" xmlns:f="sap.ui.layout.form"
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    >
+    <Panel headerText="Add User" expanded="true" expandable="true" >
+        <content>
+            <f:Form title="Add Users"  >
+                <f:title>
+                    <core:Title text="Personal Information" />
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout
+                        labelSpanXL="4"
+                        labelSpanM="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        columnsXL="2"
+                        singleContainerFullSize="false" />
+                </f:layout>
+                <f:FormContainer title="Person Details">
+                    <f:formElements>
+                        <f:FormElement >
+                            <f:label><Label required="true" text="Name"></Label></f:label>
+                            <f:fields><Input id="fieldName" required="true" value="{oUserModel>/name}"></Input></f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                    <f:formElements>
+                        <f:FormElement >
+                            <f:label><Label required="true" text="Country"></Label></f:label>
+                            <f:fields>
+                                <Select 
+                                selectedItem ="{oUserModel>/country}"
+                                items="{
+                                    path: 'countryModel>/countryList',
+                                    sorter: { path: 'countryName' }
+                                }"
+                                forceSelection="true"
+                               >
+                            <core:Item key="{countryModel>countryId}" text="{countryModel>countryName}" />
+                            </Select>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                    <f:formElements>
+                        <f:FormElement >
+                            <f:label><Label required="true" text="Gender"></Label></f:label>
+                            <f:fields>
+                                <Switch name="Gender" state="{oUserModel>/gender}"> </Switch>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:Form>
+        </content>
+    </Panel>
+</mvc:View>
