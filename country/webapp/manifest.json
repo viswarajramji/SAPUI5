@@ -59,7 +59,10 @@
       },
       "products":{
         "type":"sap.ui.model.json.JSONModel",
-        "uri":"products.json"
+        "uri":"products.json",
+        "settings": {
+          "setSizeLimit": "1000"
+        }
       }
     },
     "resources": {

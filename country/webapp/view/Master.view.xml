@@ -1,5 +1,5 @@
 <mvc:View xmlns:control="sap.gantt.control" xmlns:f="sap.f"
-	controllerName=""
+	controllerName="country.controller.Master"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -16,11 +16,15 @@
         <VBox>
             <OverflowToolbar >
                 <ToolbarSpacer/>
-                    <SearchField width="30%"> </SearchField>
+                    <SearchField width="30%" search=".filter"> </SearchField>
                     <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
 					<OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
             </OverflowToolbar>
-            <Table alternateRowColors="true"  items="{products>/ProductCollection}">
+            <Table id="tableList" alternateRowColors="true"  items="{
+                path:'products>/ProductCollection',
+                sorter: {
+                    path: 'Name'
+                }}">
                 <columns>
                     <Column>
                         <Text text="Product"></Text>

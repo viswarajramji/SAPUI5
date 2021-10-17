@@ -9,7 +9,6 @@ sap.ui.define([
 
 		return Controller.extend("country.controller.View", {
 			onInit: function () {
-
 			}
 		});
 	});
