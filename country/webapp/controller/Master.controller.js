@@ -1,11 +1,13 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
+    "sap/ui/model/FilterOperator",
+    "sap/f/library"
 ], function(
 	Controller,
 	Filter,
-	FilterOperator
+	FilterOperator,
+    fioriLibrary
 ) {
 	"use strict";
 
@@ -22,7 +24,10 @@ sap.ui.define([
            var tableList=this.getView().byId("tableList");
            var items= tableList.getBinding("items");
            items.filter(filter);
-
+        },
+        navigate:function(){
+            var oFCL = this.oView.getParent().getParent();
+			oFCL.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
         }
 	});
 });

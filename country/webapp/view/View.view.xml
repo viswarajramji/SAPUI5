@@ -10,6 +10,9 @@
 			<f:beginColumnPages>
 				<mvc:XMLView viewName="country.view.Master"></mvc:XMLView>
 			</f:beginColumnPages>
+			<f:midColumnPages>
+				<mvc:XMLView viewName="country.view.Details"></mvc:XMLView>
+			</f:midColumnPages>
 		</f:FlexibleColumnLayout>
 
 	</Shell>
