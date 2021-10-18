@@ -1,10 +1,75 @@
 <mvc:View
-	controllerName=""
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core"
-	displayBlock="true"
-	height="100%"
-	busyIndicatorDelay="0"
->
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout alwaysShowContentHeader="false">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle >
+                <actions>
+                   <m:ToggleButton  text="Edit" type="Emphasized" > </m:ToggleButton>
+                   <m:Button text= "delete" type="Transparent" > </m:Button>
+                   <m:Button  text="copy" type="Transparent" > </m:Button>
+                   <m:Button  icon="sap-icon://action" type="Transparent" > </m:Button>
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+        <headerContent>
+            <m:FlexBox>  
+                <f:Avatar
+                    displaySize="XL"
+                    displayShape="Square"
+                    class="sapUiTinyMarginEnd">
+                </f:Avatar>
+                <m:VBox justifyContent="Center" class="sapUiTinyMarginEnd">
+                  <m:Label text="Main Category"/>
+                </m:VBox>
+                <m:VBox justifyContent="Center" class="sapUiTinyMarginEnd">
+                    <m:Label text="Sub Category"/>
+                </m:VBox>
+                <m:VBox justifyContent="Center" class="sapUiTinyMarginEnd">
+                    <m:Label text="Price"/>
+                </m:VBox>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection title="General Information">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm    editable="true">
+                                <form:content>
+                                    <m:Label text="test"></m:Label>
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+            	</subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Supplier" >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table
+								id="suppliersTable2"
+								items="{path : 'products>/ProductCollectionStats/Filters/1/values'}">
+								<m:columns>
+									<m:Column/>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Navigation">
+										<m:cells>
+											<m:ObjectIdentifier text="{products>text}"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+            	</subSections>
+            </ObjectPageSection>
+        </sections>
+	</ObjectPageLayout>
 </mvc:View>
