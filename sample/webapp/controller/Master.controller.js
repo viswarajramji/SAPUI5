@@ -3,14 +3,16 @@ sap.ui.define([
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
     "sap/m/MessageBox",
-    "sap/ui/model/Sorter"
+    "sap/ui/model/Sorter",
+    'sap/f/library'
 ],
 	
 	function (Controller,
 	Filter,
 	FilterOperator,
 	MessageBox,
-	Sorter) {
+	Sorter,
+    fioriLibrary) {
 		"use strict";
 
 		return Controller.extend("sample.controller.Master", {
@@ -36,6 +38,10 @@ sap.ui.define([
                var masterTable=this.getView().byId("masterTable");
                var items=masterTable.getBinding("items");
                items.sort(new Sorter("Name",this._bDescendingSort));
+            },
+            showDetails:function(){
+                var ofcl=this.getView().getParent().getParent()
+                ofcl.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
             }
 
 		});

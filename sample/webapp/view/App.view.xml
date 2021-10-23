@@ -9,6 +9,9 @@
 			<f:beginColumnPages>
 				<mvc:XMLView id="beginPage" viewName="sample.view.Master"></mvc:XMLView>
 			</f:beginColumnPages>
+			<f:midColumnPages>
+				<mvc:XMLView id="midPage" viewName="sample.view.Detail"></mvc:XMLView>
+			</f:midColumnPages>
 		</f:FlexibleColumnLayout>
 	</Shell>
 </mvc:View>

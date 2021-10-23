@@ -36,7 +36,7 @@
               </Column>
               </columns>
               <items>
-                  <ColumnListItem type="Navigation" press="addElement">
+                  <ColumnListItem type="Navigation" press="showDetails">
                         <ObjectIdentifier title="{products>Name}" text="{products>ProductId}" />
                             <ObjectNumber
                             number="{

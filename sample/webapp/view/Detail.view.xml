@@ -1,0 +1,7 @@
+<mvc:View
+	controllerName="sample.controller.Master"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+    
+</mvc:View>
