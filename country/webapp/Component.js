@@ -42,7 +42,7 @@ sap.ui.define([
 			var oModel = this.getModel(),
 			sLayout = oEvent.getParameter("layout")
 			if (!sLayout) {
-				sLayout = fioriLibrary.LayoutType.TwoColumnsMidExpanded;
+				sLayout = fioriLibrary.LayoutType.OneColumn;
 			}
 			oModel.setProperty("/layout", sLayout);
 		}

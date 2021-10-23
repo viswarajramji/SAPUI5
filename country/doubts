@@ -1,1 +1,2 @@
 how to i set the maximum size from the file loaded via manifest to the Model
+In detail.js - use of ths.getView().bindElement()?
