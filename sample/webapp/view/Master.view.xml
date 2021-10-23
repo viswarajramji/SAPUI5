@@ -1,0 +1,62 @@
+<mvc:View
+	controllerName="sample.controller.Master"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+    <f:DynamicPage toggleHeaderOnTitleClick="false">
+        <f:title>
+            <f:DynamicPageTitle >
+                <f:heading>
+                    <Title text="{i18n>title}"></Title>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <VBox>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <OverflowToolbar class="sapFDynamicPageAlignContent" >
+                    <SearchField search="onSearch" width="17.5rem" />
+                    <OverflowToolbarButton icon="sap-icon://add" type="Transparent" press="addElement"/>
+                    <OverflowToolbarButton icon="sap-icon://sort" type="Transparent"  press="sortElement"/>
+                </OverflowToolbar>
+            </Toolbar>
+          <Table id="masterTable" items="{
+              path:'products>/ProductCollection',
+              sorter:{
+                  path:'Name'
+              }
+            }">
+              <columns>
+                  <Column>
+                    <Text text="Product"></Text>
+                  </Column>
+                  <Column hAlign="End">
+                    <Text text="Price"></Text>
+              </Column>
+              </columns>
+              <items>
+                  <ColumnListItem type="Navigation" press="addElement">
+                        <ObjectIdentifier title="{products>Name}" text="{products>ProductId}" />
+                            <ObjectNumber
+                            number="{
+                                parts:[
+                                    {path:'products>Price'},
+                                    {path:'products>CurrencyCode'}
+                                ],
+                                type: 'sap.ui.model.type.Currency',
+                                formatOptions: {showMeasure: false}
+                            }"
+                            unit="{products>CurrencyCode}"/>
+                  </ColumnListItem>
+              </items>
+          </Table>
+        </VBox>
+        </f:content>
+        <f:footer>
+        </f:footer>
+        <f:header>
+        </f:header>
+
+    </f:DynamicPage>
+</mvc:View>

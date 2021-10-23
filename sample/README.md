@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sat Oct 23 2021 11:14:38 GMT+0400 (Gulf Standard Time)|
+|**Generation Date and Time**<br>Sat Oct 23 2021 11:44:15 GMT+0400 (Gulf Standard Time)|
 |**App Generator**<br>@sap/generator-fiori|
 |**App Generator Version**<br>1.3.7|
 |**Generation Platform**<br>Visual Studio Code|
@@ -9,7 +9,7 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A
 |**Module Name**<br>sample|
-|**Application Title**<br>Sample Application|
+|**Application Title**<br>MyApplication|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|

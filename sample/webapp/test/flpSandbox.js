@@ -39,8 +39,8 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "Sample Application",
-									"targetURL": "#SampleApplication-display"
+									"title": "MyApplication",
+									"targetURL": "#MyApplication-display"
 								}
 							}]
 						}]
@@ -51,11 +51,11 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"SampleApplication-display": {
-								"semanticObject": "SampleApplication",
+							"MyApplication-display": {
+								"semanticObject": "MyApplication",
 								"action": "display",
 								"description": "A Fiori application.",
-								"title": "Sample Application",
+								"title": "MyApplication",
 								"signature": {
 									"parameters": {}
 								},

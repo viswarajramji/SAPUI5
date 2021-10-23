@@ -43,7 +43,8 @@
         "sap.ui.core": {},
         "sap.m": {},
         "sap.ui.layout": {},
-        "sap.f": {}
+        "sap.f": {},
+        "sap.uxap":{}
       }
     },
     "contentDensities": {
@@ -56,6 +57,10 @@
         "settings": {
           "bundleName": "sample.i18n.i18n"
         }
+      },
+      "products":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri": "products.json"
       }
     },
     "resources": {

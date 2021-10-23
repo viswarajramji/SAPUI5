@@ -1,16 +1,14 @@
-<mvc:View
+<mvc:View xmlns:f="sap.f"
     controllerName="sample.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
+	height="100%"
     displayBlock="true"
-    xmlns="sap.m"
->
+    xmlns="sap.m">
 	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content />
-				</Page>
-			</pages>
-		</App>
+		<f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+			<f:beginColumnPages>
+				<mvc:XMLView id="beginPage" viewName="sample.view.Master"></mvc:XMLView>
+			</f:beginColumnPages>
+		</f:FlexibleColumnLayout>
 	</Shell>
 </mvc:View>
