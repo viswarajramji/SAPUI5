@@ -6,14 +6,6 @@
 >
 
 	<Shell id="shell">
-		<f:FlexibleColumnLayout id="app"  backgroundDesign="Translucent">
-			<f:beginColumnPages>
-				<mvc:XMLView viewName="country.view.Master"></mvc:XMLView>
-			</f:beginColumnPages>
-			<f:midColumnPages>
-				<mvc:XMLView viewName="country.view.Details"></mvc:XMLView>
-			</f:midColumnPages>
-		</f:FlexibleColumnLayout>
-
+		<f:FlexibleColumnLayout  id="app"  backgroundDesign="Translucent" layout="{/layout}"></f:FlexibleColumnLayout>
 	</Shell>
 </mvc:View>

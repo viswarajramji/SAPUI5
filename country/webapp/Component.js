@@ -2,11 +2,13 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"country/model/models",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel",
+	"sap/f/library"
 ], function (UIComponent,
 	Device,
 	models,
-	JSONModel) {
+	JSONModel,
+	fioriLibrary) {
 	"use strict";
 
 	return UIComponent.extend("country.Component", {
@@ -22,13 +24,27 @@ sap.ui.define([
 		 */
 		init: function () {
 			// call the base component's init function
+			var oModel,oRouter;
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// enable routing
-			this.getRouter().initialize();
+			oModel = new JSONModel();
+			this.setModel(oModel);
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+			
+			oRouter = this.getRouter();
+			oRouter.attachBeforeRouteMatched(this._onBeforeRouteMatched, this);
+			oRouter.initialize();
+		},
+
+		_onBeforeRouteMatched:function(oEvent){
+			var oModel = this.getModel(),
+			sLayout = oEvent.getParameter("layout")
+			if (!sLayout) {
+				sLayout = fioriLibrary.LayoutType.TwoColumnsMidExpanded;
+			}
+			oModel.setProperty("/layout", sLayout);
 		}
 	});
 });

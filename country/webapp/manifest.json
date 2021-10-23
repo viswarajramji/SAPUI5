@@ -83,21 +83,35 @@
         "clearControlAggregation": false
       },
       "routes": [
-        {
-          "name": "RouteView",
-          "pattern": "RouteView",
-          "target": ["TargetView"]
-        }
-      ],
+				{
+
+         "pattern": "",
+					"name": "master",
+					"target": [
+						"master",
+						"detail"
+					]
+				}
+        ,
+				{
+					"pattern": "detail/{product}/{layout}",
+					"name": "detail",
+					"target": [
+						"master",
+						"detail"
+					]
+				}
+			],
       "targets": {
-        "TargetView": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View",
-          "viewName": "View"
-        }
-      }
+				"master": {
+					"viewName": "Master",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Details",
+					"controlAggregation": "midColumnPages"
+				}
+			}
     }
   }
 }
