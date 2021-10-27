@@ -5,7 +5,7 @@
     displayBlock="true"
     xmlns="sap.m">
 	<Shell id="shell">
-		<f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+		<f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid" layout="MidColumnFullScreen">
 			<f:beginColumnPages>
 				<mvc:XMLView id="beginPage" viewName="sample.view.Master"></mvc:XMLView>
 			</f:beginColumnPages>

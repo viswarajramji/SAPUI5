@@ -1,7 +1,75 @@
-<mvc:View
+<mvc:View  
+     xmlns:f="sap.f" xmlns="sap.uxap" 
 	controllerName="sample.controller.Master"
-	xmlns="sap.m"
-	xmlns:f="sap.f"
+	xmlns:m="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-    
+<ObjectPageLayout >
+	<headerTitle>
+		<ObjectPageDynamicHeaderTitle>
+			<actions>
+						<m:ToggleButton
+							type="Emphasized"
+							text="edit"
+						>
+							
+						</m:ToggleButton>
+						<m:Button
+						text="Delete"
+						type="Transparent"/>
+						<m:Button
+						text="Copy"
+						type="Transparent"/>
+						<m:Button
+						icon="sap-icon://action"
+						type="Transparent"/>
+						
+			</actions>
+		</ObjectPageDynamicHeaderTitle>
+	</headerTitle>
+	<headerContent>
+			<m:HBox>
+				<f:Avatar  displaySize="L"  displayShape="Square"></f:Avatar>
+				<m:VBox justifyContent="Center" class="sapUiSmallMarginBegin">
+					<m:Label text="Main Category"/>
+				</m:VBox>
+				<m:VBox justifyContent="Center" class="sapUiSmallMarginBegin">
+					<m:Label text="Sub Category"/>
+				</m:VBox>
+				<m:VBox justifyContent="Center" class="sapUiSmallMarginBegin">
+					<m:Label text="Price"/>
+				</m:VBox>
+			</m:HBox>
+	</headerContent>
+	<sections>
+		<ObjectPageSection title="General Information">
+			<subSections>
+				<ObjectPageSubSection>
+					<blocks>
+						
+					</blocks>	
+				</ObjectPageSubSection>
+			</subSections>
+		</ObjectPageSection>
+		<ObjectPageSection title="General Information">
+			<subSections>
+				<ObjectPageSubSection>
+					<blocks>
+						<m:Table 
+						items="{path : 'products>/ProductCollectionStats/Filters/1/values'}">
+							<m:columns>
+								<m:Column ></m:Column>
+							</m:columns>
+							<m:items>
+								<m:ColumnListItem >
+									<m:ObjectAttribute text="{products>text}">
+									</m:ObjectAttribute>
+								</m:ColumnListItem>
+							</m:items>
+						</m:Table>
+					</blocks>	
+				</ObjectPageSubSection>
+			</subSections>
+		</ObjectPageSection>
+	</sections>
+</ObjectPageLayout>
 </mvc:View>
