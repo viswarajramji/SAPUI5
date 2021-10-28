@@ -1,16 +1,33 @@
 <mvc:View  
      xmlns:f="sap.f" xmlns="sap.uxap" 
-	controllerName="sample.controller.Master"
+	controllerName="sample.controller.Details"
 	xmlns:m="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-<ObjectPageLayout >
+<ObjectPageLayout id="objectPageLayout">
 	<headerTitle>
 		<ObjectPageDynamicHeaderTitle>
+			<expandedHeading>
+				<m:Title
+					text="{products>Name}">
+				</m:Title>
+			</expandedHeading>
+			<snappedHeading>
+				<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
+					<m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
+						<f:Avatar
+							src="https://sapui5.hana.ondemand.com/{products>ProductPicUrl}"
+							displaySize="S"
+							displayShape="Square"
+							class="sapUiTinyMarginEnd"/>
+						<m:Title text="{products>Name}" wrapping="true"/>
+					</m:FlexBox>
+				</m:FlexBox>
+			</snappedHeading>
 			<actions>
-						<m:ToggleButton
-							type="Emphasized"
-							text="edit"
-						>
+					<m:ToggleButton
+						type="Emphasized"
+						text="edit"
+						press="showFooter">
 							
 						</m:ToggleButton>
 						<m:Button
@@ -55,13 +72,13 @@
 				<ObjectPageSubSection>
 					<blocks>
 						<m:Table 
-						items="{path : 'products>/ProductCollectionStats/Filters/1/values'}">
+						items="{path : 'products>/ProductCollectionStats/Filters/1/values'}" >
 							<m:columns>
 								<m:Column ></m:Column>
 							</m:columns>
 							<m:items>
-								<m:ColumnListItem >
-									<m:ObjectAttribute text="{products>text}">
+								<m:ColumnListItem type="Navigation" press="moreinfo">
+									<m:ObjectAttribute text="{products>text}" >
 									</m:ObjectAttribute>
 								</m:ColumnListItem>
 							</m:items>
@@ -71,5 +88,12 @@
 			</subSections>
 		</ObjectPageSection>
 	</sections>
+	<footer>
+		<m:OverflowToolbar id="footer" visible="true" >
+			<m:ToolbarSpacer/>
+				<m:Button text="save" type="Accept" />
+				<m:Button text="cancel" type="Reject" />
+		</m:OverflowToolbar>
+	</footer>
 </ObjectPageLayout>
 </mvc:View>

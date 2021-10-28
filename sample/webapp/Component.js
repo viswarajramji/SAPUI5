@@ -1,8 +1,14 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"sample/model/models"
-], function (UIComponent, Device, models) {
+	"sample/model/models",
+	"sap/f/library",
+	"sap/ui/model/json/JSONModel"
+], function (UIComponent,
+	Device,
+	models,
+	fioriLibrary,
+	JSONModel) {
 	"use strict";
 
 	return UIComponent.extend("sample.Component", {
@@ -20,11 +26,25 @@ sap.ui.define([
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// enable routing
-			this.getRouter().initialize();
-
+			this.setModel(new JSONModel())
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+
+
+		
+			// enable routing
+			
+			this.getRouter().attachBeforeRouteMatched(this._attachRouteMatcher,this);
+			this.getRouter().initialize();
+		},
+		_attachRouteMatcher:function(oEvent){
+			var oModel=this.getModel();
+			var sLayout=oEvent.getParameter("arguments").layout;
+			if(!sLayout){
+				sLayout = fioriLibrary.LayoutType.OneColumn;
+			}
+			oModel.setProperty("/layout",sLayout);
 		}
+
 	});
 });

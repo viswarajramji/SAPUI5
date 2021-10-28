@@ -18,6 +18,7 @@ sap.ui.define([
 		return Controller.extend("sample.controller.Master", {
 			onInit: function () {
                 this._bDescendingSort=false;
+                this.router=this.getOwnerComponent().getRouter();
 			},
             onSearch:function(oEvent){
                var value= oEvent.getSource().getValue();
@@ -39,10 +40,15 @@ sap.ui.define([
                var items=masterTable.getBinding("items");
                items.sort(new Sorter("Name",this._bDescendingSort));
             },
-            showDetails:function(){
-                var ofcl=this.getView().getParent().getParent()
-                ofcl.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
-            }
+            showDetails:function(oEvent){
+                var opath=oEvent.getSource().getBindingContext("products").getPath().split("/").slice(-1).pop();
+                this.router.navTo("details",{
+                    layout:fioriLibrary.LayoutType.TwoColumnsMidExpanded,
+                    productId:opath
+                });
+            },
+
+         
 
 		});
 	});

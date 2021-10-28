@@ -1,0 +1,18 @@
+<mvc:View xmlns:m="sap.m" xmlns="sap.uxap"
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<ObjectPageLayout >
+    <headerTitle>
+        <ObjectPageDynamicHeaderTitle >
+            <expandedHeading>
+                <m:Title text="tset"></m:Title>
+            </expandedHeading>
+        </ObjectPageDynamicHeaderTitle>
+    </headerTitle>
+</ObjectPageLayout>
+
+</mvc:View>

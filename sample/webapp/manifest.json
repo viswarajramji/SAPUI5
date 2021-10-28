@@ -77,23 +77,48 @@
         "async": true,
         "viewPath": "sample.view",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "flexibleColumnLayout",
         "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "RouteApp",
-          "pattern": "RouteApp",
-          "target": ["TargetApp"]
+          "name": "main",
+          "pattern": ":layout:",
+          "target": [
+            "master",
+            "detail"
+          ]
+        },
+        {
+          "name":"details",
+          "pattern":"details/{layout}/{productId}",
+          "target":[
+            "master",
+            "detail"
+           ]
+        },
+        {
+          "name":"moreinfo",
+          "pattern":"moreinfo/{layout}",
+          "target":[
+            "master",
+            "detail",
+            "moreinfodetails"
+          ]
         }
       ],
       "targets": {
-        "TargetApp": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "App",
-          "viewName": "App"
+        "master": {
+          "controlAggregation": "beginColumnPages",
+          "viewName": "Master"
+        },
+        "detail":{
+          "controlAggregation": "midColumnPages",
+          "viewName": "Detail"
+        },
+        "moreinfodetails":{
+          "controlAggregation": "endColumnPages",
+          "viewName": "MoreInfo"
         }
       }
     }
