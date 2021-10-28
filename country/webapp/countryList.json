@@ -1,0 +1,17 @@
+{
+    "countryList":
+        [
+            {
+                "countryCode":"USA",
+                "countryName":"United States America"
+            },
+            {
+                "countryCode":"CAN",
+                "countryName":"Canada"
+            },
+            {
+                "countryCode":"GBR",
+                "countryName":"United Kindom"
+            }
+    ]
+}

@@ -30,12 +30,12 @@
   },
 
   "sap.ui5": {
-    "flexEnabled": false,
+    "flexEnabled": true,
     "rootView": {
-      "viewName": "country.view.View",
+      "viewName": "country.view.Main",
       "type": "XML",
       "async": true,
-      "id": "View"
+      "id": "shell"
     },
     "dependencies": {
 			"minUI5Version": "1.95.0",
@@ -43,8 +43,7 @@
         "sap.ui.core": {},
         "sap.m": {},
         "sap.ui.layout": {},
-        "sap.f": {},
-        "sap.uxap": {}
+        "sap.f": {}
       }
     },
     "contentDensities": {
@@ -58,12 +57,9 @@
           "bundleName": "country.i18n.i18n"
         }
       },
-      "products":{
+      "country":{
         "type":"sap.ui.model.json.JSONModel",
-        "uri":"products.json",
-        "settings": {
-          "setSizeLimit": "1000"
-        }
+        "uri":"countryList.json"
       }
     },
     "resources": {
@@ -79,40 +75,26 @@
         "viewType": "XML",
         "async": true,
         "viewPath": "country.view",
-        "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "flexibleColumnLayout",
         "clearControlAggregation": false
       },
       "routes": [
-				{
-
-         "pattern": "",
-					"name": "master",
-					"target": [
-						"master",
-						"detail"
-					]
-				}
-        ,
-				{
-					"pattern": "detail/{product}/{layout}",
-					"name": "detail",
-					"target": [
-						"master",
-						"detail"
-					]
-				}
-			],
+        {
+          "name": "main",
+          "pattern": "",
+          "target": ["main"]
+        }
+      ],
       "targets": {
-				"master": {
-					"viewName": "Master",
-					"controlAggregation": "beginColumnPages"
-				},
-				"detail": {
-					"viewName": "Details",
-					"controlAggregation": "midColumnPages"
-				}
-			}
+        "main": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "beginColumnPages",
+          "clearControlAggregation": false,
+          "viewId": "Main",
+          "viewName": "Main"
+        }
+      }
     }
   }
 }

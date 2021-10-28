@@ -7,8 +7,9 @@ sap.ui.define([
 	function (Controller) {
 		"use strict";
 
-		return Controller.extend("country.controller.View", {
+		return Controller.extend("country.controller.Main", {
 			onInit: function () {
+
 			}
 		});
 	});

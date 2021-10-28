@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/ui/Device",
 	"country/model/models",
 	"sap/ui/model/json/JSONModel",
-	"sap/f/library"
+	"sap/f/library",
 ], function (UIComponent,
 	Device,
 	models,
@@ -24,27 +24,26 @@ sap.ui.define([
 		 */
 		init: function () {
 			// call the base component's init function
-			var oModel,oRouter;
 			UIComponent.prototype.init.apply(this, arguments);
 
-			oModel = new JSONModel();
-			this.setModel(oModel);
+			this.setModel(new JSONModel())
+
+			this.getRouter().attachBeforeRouteMatched(this._setAppLayout,this);
+
+			// enable routing
+			this.getRouter().initialize();
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			
-			oRouter = this.getRouter();
-			oRouter.attachBeforeRouteMatched(this._onBeforeRouteMatched, this);
-			oRouter.initialize();
 		},
-
-		_onBeforeRouteMatched:function(oEvent){
-			var oModel = this.getModel(),
-			sLayout = oEvent.getParameter("layout")
-			if (!sLayout) {
-				sLayout = fioriLibrary.LayoutType.OneColumn;
+		_setAppLayout:function(oEvent){
+			var layout=oEvent.getParameter("arguments").layout;
+			if(!layout){
+				layout=fioriLibrary.LayoutType.OneColumn;
 			}
-			oModel.setProperty("/layout", sLayout);
+			this.getModel().setProperty("/layout", layout);
 		}
+
+		
 	});
 });

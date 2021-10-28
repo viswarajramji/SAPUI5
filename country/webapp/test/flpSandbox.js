@@ -39,8 +39,8 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "App Title",
-									"targetURL": "#AppTitle-display"
+									"title": "Country Application",
+									"targetURL": "#CountryApplication-display"
 								}
 							}]
 						}]
@@ -51,11 +51,11 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"AppTitle-display": {
-								"semanticObject": "AppTitle",
+							"CountryApplication-display": {
+								"semanticObject": "CountryApplication",
 								"action": "display",
 								"description": "A Fiori application.",
-								"title": "App Title",
+								"title": "Country Application",
 								"signature": {
 									"parameters": {}
 								},
