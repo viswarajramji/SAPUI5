@@ -105,6 +105,13 @@
             "detail",
             "moreinfodetails"
           ]
+        },
+        {
+          "layout": "EndColumnFullScreen",
+          "name":"newPage",
+          "pattern":"newPage/{layout}",
+          "target": ["fullpage"]
+         
         }
       ],
       "targets": {
@@ -119,6 +126,10 @@
         "moreinfodetails":{
           "controlAggregation": "endColumnPages",
           "viewName": "MoreInfo"
+        },
+        "fullpage":{
+          "controlAggregation": "endColumnPages",
+          "viewName": "FullPage"
         }
       }
     }
