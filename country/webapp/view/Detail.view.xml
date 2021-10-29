@@ -7,7 +7,7 @@
     <f:title>
         <f:DynamicPageTitle>
             <f:heading>
-                <Title text="fuck u"></Title>
+                <Title text="{country>countryName}"></Title>
             </f:heading>
         </f:DynamicPageTitle>
     </f:title>

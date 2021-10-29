@@ -89,7 +89,7 @@
         },
         {
           "name":"detail",
-          "pattern":"detail/{layout}",
+          "pattern":"detail/{layout}/{productId}",
           "target":[
             "Master",
             "Detail"

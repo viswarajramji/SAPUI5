@@ -16,23 +16,26 @@
 			<OverflowToolbar   >
 				<ToolbarSpacer/>
 				<SearchField  width="17.5rem" search="search"/>
-				<Button icon="sap-icon://add" 	type="Transparent"/>
-				<Button icon="sap-icon://sort" 	type="Transparent"/>
+				<Button icon="sap-icon://add" 	type="Transparent" press="addCountry"/>
+				<Button icon="sap-icon://sort" 	type="Transparent" press="sortCountry"/>
 			</OverflowToolbar>
-		<Table id="masterTable" items="{country>/countryList}" 	class="sapFDynamicPageAlignContent">
+		<Table id="masterTable" 
+		items="{
+				path: 'country>/countryList',
+				sorter: {
+					path: 'countryName'
+				}
+			}"
+			class="sapFDynamicPageAlignContent">
 			<columns>
-				<Column>
-					<Text text="CountryCode"></Text>
-				</Column>
-				<Column hAlign="left" class="sapUiMediumMarginBegin">
-					<Text text="CountryName"></Text>
+				 <Column>
+				
 				</Column>
 			</columns>
 			<items>
 				<ColumnListItem type="Navigation" press="countryDetails">
 					 <cells>
-						<ObjectIdentifier title="{country>countryCode}"></ObjectIdentifier>	
-						<ObjectIdentifier text="{country>countryName}"></ObjectIdentifier>	
+						<ObjectIdentifier title="{country>countryCode}" ></ObjectIdentifier>	
 					</cells>
 				</ColumnListItem>
 			</items>
