@@ -31,7 +31,7 @@ sap.ui.define([
 		 var searchText=oEvent.getSource().getValue();
 		 var filters=[];
 		 if(searchText){
-			filters.push(new Filter("countryCode",FilterOperator.Contains,searchText));
+			filters.push(new Filter("countryName",FilterOperator.Contains,searchText));
 		 }
 
 		  var table= this.getView().byId("masterTable");
@@ -56,8 +56,8 @@ sap.ui.define([
 		},
 
 		addCountry:function(){
-			MessageBox.information("feature Not Implmenet",{
-				title: "Information"
+			MessageBox.information("Country cannot be added ",{
+				title: "Oh ho!!"
 			});
 		}
 	});

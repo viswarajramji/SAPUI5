@@ -1,54 +1,58 @@
-<mvc:View xmlns:f="sap.f"
+<mvc:View xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:f="sap.f"
 	controllerName="country.controller.Master"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core">
-	<f:DynamicPage toggleHeaderOnTitleClick="false" showFooter="true" >
-		<f:content>
-			<Table id="masterTable" 
-			items="{
-					path: 'country>/countryList',
-					sorter: {
-						path: 'countryName'
-					}
-				}"
-				class="sapFDynamicPageAlignContent">
-				<columns>
-					 <Column>
-						 	<Text text="Hello"></Text>
-					</Column>
-				</columns>
-				<items>
-					<ColumnListItem type="Navigation" press="countryDetails">
-						 <cells>
-							<ObjectIdentifier title="{country>countryCode}" ></ObjectIdentifier>	
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
-		</f:content>
+	xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage toggleHeaderOnTitleClick="true" showFooter="true" >
+			<f:title>
+				<f:DynamicPageTitle >
+					<f:heading>
+				  		<m:Title text="Country Application"></m:Title>
+					</f:heading>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:header>
+				<f:DynamicPageHeader pinnable="false">
+					<m:Title text="Search for Country"></m:Title>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+				<m:Table  id="masterTable" items="{
+						path: 'country>/countryList',
+						sorter: {
+							path: 'countryName'
+						}
+					}" >
+					<m:headerToolbar >
+						<m:OverflowToolbar  >
+							<m:content>
+								<m:SearchField width="19.0rem" search="search"></m:SearchField>
+								<m:Button icon="sap-icon://sort" press="sortCountry"></m:Button>
+							</m:content>
+						</m:OverflowToolbar>
+					</m:headerToolbar>
+					<m:columns>
+						<m:Column >
+
+						</m:Column>
+					</m:columns>
+					<m:items>
+						<m:ColumnListItem type="Navigation" press="showDetails" >
+							<m:cells>
+								<m:Title text="{country>countryName}"></m:Title>
+							</m:cells>
+						</m:ColumnListItem>
+					</m:items>
+
+				</m:Table>  
+
+			</f:content>
+			<f:footer>
+			<m:Toolbar >
+				<m:ToolbarSpacer ></m:ToolbarSpacer>
+				<m:Button icon="sap-icon://add" type="Transparent" press="addCountry"></m:Button>
+			</m:Toolbar>
+			</f:footer>
 	</f:DynamicPage>
+
 </mvc:View>
 
-<!-- 
-<f:title>
-	<f:DynamicPageTitle >
-		<f:heading>
-			<Title text="country application"></Title>
-		</f:heading>
-	</f:DynamicPageTitle>
-</f:title>
-<
-<f:content>
-<VBox fitContainer="true">
-	<OverflowToolbar   >
-		<ToolbarSpacer/>
-		<SearchField  width="17.5rem" search="search"/>
-		<Button icon="sap-icon://add" 	type="Transparent" press="addCountry"/>
-		<Button icon="sap-icon://sort" 	type="Transparent" press="sortCountry"/>
-	</OverflowToolbar>
-
-</VBox>
-</f:content>
-<f:footer>
-</f:footer> -->
+		
