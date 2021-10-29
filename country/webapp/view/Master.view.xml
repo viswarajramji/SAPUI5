@@ -3,47 +3,52 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core">
-    <f:DynamicPage>
-		<f:title>
-			<f:DynamicPageTitle >
-				<f:heading>
-					<Title text="country application"></Title>
-				</f:heading>
-			</f:DynamicPageTitle>
-		</f:title>
+	<f:DynamicPage toggleHeaderOnTitleClick="false" showFooter="true" >
 		<f:content>
-		<VBox fitContainer="true">
-			<OverflowToolbar   >
-				<ToolbarSpacer/>
-				<SearchField  width="17.5rem" search="search"/>
-				<Button icon="sap-icon://add" 	type="Transparent" press="addCountry"/>
-				<Button icon="sap-icon://sort" 	type="Transparent" press="sortCountry"/>
-			</OverflowToolbar>
-		<Table id="masterTable" 
-		items="{
-				path: 'country>/countryList',
-				sorter: {
-					path: 'countryName'
-				}
-			}"
-			class="sapFDynamicPageAlignContent">
-			<columns>
-				 <Column>
-				
-				</Column>
-			</columns>
-			<items>
-				<ColumnListItem type="Navigation" press="countryDetails">
-					 <cells>
-						<ObjectIdentifier title="{country>countryCode}" ></ObjectIdentifier>	
-					</cells>
-				</ColumnListItem>
-			</items>
-		</Table>
-		</VBox>
+			<Table id="masterTable" 
+			items="{
+					path: 'country>/countryList',
+					sorter: {
+						path: 'countryName'
+					}
+				}"
+				class="sapFDynamicPageAlignContent">
+				<columns>
+					 <Column>
+						 	<Text text="Hello"></Text>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="countryDetails">
+						 <cells>
+							<ObjectIdentifier title="{country>countryCode}" ></ObjectIdentifier>	
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
 		</f:content>
-		<f:footer>
-		</f:footer>
-
 	</f:DynamicPage>
 </mvc:View>
+
+<!-- 
+<f:title>
+	<f:DynamicPageTitle >
+		<f:heading>
+			<Title text="country application"></Title>
+		</f:heading>
+	</f:DynamicPageTitle>
+</f:title>
+<
+<f:content>
+<VBox fitContainer="true">
+	<OverflowToolbar   >
+		<ToolbarSpacer/>
+		<SearchField  width="17.5rem" search="search"/>
+		<Button icon="sap-icon://add" 	type="Transparent" press="addCountry"/>
+		<Button icon="sap-icon://sort" 	type="Transparent" press="sortCountry"/>
+	</OverflowToolbar>
+
+</VBox>
+</f:content>
+<f:footer>
+</f:footer> -->

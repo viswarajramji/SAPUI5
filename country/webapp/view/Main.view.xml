@@ -4,6 +4,6 @@
     displayBlock="true"
     xmlns="sap.m">
 	<Shell id="shell">
-		<f:FlexibleColumnLayout id="flexibleColumnLayout" layout="{/layout}"></f:FlexibleColumnLayout>
+		<f:FlexibleColumnLayout id="flexibleColumnLayout" layout="{/layout}"  ></f:FlexibleColumnLayout>
 	</Shell>
 </mvc:View>
