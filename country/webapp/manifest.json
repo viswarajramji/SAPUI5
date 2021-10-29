@@ -80,19 +80,38 @@
       },
       "routes": [
         {
-          "name": "main",
+          "name": "master",
           "pattern": "",
-          "target": ["main"]
+          "target": [
+            "Master",
+            "Detail"
+          ]
+        },
+        {
+          "name":"detail",
+          "pattern":"detail/{layout}",
+          "target":[
+            "Master",
+            "Detail"
+          ]
         }
       ],
       "targets": {
-        "main": {
+        "Master": {
           "viewType": "XML",
           "transition": "slide",
           "controlAggregation": "beginColumnPages",
           "clearControlAggregation": false,
-          "viewId": "Main",
-          "viewName": "Main"
+          "viewId": "Master",
+          "viewName": "Master"
+        },
+        "Detail":{
+          "viewId": "Detail",
+          "viewName":"Detail",
+          "viewType":"XML",
+          "transition": "flip",
+          "controlAggregation": "midColumnPages",
+          "clearControlAggregation": false
         }
       }
     }

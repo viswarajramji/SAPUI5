@@ -1,0 +1,15 @@
+<mvc:View xmlns:f="sap.f"
+	controllerName="country.controller.Details"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+<f:DynamicPage>
+    <f:title>
+        <f:DynamicPageTitle>
+            <f:heading>
+                <Title text="fuck u"></Title>
+            </f:heading>
+        </f:DynamicPageTitle>
+    </f:title>
+</f:DynamicPage>
+</mvc:View>

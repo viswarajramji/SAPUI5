@@ -1,0 +1,46 @@
+<mvc:View xmlns:f="sap.f"
+	controllerName="country.controller.Master"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+    <f:DynamicPage>
+		<f:title>
+			<f:DynamicPageTitle >
+				<f:heading>
+					<Title text="country application"></Title>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:content>
+		<VBox fitContainer="true">
+			<OverflowToolbar   >
+				<ToolbarSpacer/>
+				<SearchField  width="17.5rem" search="search"/>
+				<Button icon="sap-icon://add" 	type="Transparent"/>
+				<Button icon="sap-icon://sort" 	type="Transparent"/>
+			</OverflowToolbar>
+		<Table id="masterTable" items="{country>/countryList}" 	class="sapFDynamicPageAlignContent">
+			<columns>
+				<Column>
+					<Text text="CountryCode"></Text>
+				</Column>
+				<Column hAlign="left" class="sapUiMediumMarginBegin">
+					<Text text="CountryName"></Text>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Navigation" press="countryDetails">
+					 <cells>
+						<ObjectIdentifier title="{country>countryCode}"></ObjectIdentifier>	
+						<ObjectIdentifier text="{country>countryName}"></ObjectIdentifier>	
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+		</VBox>
+		</f:content>
+		<f:footer>
+		</f:footer>
+
+	</f:DynamicPage>
+</mvc:View>

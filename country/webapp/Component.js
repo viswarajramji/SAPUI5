@@ -39,11 +39,9 @@ sap.ui.define([
 		_setAppLayout:function(oEvent){
 			var layout=oEvent.getParameter("arguments").layout;
 			if(!layout){
-				layout=fioriLibrary.LayoutType.OneColumn;
+				layout=fioriLibrary.LayoutType.TwoColumnsMidExpanded;
 			}
 			this.getModel().setProperty("/layout", layout);
-		}
-
-		
+		}	
 	});
 });
