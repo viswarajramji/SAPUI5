@@ -1,7 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+	"sap/ui/core/mvc/Controller",
+  "sap/m/MessageBox",
+  "sap/f/library",
 ], function(
-	Controller
+	Controller,
+	MessageBox,
+	fioriLibrary
 ) {
 	"use strict";
 
@@ -19,6 +23,12 @@ sap.ui.define([
           this.getView().bindElement({
               path:"/countryList/"+this.productId,
               model:"country"
+          });
+        },
+
+        closeDetails:function(){
+          this._oRouter.navTo("master",{
+              layout: fioriLibrary.LayoutType.OneColumn
           });
         }
 	});

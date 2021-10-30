@@ -4,14 +4,16 @@ sap.ui.define([
 	"sap/ui/model/FilterOperator",
 	"sap/f/library",
 	"sap/ui/model/Sorter",
-	"sap/m/MessageBox"
+	"sap/m/MessageBox",
+	"sap/f/library",
 ], function(
 	Controller,
 	Filter,
 	FilterOperator,
 	library,
 	Sorter,
-	MessageBox
+	MessageBox,
+	fioriLibrary
 ) {
 	"use strict";
 

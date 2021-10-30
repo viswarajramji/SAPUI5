@@ -24,6 +24,7 @@
 					<m:headerToolbar >
 						<m:OverflowToolbar  >
 							<m:content>
+								<m:ToolbarSpacer ></m:ToolbarSpacer>
 								<m:SearchField width="19.0rem" search="search"></m:SearchField>
 								<m:Button icon="sap-icon://sort" press="sortCountry"></m:Button>
 							</m:content>
@@ -35,7 +36,7 @@
 						</m:Column>
 					</m:columns>
 					<m:items>
-						<m:ColumnListItem type="Navigation" press="showDetails" >
+						<m:ColumnListItem type="Navigation" press="countryDetails" >
 							<m:cells>
 								<m:Title text="{country>countryName}"></m:Title>
 							</m:cells>

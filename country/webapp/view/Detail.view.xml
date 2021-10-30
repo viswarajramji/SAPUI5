@@ -1,6 +1,49 @@
-<mvc:View
+<mvc:View xmlns:m="sap.m" xmlns:uxap="sap.uxap"
 	controllerName="country.controller.Details"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	>
+<uxap:ObjectPageLayout toggleHeaderOnTitleClick="false"  >
+	<uxap:headerTitle>
+			<uxap:ObjectPageDynamicHeaderTitle >
+				<uxap:heading>
+					<m:Title text="{country>countryName}"></m:Title>
+				</uxap:heading>
+				<uxap:actions>
+					<m:Button text="X" type="Transparent" press="closeDetails"></m:Button>
+				</uxap:actions>
+				<uxap:expandedContent>
+					<m:Text text="{country>countryCode}"></m:Text>
+				</uxap:expandedContent>
+				<uxap:snappedContent>
+					<m:Text text="{country>countryCode}"></m:Text>
+				</uxap:snappedContent>
+			</uxap:ObjectPageDynamicHeaderTitle>
+	</uxap:headerTitle>
+	<uxap:sections>
+			<uxap:ObjectPageSection title="Basic Details" >
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+								<m:Text text="{country>countryName}"></m:Text>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection title="More Details" >
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+							<m:Text text="{country>countryCode}"></m:Text>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+	</uxap:sections>
+	<uxap:footer>
 
+	</uxap:footer>
+
+
+</uxap:ObjectPageLayout>
 
 </mvc:View>

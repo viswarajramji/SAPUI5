@@ -81,7 +81,7 @@
       "routes": [
         {
           "name": "master",
-          "pattern": "",
+          "pattern": ":layout:",
           "target": [
             "Master",
             "Detail"
