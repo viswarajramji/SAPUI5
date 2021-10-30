@@ -15,6 +15,8 @@
 				</f:DynamicPageHeader>
 			</f:header>
 			<f:content>
+
+	
 				<m:Table  id="masterTable" items="{
 						path: 'country>/countryList',
 						sorter: {
@@ -22,11 +24,18 @@
 						}
 					}" >
 					<m:headerToolbar >
-						<m:OverflowToolbar  >
+					
+						
+						<m:OverflowToolbar height="auto" width="auto">
 							<m:content>
-								<m:ToolbarSpacer ></m:ToolbarSpacer>
-								<m:SearchField width="19.0rem" search="search"></m:SearchField>
-								<m:Button icon="sap-icon://sort" press="sortCountry"></m:Button>
+								<m:VBox height="auto"  width="auto" fitContainer="true" >
+									<m:PullToRefresh ></m:PullToRefresh>
+									<m:HBox>
+									<m:ToolbarSpacer ></m:ToolbarSpacer>
+									<m:SearchField search="search" showRefreshButton="true"></m:SearchField>
+									<m:OverflowToolbarButton icon="sap-icon://sort" press="sortCountry"></m:OverflowToolbarButton>
+									</m:HBox>
+								</m:VBox>
 							</m:content>
 						</m:OverflowToolbar>
 					</m:headerToolbar>
@@ -49,7 +58,11 @@
 			<f:footer>
 			<m:Toolbar >
 				<m:ToolbarSpacer ></m:ToolbarSpacer>
-				<m:Button icon="sap-icon://add" type="Transparent" press="addCountry"></m:Button>
+				<m:Button icon="sap-icon://add" type="Transparent" press="addCountry">
+				<m:layoutData>
+					<m:FlexItemData minHeight="100px"></m:FlexItemData>
+				</m:layoutData>
+				</m:Button>
 			</m:Toolbar>
 			</f:footer>
 	</f:DynamicPage>

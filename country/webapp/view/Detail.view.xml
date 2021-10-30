@@ -2,11 +2,49 @@
 	controllerName="country.controller.Details"
 	xmlns:mvc="sap.ui.core.mvc"
 	>
+	<tnt:ToolHeader >
+		<tnt:content>
+			<m:Button icon="sap-icon://menu" press="expand"></m:Button>
+			<m:MenuButton text="File">
+					<m:menu>
+						<m:Menu >
+							<m:items>
+								<m:MenuItem text="test" ></m:MenuItem>
+							</m:items>
+						</m:Menu>
+					</m:menu>
+			</m:MenuButton>
+			<m:ToolbarSpacer ></m:ToolbarSpacer>
+			<m:SearchField width="17.5rem"></m:SearchField>
+			<m:MenuButton icon="sap-icon://user-settings" >
+				<m:menu>
+					<m:Menu>
+						<m:items>
+							<m:MenuItem text="profile" icon="sap-icon://user-edit"></m:MenuItem>
+							<m:MenuItem text="logout" icon="sap-icon://system-exit"></m:MenuItem>
+						</m:items>
+					</m:Menu>
+				</m:menu>
+			</m:MenuButton>
+		</tnt:content>
+
+	</tnt:ToolHeader>
+	<tnt:SideNavigation id="sideNavigation">
+		<tnt:item>
+			<tnt:NavigationList >
+				<tnt:NavigationListItem text="tet"></tnt:NavigationListItem>
+			</tnt:NavigationList>
+		</tnt:item>
+	</tnt:SideNavigation>
 <uxap:ObjectPageLayout toggleHeaderOnTitleClick="false"  >
+
 	<uxap:headerTitle>
 			<uxap:ObjectPageDynamicHeaderTitle >
+				
 				<uxap:heading>
+					
 					<m:Title text="{country>countryName}"></m:Title>
+				
 				</uxap:heading>
 				<uxap:actions>
 					<m:Button text="X" type="Transparent" press="closeDetails"></m:Button>
@@ -42,6 +80,7 @@
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection >
 						<uxap:blocks>
+								<m:MessageStrip text="hello word" close="alertClose" showCloseButton="true"></m:MessageStrip>
 								<tnt:InfoLabel text="{country>countryCode}" colorScheme="{
 
 									    formatter: '.formatter.selectTagColor',
@@ -50,6 +89,9 @@
 													}"></tnt:InfoLabel>
 
 									<m:Link text="show me babe" press=".alert"></m:Link>
+									<m:Slider value="100%"></m:Slider>
+
+
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>

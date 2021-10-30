@@ -39,6 +39,17 @@ sap.ui.define([
         alert:function(parms){
           console.log(parms)
           MessageBox.show("hello");
+        },
+
+        alertClose:function(oEvent){
+          var source=oEvent.getSource();
+          MessageBox.show("hello");
+        },
+
+        expand:function(){
+         var sideNavigation= this.getView().byId("sideNavigation")
+         sideNavigation.setExpanded(!sideNavigation.getExpanded());
+
         }
 	});
 });
