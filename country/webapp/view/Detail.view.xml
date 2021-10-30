@@ -46,7 +46,7 @@
 
 									    formatter: '.formatter.selectTagColor',
 										parts: ['country>countryCode','country>countryCode']
-
+ 
 													}"></tnt:InfoLabel>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
