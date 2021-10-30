@@ -34,6 +34,11 @@ sap.ui.define([
           this._oRouter.navTo("master",{
               layout: fioriLibrary.LayoutType.OneColumn
           });
+        },
+
+        alert:function(parms){
+          console.log(parms)
+          MessageBox.show("hello");
         }
 	});
 });

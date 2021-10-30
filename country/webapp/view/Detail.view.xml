@@ -48,6 +48,8 @@
 										parts: ['country>countryCode','country>countryCode']
  
 													}"></tnt:InfoLabel>
+
+									<m:Link text="show me babe" press=".alert"></m:Link>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
