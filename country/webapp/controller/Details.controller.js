@@ -2,10 +2,12 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
   "sap/m/MessageBox",
   "sap/f/library",
+  "../model/formatter"
 ], function(
 	Controller,
 	MessageBox,
-	fioriLibrary
+	library,
+	formatter
 ) {
 	"use strict";
 
@@ -13,6 +15,8 @@ sap.ui.define([
         /**
          * @override
          */
+
+        formatter:formatter,
         onInit: function() {
             this._oRouter=this.getOwnerComponent().getRouter();
             this._oRouter.getRoute("detail").attachPatternMatched(this._attachRoutePatterMatched,this);
