@@ -2,12 +2,14 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
   "sap/m/MessageBox",
   "sap/f/library",
-  "../model/formatter"
+  "../model/formatter",
+	"sap/ui/model/json/JSONModel"
 ], function(
 	Controller,
 	MessageBox,
 	library,
-	formatter
+	formatter,
+	JSONModel
 ) {
 	"use strict";
 
@@ -29,6 +31,17 @@ sap.ui.define([
               path:"/countryList/"+this.productId,
               model:"country"
           });
+
+          this.getView().getModel("country").setProperty("/date", new Date());
+
+          var dateText="01/31/2021"
+
+          this.getView().getModel("country").setProperty("/datetext",dateText);
+
+          var dateTime=new Date();
+
+          this.getView().getModel("country").setProperty("/datetime",dateTime);
+         
         },
 
         closeDetails:function(){

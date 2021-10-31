@@ -62,11 +62,46 @@
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection >
 						<uxap:blocks>
-								<m:Text text="{country>countryName}">
+								<m:Text text="{country>countryName}">	</m:Text>
+								<m:Text text="{
+											path:'country>/date',
+											type:'sap.ui.model.type.Date',
+											formatOptions: {
+												style:'short'
+											}
+										}">	</m:Text>
+								<m:DatePicker value="{
+														path:'country>/datetime',
+														type:'sap.ui.model.type.Date',
+														formatOptions: {
+															style:'long'
+														}
+													}"></m:DatePicker>
 
-								
-	
-								</m:Text>
+
+
+								<m:DateTimePicker value="{
+									path:'country>/datetime',
+									type:'sap.ui.model.type.DateTime',
+									formatOptions: {
+										style:'full'
+									}
+								}"></m:DateTimePicker>
+
+
+
+
+								<m:Text text=" date {
+									path:'country>/datetext',
+									type:'sap.ui.model.type.Date',
+									formatOptions: {
+										style:'short',
+										source:{
+											pattern:'MM/dd/yyyy'
+										}
+									}
+								}" >	</m:Text>
+													
 								<m:Input value="{
 									path:'country>cost',
 									type:'sap.ui.model.type.Currency',
