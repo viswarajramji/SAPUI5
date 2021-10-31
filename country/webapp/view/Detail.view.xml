@@ -63,8 +63,33 @@
 					<uxap:ObjectPageSubSection >
 						<uxap:blocks>
 								<m:Text text="{country>countryName}">
+
+								
 	
 								</m:Text>
+								<m:Input value="{
+									path:'country>cost',
+									type:'sap.ui.model.type.Currency',
+									formatOptions: {
+										minIntegerDigits:1,
+										maxIntegerDigits:3,
+										maxFractionDigits:2
+									}
+								
+								}" 
+								
+								description="{
+									path:'country>cost',
+									type:'sap.ui.model.type.Currency',
+									formatOptions: {
+										minIntegerDigits:1,
+										maxIntegerDigits:3,
+										maxFractionDigits:2
+									}
+								
+								}" valueLiveUpdate="true"
+								></m:Input>
+						
 								<m:HBox fitContainer="true">
 								<m:Button type="Emphasized" icon="sap-icon://accept"></m:Button>
 								<m:Button type="Accept" text="hello" enabled="false"> </m:Button>
