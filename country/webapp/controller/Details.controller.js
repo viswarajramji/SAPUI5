@@ -11,6 +11,7 @@ sap.ui.define([
 ) {
 	"use strict";
 
+  var urlHelper=library.urlHelper;
 	return Controller.extend("country.controller.Details", {
         /**
          * @override
@@ -37,8 +38,8 @@ sap.ui.define([
         },
 
         alert:function(parms){
-          console.log(parms)
-          MessageBox.show("hello");
+          var value= parms.getSource().getHref();
+          urlHelper.redirect(value,true);
         },
 
         alertClose:function(oEvent){

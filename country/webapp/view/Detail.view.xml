@@ -88,10 +88,8 @@
  
 													}"></tnt:InfoLabel>
 
-									<m:Link text="show me babe" press=".alert"></m:Link>
+									<m:Link text="show me babe" href="https://www.google.com" press=".alert"></m:Link>
 									<m:Slider value="100%"></m:Slider>
-
-
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
