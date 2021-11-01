@@ -23,6 +23,8 @@ sap.ui.define([
         onInit: function() {
             this._oRouter=this.getOwnerComponent().getRouter();
             this._oRouter.getRoute("detail").attachPatternMatched(this._attachRoutePatterMatched,this);
+
+
         },
         _attachRoutePatterMatched:function(oEvent){
           this.layout= oEvent.getParameter("arguments").layout;
@@ -41,6 +43,10 @@ sap.ui.define([
           var dateTime=new Date();
 
           this.getView().getModel("country").setProperty("/datetime",dateTime);
+
+          var fileSize=100000000;
+
+          this.getView().getModel("country").setProperty("/filesize", fileSize);
          
         },
 
