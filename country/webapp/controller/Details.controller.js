@@ -55,6 +55,10 @@ sap.ui.define([
           var integerValue=100;
 
           this.getView().getModel("country").setProperty("/integerValue", integerValue)
+
+          var timeDate=new Date();
+
+          this.getView().getModel("country").setProperty("/timedata", timeDate);
         
         },
 

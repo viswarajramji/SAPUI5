@@ -152,8 +152,17 @@
 									formatOptions: {
 										minIntegerDigits:5
 									}
-							}"></m:Text>
+								}"></m:Text>
 
+								<m:Text text="{
+									path: 'country>/timedata',
+									type: 'sap.ui.model.type.Time',
+									formatOptions: {
+										style:'full'
+									}
+								}"></m:Text>
+
+							
 								<m:HBox fitContainer="true">
 								<m:Button type="Emphasized" icon="sap-icon://accept"></m:Button>
 								<m:Button type="Accept" text="hello" enabled="false"> </m:Button>
