@@ -51,6 +51,11 @@ sap.ui.define([
           var floatValue=10.500;
 
           this.getView().getModel("country").setProperty("/floatValue", floatValue);
+
+          var integerValue=100;
+
+          this.getView().getModel("country").setProperty("/integerValue", integerValue)
+        
         },
 
         closeDetails:function(){
