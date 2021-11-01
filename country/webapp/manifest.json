@@ -61,6 +61,10 @@
       "country":{
         "type":"sap.ui.model.json.JSONModel",
         "uri":"countryList.json"
+      },
+      "clothing":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri": "Clothing.json"
       }
     },
     "resources": {

@@ -1,4 +1,4 @@
-<mvc:View xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
+<mvc:View xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
 	controllerName="country.controller.Details"
 	xmlns:mvc="sap.ui.core.mvc"
 	>
@@ -188,6 +188,54 @@
 
 									<m:Link text="show me babe" href="https://www.google.com" press=".alert"></m:Link>
 									<m:Slider value="100%"></m:Slider>
+
+
+							<table:TreeTable rows="{clothing>/catalog/clothing}" selectionMode="Multi" id="TreeTableBasic">
+								<table:extension>
+										<m:OverflowToolbar >
+												<m:content>
+												<m:Title text="clothes"></m:Title>
+												<m:ToolbarSpacer ></m:ToolbarSpacer>
+												<m:Button text="Collapse all" press="onCollapseAll"/>
+												<m:Button text="Collapse selection" press="onCollapseSelection"/>
+												<m:Button text="Expand first level" press="onExpandFirstLevel"/>
+												<m:Button text="Expand selection" press="onExpandSelection"/>
+												</m:content>
+										</m:OverflowToolbar>
+										
+								</table:extension>
+								<table:columns>
+									<table:Column >
+										<m:Label text="Categories"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>name}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="Price"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>amount}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="size"></m:Label>
+										<table:template>
+												<m:Select items="{
+													path:'clothing>/sizes',
+													templateShareable: true}"
+													visible="{= !!${clothing>size}}"
+												>
+													<core:Item key="{clothing>key}" text="{clothing>value}"/>
+												</m:Select>
+										</table:template>
+									</table:Column>
+								</table:columns>
+						
+							</table:TreeTable>
+
+							
+
+
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>

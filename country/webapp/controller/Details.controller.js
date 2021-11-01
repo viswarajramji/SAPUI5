@@ -23,6 +23,7 @@ sap.ui.define([
         onInit: function() {
             this._oRouter=this.getOwnerComponent().getRouter();
             this._oRouter.getRoute("detail").attachPatternMatched(this._attachRoutePatterMatched,this);
+            this._treeModel=this.getView().byId("TreeTableBasic");
 
 
         },
@@ -82,6 +83,24 @@ sap.ui.define([
          var sideNavigation= this.getView().byId("sideNavigation")
          sideNavigation.setExpanded(!sideNavigation.getExpanded());
 
+        },
+
+        onCollapseAll:function(){
+          this._treeModel.collapseAll()
+        },
+
+        onCollapseSelection:function(){
+          this._treeModel.collapse(this._treeModel.getSelectedIndices());
+        },
+        onExpandFirstLevel:function(){
+          this._treeModel.expandToLevel(1);
+        },
+        onExpandSelection:function(){
+          this._treeModel.expand(this._treeModel.getSelectedIndices())
         }
+
+
+
+
 	});
 });
