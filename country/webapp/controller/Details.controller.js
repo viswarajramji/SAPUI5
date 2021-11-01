@@ -47,7 +47,10 @@ sap.ui.define([
           var fileSize=100000000;
 
           this.getView().getModel("country").setProperty("/filesize", fileSize);
-         
+
+          var floatValue=10.500;
+
+          this.getView().getModel("country").setProperty("/floatValue", floatValue);
         },
 
         closeDetails:function(){
