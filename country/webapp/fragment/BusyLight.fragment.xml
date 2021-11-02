@@ -1,0 +1,11 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<BusyDialog
+    id="busyDailog"
+>
+     
+</BusyDialog>
+</c:FragmentDefinition>

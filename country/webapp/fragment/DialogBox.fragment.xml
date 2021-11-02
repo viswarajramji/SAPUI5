@@ -1,0 +1,26 @@
+<c:FragmentDefinition xmlns:tnt="sap.tnt"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<Dialog
+    title="Country List"
+    resizable="true"
+    draggable="true"
+    type="Standard">
+    <beginButton>
+        <Button text="ok"></Button>
+    </beginButton>
+    <content>
+        <Text text="this is a message"></Text>
+    </content>
+    <customHeader>
+    </customHeader>
+    <endButton>
+        <Button text="trest"></Button>
+    </endButton>
+    <subHeader>
+
+    </subHeader>
+</Dialog>
+</c:FragmentDefinition>

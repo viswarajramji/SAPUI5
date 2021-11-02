@@ -4,14 +4,22 @@ sap.ui.define([
   "sap/f/library",
   "../model/formatter",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/Fragment"
+	"sap/ui/core/Fragment",
+	"sap/m/Dialog",
+	"sap/m/StandardListItem",
+  "sap/m/List",
+	"sap/m/Button",
 ], function(
 	Controller,
 	MessageBox,
 	library,
 	formatter,
 	JSONModel,
-	Fragment
+	Fragment,
+	Dialog,
+	StandardListItem,
+	List,
+	Button
 ) {
 	"use strict";
 
@@ -141,6 +149,28 @@ sap.ui.define([
         this._oDailog.then(function(oDependent){
           oDependent.close();
         });
-      }
+      },
+
+      loadFragmentLight:function(){
+        var busyDailog=this.getView().byId("busyDailog");
+        busyDailog.open();
+        setTimeout(function(){
+          busyDailog.close()
+        },3000);
+      },
+      dailogPress:function(){
+        if(!this._oDailog){
+          this._oDailog=Fragment.load({
+            name:"country.fragment.DialogBox",
+            controller:this
+          }).then(function(oDependent){
+            this.getView().addDependent(oDependent);
+            return oDependent;
+          }.bind(this))
+        }
+        this._oDailog.then(function(oDependent){
+          oDependent.open();
+        })
+      },
 	});
 });

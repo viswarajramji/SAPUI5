@@ -164,12 +164,10 @@
 
 							
 								<m:HBox fitContainer="true">
-								<m:Button type="Emphasized" icon="sap-icon://accept"></m:Button>
-								<m:Button type="Accept" text="hello" enabled="false"> </m:Button>
-								<m:Button type="Reject" text="hello"> </m:Button>
-								<m:Button type="Transparent" text="hello"> </m:Button>
-								<m:Button type="Unstyled" text="hello"> </m:Button>
 								<m:Button type="Default" text="load the dailoag" press=".loadFragment"> </m:Button>
+								<m:Button type="Default" text="load the dailoag" press=".loadFragmentLight"> </m:Button>
+
+								<m:Button type="Default" text="Dailog" press=".dailogPress"> </m:Button>
 								</m:HBox>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
@@ -246,7 +244,9 @@
 
 	</uxap:footer>
 
-
+	<uxap:dependents>
+		
+	</uxap:dependents>
 </uxap:ObjectPageLayout>
 
 </mvc:View>
