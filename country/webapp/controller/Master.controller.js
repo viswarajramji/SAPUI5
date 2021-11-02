@@ -26,6 +26,15 @@ sap.ui.define([
 		
 			this._oRouter=this.getOwnerComponent().getRouter();
 			this._descendingSort=false;
+			this._oRouter.attachRoutePatternMatched(function(){
+				console.log("master page")
+			})
+
+
+            this._oRouter.getRoute("master").attachPatternMatched(function(){
+				console.log("master - pattern page")
+			  })
+			  
 
 		},
 		//TODO : and / or operator in this list

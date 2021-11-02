@@ -22,8 +22,17 @@ sap.ui.define([
         formatter:formatter,
         onInit: function() {
             this._oRouter=this.getOwnerComponent().getRouter();
-            this._oRouter.getRoute("detail").attachPatternMatched(this._attachRoutePatterMatched,this);
+            // this._oRouter.getRoute("detail").attachPatternMatched(this._attachRoutePatterMatched,this);
             this._treeModel=this.getView().byId("TreeTableBasic");
+
+            this._oRouter.attachRoutePatternMatched(function(){
+              console.log("details page")
+            })
+
+            this._oRouter.getRoute("detail").attachPatternMatched(function(){
+              console.log("details - pattern page")
+            })
+            
 
 
         },
