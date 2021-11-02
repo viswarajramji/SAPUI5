@@ -113,20 +113,19 @@ sap.ui.define([
 
       ,
       loadFragment:function(){
-  
-        if(!this._oDailog){
-          this._oDailog = Fragment.load({
-            name:"country.fragment.BusyDialog",
-            Controller:this
-          }).then(function(oDependent){
-            this.getView().addDependent(oDependent);
-            return oDependent;
-          }.bind(this));
-        }
-        this._oDailog.then(function(oDependent){
-          oDependent.open();
-          this._simulateCall();
-        }.bind(this));
+          if(!this._oDailog){
+            this._oDailog=Fragment.load({
+              name:"country.fragment.BusyDialog",
+              controller:this
+            }).then(function(oDependent){
+                this.getView().addDependent(oDependent);
+                return oDependent;
+            }.bind(this)); 
+          }
+          this._oDailog.then(function(oDependent){
+            oDependent.open();
+            //this._simulateCall();
+          }.bind(this))
       },
 
       _simulateCall:function(){
@@ -134,7 +133,14 @@ sap.ui.define([
           this._oDailog.then(function(oDependent){
             oDependent.close();
           })
-        }.bind(this),3000);
+        }.bind(this),3000)
+      },
+
+
+      closeDailog:function(){
+        this._oDailog.then(function(oDependent){
+          oDependent.close();
+        });
       }
 	});
 });

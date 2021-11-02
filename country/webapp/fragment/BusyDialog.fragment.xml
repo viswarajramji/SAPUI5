@@ -6,6 +6,7 @@
     showCancelButton="true"
     text="Server fetching values please wait"
     title="Loading Data"
+    press=".closeDailog"
     
 >
     
