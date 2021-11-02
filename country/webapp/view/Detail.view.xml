@@ -169,6 +169,7 @@
 								<m:Button type="Reject" text="hello"> </m:Button>
 								<m:Button type="Transparent" text="hello"> </m:Button>
 								<m:Button type="Unstyled" text="hello"> </m:Button>
+								<m:Button type="Default" text="load the dailoag" press=".loadFragment"> </m:Button>
 								</m:HBox>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>

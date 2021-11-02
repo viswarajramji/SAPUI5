@@ -3,13 +3,15 @@ sap.ui.define([
   "sap/m/MessageBox",
   "sap/f/library",
   "../model/formatter",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/core/Fragment"
 ], function(
 	Controller,
 	MessageBox,
 	library,
 	formatter,
-	JSONModel
+	JSONModel,
+	Fragment
 ) {
 	"use strict";
 
@@ -98,6 +100,7 @@ sap.ui.define([
           this._treeModel.collapseAll()
         },
 
+
         onCollapseSelection:function(){
           this._treeModel.collapse(this._treeModel.getSelectedIndices());
         },
@@ -108,8 +111,30 @@ sap.ui.define([
           this._treeModel.expand(this._treeModel.getSelectedIndices())
         }
 
+      ,
+      loadFragment:function(){
+  
+        if(!this._oDailog){
+          this._oDailog = Fragment.load({
+            name:"country.fragment.BusyDialog",
+            Controller:this
+          }).then(function(oDependent){
+            this.getView().addDependent(oDependent);
+            return oDependent;
+          }.bind(this));
+        }
+        this._oDailog.then(function(oDependent){
+          oDependent.open();
+          this._simulateCall();
+        }.bind(this));
+      },
 
-
-
+      _simulateCall:function(){
+        setTimeout(function(){
+          this._oDailog.then(function(oDependent){
+            oDependent.close();
+          })
+        }.bind(this),3000);
+      }
 	});
 });
