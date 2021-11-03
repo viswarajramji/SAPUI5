@@ -359,9 +359,25 @@ sap.ui.define([
         this._p13Dailog.then(function(oDependent){
           oDependent.open();
         });
-      }
+      },
       
+      popover:function(oEvent){
+        var oButton = oEvent.getSource();
+        if(!this._popover){
+          this._popover=Fragment.load({
+            id:this.getView().getId(),
+            name:"country.fragment.Popover",
+            controller:this
+          }).then(function(oDependent){
+              this.getView().addDependent(oDependent);
+              return oDependent;
+          }.bind(this));
+        }
 
+        this._popover.then(function(oDependent){
+          oDependent.openBy(oButton);
+        })
+      }
       
 	});
 });

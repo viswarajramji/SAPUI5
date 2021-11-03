@@ -1,0 +1,29 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Popover
+contentWidth="200px"
+contentHeight="200px"
+    id="myPopover"
+    title="details"
+    placement="Bottom">
+
+    <beginButton>
+        <Button text="clock"></Button>
+    </beginButton>
+    <content>
+        <Text  text="hello world baby" >  </Text>
+    </content>
+    <customHeader>
+    </customHeader>
+    <endButton>
+        <Button text="end"></Button>
+    </endButton>
+    <footer>
+        <Button text="footer"></Button>
+    </footer>
+    <subHeader>
+    </subHeader>
+</Popover>
+</c:FragmentDefinition>

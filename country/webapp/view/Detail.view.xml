@@ -163,7 +163,7 @@
 								}"></m:Text>
 
 							
-								<m:HBox fitContainer="true">
+					
 								<m:Button type="Default" text="load the dailoag" press=".loadFragment"> </m:Button>
 								<m:Button type="Default" text="load the dailoag" press=".loadFragmentLight"> </m:Button>
 
@@ -172,7 +172,9 @@
 								<m:Button type="Default" text="showMessagePop" press=".MessageBox2"> </m:Button>
 								<m:Button type="Default" text="messageToast" press=".MessageToast"> </m:Button>
 								<m:Button type="Default" text="P13n dailog" press=".p13ndailog"> </m:Button>
-								</m:HBox>
+								
+								<m:Button type="Default" text="pop" press=".popover"> </m:Button>
+								
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
