@@ -9,6 +9,9 @@ sap.ui.define([
 	"sap/m/StandardListItem",
   "sap/m/List",
 	"sap/m/Button",
+  "sap/ui/core/Core",
+	"sap/ui/core/Message",
+  "sap/m/MessageToast"
 ], function(
 	Controller,
 	MessageBox,
@@ -19,7 +22,10 @@ sap.ui.define([
 	Dialog,
 	StandardListItem,
 	List,
-	Button
+	Button,
+	Core,
+	Message,
+	MessageToast
 ) {
 	"use strict";
 
@@ -28,7 +34,121 @@ sap.ui.define([
         /**
          * @override
          */
-
+         oDataInitial: {
+          // Static data
+          Items: [
+            {
+              columnKey: "productId",
+              text: "Product ID"
+            }, {
+              columnKey: "name",
+              text: "Name"
+            }, {
+              columnKey: "category",
+              text: "Category"
+            }, {
+              columnKey: "supplierName",
+              text: "Supplier Name"
+            }, {
+              columnKey: "description",
+              text: "Description"
+            }, {
+              columnKey: "weightMeasure",
+              text: "Weight Measure"
+            }, {
+              columnKey: "weightUnit",
+              text: "WeightUnit"
+            }, {
+              columnKey: "price",
+              text: "Price"
+            }, {
+              columnKey: "currencyCode",
+              text: "Currency Code"
+            }, {
+              columnKey: "status",
+              text: "Status"
+            }, {
+              columnKey: "quantity",
+              text: "Quantity"
+            }, {
+              columnKey: "uom",
+              text: "UoM"
+            }, {
+              columnKey: "width",
+              text: "Width"
+            }, {
+              columnKey: "depth",
+              text: "Depth"
+            }, {
+              columnKey: "height",
+              text: "Height"
+            }, {
+              columnKey: "dimUnit",
+              text: "DimUnit"
+            }, {
+              columnKey: "productPicUrl",
+              text: "ProductPicUrl"
+            }
+          ],
+          // Runtime data
+          ColumnsItems: [
+            {
+              columnKey: "name",
+              visible: true,
+              index: 0
+            }, {
+              columnKey: "category",
+              visible: true,
+              index: 1
+            }, {
+              columnKey: "productId",
+              visible: false
+            }, {
+              columnKey: "supplierName",
+              visible: false
+            }, {
+              columnKey: "description",
+              visible: false
+            }, {
+              columnKey: "weightMeasure",
+              visible: false
+            }, {
+              columnKey: "weightUnit",
+              visible: false
+            }, {
+              columnKey: "price",
+              visible: false
+            }, {
+              columnKey: "currencyCode",
+              visible: false
+            }, {
+              columnKey: "status",
+              visible: false
+            }, {
+              columnKey: "quantity",
+              visible: false
+            }, {
+              columnKey: "uom",
+              visible: false
+            }, {
+              columnKey: "width",
+              visible: false
+            }, {
+              columnKey: "depth",
+              visible: false
+            }, {
+              columnKey: "height",
+              visible: false
+            }, {
+              columnKey: "dimUnit",
+              visible: false
+            }, {
+              columnKey: "productPicUrl",
+              visible: false
+            }
+          ],
+          ShowResetEnabled: false
+        },
         formatter:formatter,
         onInit: function() {
             this._oRouter=this.getOwnerComponent().getRouter();
@@ -42,7 +162,12 @@ sap.ui.define([
             this._oRouter.getRoute("detail").attachPatternMatched(function(){
               console.log("details - pattern page")
             })
+
             
+            this.oJSONModel = new JSONModel(this.oDataInitial);
+
+  
+            this.getView().setModel(this.oJSONModel,"dataModel");
 
 
         },
@@ -79,7 +204,10 @@ sap.ui.define([
           var timeDate=new Date();
 
           this.getView().getModel("country").setProperty("/timedata", timeDate);
+
+
         
+
         },
 
         closeDetails:function(){
@@ -172,5 +300,68 @@ sap.ui.define([
           oDependent.open();
         })
       },
+
+      submit:function(){
+        this._oDailog.then(function(oDependent){
+           var  values=Core.byId("comments").getValue();
+           console.log(values);
+           MessageBox.show(values)
+           oDependent.close();
+           
+        }.bind(this))
+      },
+
+      cancel:function(){
+        this._oDailog.then(function(oDependent){
+          oDependent.close();
+        })
+      },
+
+      enableSubmit:function(oValue){
+        var value=oValue.getSource().getValue();
+        Core.byId("coreSubmit").setEnabled(value.length>0?true:false);
+      },
+
+      MessageBox1:function(){
+        var json="<H1>hello world</H1>"
+        MessageBox.information("test",{
+          details:json,
+          styleClass: "sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer",
+          actions: ["OK","CANCEL","HERO",MessageBox.Action.RETRY],
+          initialFocus:MessageBox.Action.RETRY,
+          SuccessAction: "OK",
+          onClose:function(sAction){
+            if(sAction==MessageBox.Action.RETRY){
+              MessageBox.alert("you have pressed ok ")
+            }
+          }
+        })
+      },
+
+      toggle:function(oEvent){
+        this.getView().byId("messagepop").toggle(oEvent.getSource())
+      },
+
+      MessageToast:function(){
+        MessageToast.show("hello world");
+      },
+
+      p13ndailog:function(){
+        if(!this._p13Dailog){
+          this._p13Dailog=Fragment.load({
+            name:"country.fragment.PP3Dialog",
+            controller:this
+          }).then(function(oDependents){
+              this.getView().addDependent(oDependents);
+              return oDependents;
+          }.bind(this));
+        }
+        this._p13Dailog.then(function(oDependent){
+          oDependent.open();
+        });
+      }
+      
+
+      
 	});
 });

@@ -36,7 +36,7 @@
 			</tnt:NavigationList>
 		</tnt:item>
 	</tnt:SideNavigation>
-<uxap:ObjectPageLayout toggleHeaderOnTitleClick="false"  >
+<uxap:ObjectPageLayout toggleHeaderOnTitleClick="false" showFooter="true" >
 
 	<uxap:headerTitle>
 			<uxap:ObjectPageDynamicHeaderTitle >
@@ -168,6 +168,10 @@
 								<m:Button type="Default" text="load the dailoag" press=".loadFragmentLight"> </m:Button>
 
 								<m:Button type="Default" text="Dailog" press=".dailogPress"> </m:Button>
+								<m:Button type="Default" text="MessageBox1" press=".MessageBox1"> </m:Button>
+								<m:Button type="Default" text="showMessagePop" press=".MessageBox2"> </m:Button>
+								<m:Button type="Default" text="messageToast" press=".MessageToast"> </m:Button>
+								<m:Button type="Default" text="P13n dailog" press=".p13ndailog"> </m:Button>
 								</m:HBox>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
@@ -232,6 +236,28 @@
 						
 							</table:TreeTable>
 
+							<m:Button  text="hello" press="toggle">
+					<m:dependents>
+						<m:MessagePopover id="messagepop" items="{country>/countryList}" >
+							<m:items>
+								<m:MessageItem
+									activeTitle="true"
+									counter="1"
+									description="test description"
+									groupName="testGrup"
+									longtextUrl=""
+									subtitle=""
+									title="test title"
+									type="Error"
+								>
+									<m:link>
+										<m:Link href="google.com" text="hello world"></m:Link>
+									</m:link>
+								</m:MessageItem>
+							</m:items>
+					</m:MessagePopover>
+					</m:dependents>
+				</m:Button>
 							
 
 
@@ -241,11 +267,14 @@
 			</uxap:ObjectPageSection>
 	</uxap:sections>
 	<uxap:footer>
-
+		<m:OverflowToolbar >
+			<m:content>
+				
+			</m:content>
+		</m:OverflowToolbar>
 	</uxap:footer>
 
 	<uxap:dependents>
-		
 	</uxap:dependents>
 </uxap:ObjectPageLayout>
 

@@ -1,26 +1,25 @@
-<c:FragmentDefinition xmlns:tnt="sap.tnt"
+<c:FragmentDefinition
 	xmlns="sap.m"
-	xmlns:c="sap.ui.core"
->
-
-<Dialog
-    title="Country List"
-    resizable="true"
-    draggable="true"
-    type="Standard">
+	xmlns:c="sap.ui.core">
+<Dialog title="Confirmation" type="Message">
     <beginButton>
-        <Button text="ok"></Button>
+        <Button id="coreSubmit" text="Submit" type="Emphasized" press="submit" enabled="false"></Button>
     </beginButton>
+    <buttons>
+    </buttons>
     <content>
-        <Text text="this is a message"></Text>
+       
+        <Text textAlign="Center" text="Do you want to submit this order?" ></Text>
+        <TextArea  id="comments" width="100%" liveChange="enableSubmit"></TextArea>
+
+ 
     </content>
     <customHeader>
     </customHeader>
     <endButton>
-        <Button text="trest"></Button>
+    <Button text="cancel" press="cancel"></Button>
     </endButton>
     <subHeader>
-
     </subHeader>
 </Dialog>
 </c:FragmentDefinition>

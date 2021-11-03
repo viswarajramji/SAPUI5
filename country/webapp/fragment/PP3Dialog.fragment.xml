@@ -1,0 +1,22 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<P13nDialog
+    initialVisiblePanelType=""
+    showReset="false"
+    showResetEnabled="false"
+    validationExecutor=""
+>
+    <panels>
+        <P13nColumnsPanel items="{dataModel>/Items}" columnsItems="{dataModel>/ColumnItems}">
+            <items>
+                <P13nItem columnKey="{dataModel>columnKey}" text="{dataModel>text}"></P13nItem>
+            </items>
+            <columnsItems>
+                <P13nColumnsItem columnKey="{dataModel>columnKey}" index="{dataModel>index}" text="{dataModel>visible}"></P13nColumnsItem>
+            </columnsItems>
+        </P13nColumnsPanel>
+    </panels>
+</P13nDialog>
+</c:FragmentDefinition>
