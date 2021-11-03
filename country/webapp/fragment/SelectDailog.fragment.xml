@@ -1,0 +1,10 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<SelectDialog>
+    <items>
+        
+    </items>
+</SelectDialog>
+</c:FragmentDefinition>

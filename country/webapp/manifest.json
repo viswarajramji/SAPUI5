@@ -65,6 +65,10 @@
       "clothing":{
         "type":"sap.ui.model.json.JSONModel",
         "uri": "Clothing.json"
+      },
+      "employee":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri":"employee.json" 
       }
     },
     "resources": {

@@ -377,7 +377,62 @@ sap.ui.define([
         this._popover.then(function(oDependent){
           oDependent.openBy(oButton);
         })
+      },
+
+      quickview:function(oEvent){
+        var oView=this.getView();
+        var oSource=oEvent.getSource();
+
+        if(!this._quickView){
+          this._quickView=Fragment.load({
+            id:oView.getId(),
+            name:"country.fragment.QuickView",
+            controller:this
+          }).then(function(dependent){
+            oView.addDependent(dependent);
+            return dependent;
+          }.bind(this));  
+        }
+
+        this._quickView.then(function(oquick){
+          oquick.openBy(oSource);
+        })
+      },
+
+      selectDailog:function(oEvent){
+        var oView=this.getView();
+        var oButton=oEvent.getSource();
+        if(!this._selectDialog){
+          this._selectDialog=Fragment.load({
+            name:"country.fragment.SelectDailog",
+            controller:this
+          }).then(function(oDailog){
+            oView.addDependent(oDailog);
+            return oDailog;
+          }.bind(this))
+        }
+
+        this._selectDialog.then(function(oDailog){
+          this._setConfigData(oDailog,oButton)
+          oDailog.open();
+        }.bind(this))
+      },
+
+      _setConfigData:function(oDailog,oButton){
+        var title= oButton.data("title");
+        var multiSelect= oButton.data("multiSelect");
+        var noDataText= oButton.data("noDataText");
+        var rememberSelections= oButton.data("rememberSelections");
+        
+        console.log(title);
+
+        oDailog.setTitle(title);
+        oDailog.setMultiSelect(multiSelect=="true"?true:false);
+        oDailog.setNoDataText(noDataText);
+        oDailog.setRememberSelections(rememberSelections=="true"?true:false);
+
       }
       
 	});
 });
+

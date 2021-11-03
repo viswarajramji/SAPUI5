@@ -1,0 +1,46 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<QuickView
+    placement="Right"
+    width="320px"
+    pages="{
+        path:'employee>/pages',
+        templateShareable: true
+    }"
+    
+>
+<QuickViewPage
+    description="{employee>description}"
+    header="{employee>header}"
+    pageId="{employee>pageId}"
+    title="{employee>title}"
+    icon="sap-icon://sap-icon://receipt" 
+    groups="{
+        path:'employee>groups',
+        templateShareable:true
+         }"
+    >
+
+    <groups>
+        <QuickViewGroup heading="{employee>heading}" elements="{
+            path:'employee>elements',
+            templateShareable:true
+        }" >
+            <QuickViewGroupElement
+                label="{employee>label}"
+                value="{employee>value}"
+                type="{employee>elementType}"
+                pageLinkId="{employee>pageLinkId}">
+                
+            </QuickViewGroupElement>
+        </QuickViewGroup>
+    </groups>
+    <customData>
+    
+</customData>
+</QuickViewPage>
+</QuickView>
+</c:FragmentDefinition>
