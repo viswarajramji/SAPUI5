@@ -423,9 +423,10 @@ sap.ui.define([
         var multiSelect= oButton.data("multiSelect");
         var noDataText= oButton.data("noDataText");
         var rememberSelections= oButton.data("rememberSelections");
+        var name=oButton.data("name");
         
         console.log(title);
-
+        console.log(name);
         oDailog.setTitle(title);
         oDailog.setMultiSelect(multiSelect=="true"?true:false);
         oDailog.setNoDataText(noDataText);

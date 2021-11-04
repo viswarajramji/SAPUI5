@@ -180,6 +180,7 @@
 										<core:CustomData key="multiSelect" value="true"></core:CustomData>
 										<core:CustomData key="noDataText" value="no data babe"></core:CustomData>
 										<core:CustomData key="rememberSelections" value="true"></core:CustomData>
+										<core:CustomData key="name" value="viswa"></core:CustomData>
 									</m:customData>
 								</m:Button>
 
