@@ -191,10 +191,7 @@
 										<core:CustomData key="resizable" value="true"></core:CustomData>
 									</m:customData>
 								</m:Button>
-
-
-
-
+								<m:Button type="Default" text="viewsetting" press=".viewsettings"> </m:Button>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>

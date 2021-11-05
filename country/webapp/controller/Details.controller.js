@@ -13,7 +13,10 @@ sap.ui.define([
 	"sap/ui/core/Message",
   "sap/m/MessageToast",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
+	"sap/ui/model/FilterOperator",
+	"sap/m/ViewSettingsFilterItem",
+	"sap/m/ViewSettingsItem",
+  "sap/ui/core/CustomData"
 ], function(
 	Controller,
 	MessageBox,
@@ -29,7 +32,10 @@ sap.ui.define([
 	Message,
 	MessageToast,
 	Filter,
-	FilterOperator
+	FilterOperator,
+	ViewSettingsFilterItem,
+	ViewSettingsItem,
+	CustomData
 ) {
 	"use strict";
 
@@ -474,6 +480,43 @@ sap.ui.define([
        }
        var items=Core.byId("tableDailog").getBinding("items");
        items.filter(afilters);
+      },
+
+      viewsettings:function(oEvent){
+       this._presetValue(oEvent,"sort")
+      },
+
+      _presetValue:function(oEvent,page){
+        if(!this._tableDialog){
+          this._tableDialog=Fragment.load({
+            name:"country.fragment.viewSettings",
+            controller:this
+          }).then(function(oTableDialog){
+            this.getView().addDependent(oTableDialog);
+            return oTableDialog;
+          }.bind(this))
+        };
+        this._tableDialog.then(function(oDailog){
+          this._presetFilter(oDailog);
+          oDailog.open(page);
+        }.bind(this));
+      },
+
+      _presetFilter:function(oDialog){
+        var filter1=[
+          new Filter("limit", FilterOperator.BT, 10, 100),
+          new Filter("name", FilterOperator.Contains, "o"),
+          new Filter("status", FilterOperator.EQ, "D")
+        ];
+        oDialog.addPresetFilterItem(new ViewSettingsItem({
+            key:"test",
+            value:"test",
+            customData:new CustomData({
+              key:"filter",
+              value:filter1
+            })
+        }));
+        
       }
 	});
 });

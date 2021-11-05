@@ -1,0 +1,70 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+<ViewSettingsDialog
+    filterSearchOperator="StartsWith"
+    groupDescending="false"
+    sortDescending="false"
+    title="Settings">
+    <customTabs>
+        <ViewSettingsCustomTab id="test" text="custom table">
+            <content>
+                <Text
+                    maxLines=""
+                    renderWhitespace="false"
+                    text="sfsfsfsfdsf"
+                    textAlign="Begin"
+                    textDirection="Inherit"
+                    width=""
+                    wrapping="true"
+                    wrappingType="Normal"
+                >
+                </Text>
+            </content>
+        </ViewSettingsCustomTab>
+        <ViewSettingsCustomTab text="custom table2" icon="sap-icon://add">
+            <content>
+                <Input text="hello"></Input>
+            </content>
+        </ViewSettingsCustomTab>
+    </customTabs>
+    <filterItems>
+        <ViewSettingsFilterItem text="filter1">
+            <items>
+                <ViewSettingsItem text="option A" ></ViewSettingsItem>
+                <ViewSettingsItem text="option B" ></ViewSettingsItem>
+                <ViewSettingsItem text="option C" ></ViewSettingsItem>
+                <ViewSettingsItem text="option D" ></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        <ViewSettingsFilterItem text="filter2">
+            <items>
+                <ViewSettingsItem text="option A" ></ViewSettingsItem>
+                <ViewSettingsItem text="option B" ></ViewSettingsItem>
+                <ViewSettingsItem text="option C" ></ViewSettingsItem>
+                <ViewSettingsItem text="option D" ></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        <ViewSettingsFilterItem text="filter3">
+            <items>
+                <ViewSettingsItem text="option A" ></ViewSettingsItem>
+                <ViewSettingsItem text="option B" ></ViewSettingsItem>
+                <ViewSettingsItem text="option C" ></ViewSettingsItem>
+                <ViewSettingsItem text="option D" ></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+    </filterItems>
+    <groupItems>
+        <ViewSettingsFilterItem text="group1" selected="true">
+        </ViewSettingsFilterItem>
+        <ViewSettingsFilterItem text="group2">
+        </ViewSettingsFilterItem>
+    </groupItems>
+    <presetFilterItems>
+    </presetFilterItems>
+    <sortItems>
+        <ViewSettingsFilterItem text="sortItems" selected="true">
+        </ViewSettingsFilterItem>
+    </sortItems>
+</ViewSettingsDialog>
+</c:FragmentDefinition>
