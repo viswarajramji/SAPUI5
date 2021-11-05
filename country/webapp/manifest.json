@@ -69,6 +69,18 @@
       "employee":{
         "type": "sap.ui.model.json.JSONModel",
         "uri":"employee.json" 
+      },
+      "products":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"products.json"
+      },
+      "tree":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"NodeInfo.json"
+      },
+      "feeds":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"feeds.json"
       }
     },
     "resources": {

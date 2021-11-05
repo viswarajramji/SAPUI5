@@ -36,7 +36,7 @@
 			</tnt:NavigationList>
 		</tnt:item>
 	</tnt:SideNavigation>
-<uxap:ObjectPageLayout toggleHeaderOnTitleClick="false" showFooter="true" >
+<uxap:ObjectPageLayout toggleHeaderOnTitleClick="false" showFooter="true" id="pageLayout">
 
 	<uxap:headerTitle>
 			<uxap:ObjectPageDynamicHeaderTitle >
@@ -57,8 +57,8 @@
 				</uxap:snappedContent>
 			</uxap:ObjectPageDynamicHeaderTitle>
 	</uxap:headerTitle>
-	<uxap:sections>
-			<uxap:ObjectPageSection title="Basic Details" >
+	<uxap:sections >
+			<uxap:ObjectPageSection title="Basic Details"  >
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection >
 						<uxap:blocks>
@@ -286,11 +286,139 @@
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection title="ListItems" id="firstsection">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+					
+							<!-- <m:List headerText="actions">
+								<m:items>
+									<m:ActionListItem text="Accept"></m:ActionListItem>
+									<m:ActionListItem text="Reject"></m:ActionListItem>
+									<m:ActionListItem text="Cancel"></m:ActionListItem>
+								</m:items>
+							</m:List> -->
+<!-- 							
+							<m:Table id="idDetailTable"
+							items="{products>/ProductCollection}"
+							growing="true"
+							growingThreshold="10"
+							growingScrollToLoad="true">
+							<m:headerToolbar>
+								<m:OverflowToolbar >
+									<m:content>
+										<m:Title text="Products"></m:Title>
+										<m:ToolbarSpacer ></m:ToolbarSpacer>
+										<m:ComboBox>
+											<m:items>
+												<core:Item key="Block" text="Block"></core:Item>
+												<core:Item key="Grid Large" text="Grid Large"></core:Item>
+												<core:Item key="Grid Small" text="Grid Small"></core:Item>
+											</m:items>
+										</m:ComboBox>
+										<m:Text text="Sticky Notes"></m:Text>
+										<m:CheckBox text="Column Header"></m:CheckBox>
+										<m:CheckBox text="Header Toolbar"></m:CheckBox>
+										<m:CheckBox text="InfoToolbarr"></m:CheckBox>
+										<m:ToggleButton text="Hide/show" press="displayInfo"></m:ToggleButton>
+									</m:content>
+								</m:OverflowToolbar>
+							</m:headerToolbar>
+							<m:infoToolbar>
+								<m:OverflowToolbar >
+									<m:content>
+										<m:Text text="wide range of products"></m:Text>
+									</m:content>
+								</m:OverflowToolbar>
+							</m:infoToolbar>
+								<m:columns>
+									<m:Column>
+										<m:Text text="product"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="supplier"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="dimensions"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="weight"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="price"></m:Text>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem >
+											<m:ObjectIdentifier title="{products>Name}" text="{products>ProductId}"></m:ObjectIdentifier>
+											<m:Text text="{products>ProductId}"></m:Text>
+											<m:Text text="{products>Width} X {products>Height} X {products>Depth}"></m:Text>
+											
+											<m:ObjectIdentifier text="{products>ProductId}"></m:ObjectIdentifier>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+
+						 -->
+
+
+						 <!-- <m:List id="idDetailTable"
+						 items="{products>/ProductCollection}"
+						 growing="true"
+						 growingThreshold="10"
+						 growingScrollToLoad="true" mode="Delete">
+							 <m:items>
+								<m:CustomListItem >
+							 		<m:HBox >
+										 <m:items>
+											  <core:Icon size="2rem" src="sap-icon://attachment-photo" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom sapUiSmallMarginEnd" ></core:Icon>
+											  <m:VBox >
+												<m:Link text="{products>Name}" target="{products>ProductPicUrl}" press="handlePress" class="sapUiSmallMarginBottom"></m:Link>
+												<m:Text text="{products>ProductId}"></m:Text>
+											 </m:VBox>
+										</m:items>
+									</m:HBox >
+								</m:CustomListItem>
+							 </m:items>
+						 </m:List> -->
+
+
+						 <!-- <m:Tree items="{tree>/}">
+							 <m:items>
+								 <m:CustomTreeItem >
+									 <m:FlexBox fitContainer="true">
+						 				<m:items>
+						 					  <core:Icon src="{tree>ref}" size="2rem"></core:Icon>
+											   <m:Text text="{tree>text}" class="sapUiSmallMarginBegin"></m:Text>
+										 </m:items>
+									 </m:FlexBox>
+								 </m:CustomTreeItem>
+							 </m:items>
+						 </m:Tree> -->
+
+						 <!-- <m:List items="{products>/ProductCollection}">
+							 <m:items>
+								<m:DisplayListItem label="Name" value="{products>Name}">	 </m:DisplayListItem>
+							 </m:items>
+						 </m:List> -->
+					 	<m:List items="{feeds>/EntryCollection}">
+							 <m:items>
+						 		<m:FeedListItem text="{feeds>Text}" sender="{feeds>author}" ></m:FeedListItem>
+							 </m:items>
+						 </m:List> 
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
 	</uxap:sections>
 	<uxap:footer>
 		<m:OverflowToolbar >
 			<m:content>
 				
+
+			
 			</m:content>
 		</m:OverflowToolbar>
 	</uxap:footer>

@@ -180,8 +180,12 @@ sap.ui.define([
             this.getView().setModel(this.oJSONModel,"dataModel");
 
 
-        },
+            var pageLayout=this.getView().byId("pageLayout");
+            var pageSection=this.getView().byId("firstsection")
+            pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
+
+
           this.layout= oEvent.getParameter("arguments").layout;
           this.productId=oEvent.getParameter("arguments").productId || this.productId || "0";
           this.getView().bindElement({
@@ -214,6 +218,8 @@ sap.ui.define([
           var timeDate=new Date();
 
           this.getView().getModel("country").setProperty("/timedata", timeDate);
+
+
 
 
         
@@ -517,6 +523,12 @@ sap.ui.define([
             })
         }));
         
+      },
+
+      displayInfo:function(oEvent){
+        var detailTable=this.getView().byId("idDetailTable");
+        var showToolbar=oEvent.getSource().getPressed();
+        detailTable.getInfoToolbar().setVisible(!showToolbar);
       }
 	});
 });

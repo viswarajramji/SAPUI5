@@ -39,7 +39,7 @@ sap.ui.define([
 		_setAppLayout:function(oEvent){
 			var layout=oEvent.getParameter("arguments").layout;
 			if(!layout){
-				layout=fioriLibrary.LayoutType.TwoColumnsMidExpanded;
+				layout=fioriLibrary.LayoutType.MidColumnFullScreen;
 			}
 			this.getModel().setProperty("/layout", layout);
 		}	
