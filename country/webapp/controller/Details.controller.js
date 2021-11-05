@@ -11,7 +11,9 @@ sap.ui.define([
 	"sap/m/Button",
   "sap/ui/core/Core",
 	"sap/ui/core/Message",
-  "sap/m/MessageToast"
+  "sap/m/MessageToast",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
 ], function(
 	Controller,
 	MessageBox,
@@ -25,7 +27,9 @@ sap.ui.define([
 	Button,
 	Core,
 	Message,
-	MessageToast
+	MessageToast,
+	Filter,
+	FilterOperator
 ) {
 	"use strict";
 
@@ -432,8 +436,45 @@ sap.ui.define([
         oDailog.setNoDataText(noDataText);
         oDailog.setRememberSelections(rememberSelections=="true"?true:false);
 
+      },
+
+      tableDialog:function(oEvent){
+        var oSource=oEvent.getSource();
+        if(!this._tableDialog){
+          this._tableDialog=Fragment.load({
+            name:"country.fragment.tableDialog",
+            controller:this
+          }).then(function(oTableDialog){
+            this.getView().addDependent(oTableDialog);
+            return oTableDialog;
+          }.bind(this))
+        };
+        this._tableDialog.then(function(oDailog){
+          this._setTableConfig(oDailog,oSource)
+          oDailog.open();
+        }.bind(this));
+      },
+
+      _setTableConfig:function(oDailog,oSource){
+        var remember=oSource.data("remember");
+        var multi=oSource.data("mutli");
+        var draggable=oSource.data("draggable");
+        var resizable=oSource.data("resizable");
+        oDailog.setRememberSelections(remember=="true"?true:false);
+        oDailog.setMultiSelect(multi=="true"?true:false);
+        oDailog.setDraggable(draggable=="true"?true:false);
+        oDailog.setResizable(resizable=="true"?true:false);
+      },
+
+      onsearchtable:function(oEvent){
+       var value= oEvent.getParameter("value");
+       var afilters=[];
+       if(value){
+        afilters.push(new Filter("countryCode",FilterOperator.Contains,value));
+       }
+       var items=Core.byId("tableDailog").getBinding("items");
+       items.filter(afilters);
       }
-      
 	});
 });
 

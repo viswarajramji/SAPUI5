@@ -1,0 +1,37 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<TableSelectDialog
+    id="tableDailog"
+    contentHeight="auto"
+    contentWidth="20%"
+    noDataText="No data"
+    title="Select Dialog"
+    search=".onsearchtable"
+    items="{country>/countryList}">
+    <columns>
+        <Column width="12rem">
+            <Text  text="countryCode">
+                
+            </Text>
+        </Column>
+        <Column >
+            <Text  text="countyName">
+            </Text>
+        </Column>
+    </columns>
+    <items>
+        <ColumnListItem >
+           <Text  text="{country>countryCode}"></Text>
+           <Text  text="{country>countryName}"></Text>
+        </ColumnListItem>
+    </items>
+</TableSelectDialog>
+</c:FragmentDefinition>
+
+<!-- rememberSelections="false"
+showClearButton="false"
+growing="true"
+growingThreshold=""
+multiSelect="false" -->

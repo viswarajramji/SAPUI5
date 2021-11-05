@@ -183,7 +183,14 @@
 										<core:CustomData key="name" value="viswa"></core:CustomData>
 									</m:customData>
 								</m:Button>
-
+								<m:Button type="Default" text="tableDialog" press=".tableDialog"> 
+									<m:customData>
+										<core:CustomData key="remember" value="true"></core:CustomData>
+										<core:CustomData key="mutli" value="true"></core:CustomData>
+										<core:CustomData key="draggable" value="true"></core:CustomData>
+										<core:CustomData key="resizable" value="true"></core:CustomData>
+									</m:customData>
+								</m:Button>
 
 
 
