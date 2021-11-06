@@ -530,6 +530,22 @@ sap.ui.define([
         var showToolbar=oEvent.getSource().getPressed();
         detailTable.getInfoToolbar().setVisible(!showToolbar);
       }
-	});
+,
+
+		actionPressed: function(oEvent) {
+			console.log("object pressed");
+		}	,
+  
+    createPost:function(oEvent){
+      var value=oEvent.getParameter("value");
+      console.log(value);
+    }
+  
+  });
+    
+
+   
+
+
 });
 

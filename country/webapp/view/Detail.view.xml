@@ -402,12 +402,37 @@
 								<m:DisplayListItem label="Name" value="{products>Name}">	 </m:DisplayListItem>
 							 </m:items>
 						 </m:List> -->
+				
+						 <m:FeedInput placeholder="Post something here" icon="{feeds>/EntryCollection/0/AuthorPicUrl}" post="createPost"></m:FeedInput>
 					 	<m:List items="{feeds>/EntryCollection}">
 							 <m:items>
-						 		<m:FeedListItem text="{feeds>Text}" sender="{feeds>author}" ></m:FeedListItem>
+								
+						 		<m:FeedListItem text="{feeds>Text}" 
+									 			sender="{feeds>Author}"
+												 icon="{feeds>AuthorPicUrl}"
+												 iconPress=".iconpress"
+												 senderPress=".sendPress"
+						 						 info="{feeds>Type}"
+												  timestamp="{feeds>Date}"
+												  actions="{
+													  path:'feeds>Actions',
+													  templateShareable:false
+													}"
+												
+												  >	
+												  	
+												  <m:FeedListItemAction 
+												 		 icon="{feeds>Icon}"
+														 key="{feeds>Key}"
+												 	     text="{feeds>Text}"
+														 press="actionPressed"
+									
+												  ></m:FeedListItemAction>		
+										</m:FeedListItem>
 							 </m:items>
 						 </m:List> 
-
+			
+				
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
