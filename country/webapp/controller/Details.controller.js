@@ -181,7 +181,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("firstsection")
+            var pageSection=this.getView().byId("actionrevise")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -539,7 +539,31 @@ sap.ui.define([
     createPost:function(oEvent){
       var value=oEvent.getParameter("value");
       console.log(value);
+    },
+
+    detailsPressGrid:function(){
+      alert("detailsPRess");
+    },
+
+    pressGrid:function(){
+      alert("pressGrid")
+    },
+
+    loadactionsheet:function(oEvent){
+        var oSource=oEvent.getSource();
+        this._actionsheet=Fragment.load({
+          name:"country.fragment.Actionsheet",
+          controller:this
+        }).then(function(oDailog){
+            this.getView().addDependent(oDailog);
+            return oDailog;
+        }.bind(this));  
+
+        this._actionsheet.then(function(oModel){
+          oModel.openBy(oSource);
+        });
     }
+
   
   });
     

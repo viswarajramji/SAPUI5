@@ -1,4 +1,4 @@
-<mvc:View xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
+<mvc:View xmlns:dnd="sap.ui.core.dnd" xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
 	controllerName="country.controller.Details"
 	xmlns:mvc="sap.ui.core.mvc"
 	>
@@ -431,19 +431,145 @@
 										</m:FeedListItem>
 							 </m:items>
 						 </m:List> 
-			
-				
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
+
+
+			<uxap:ObjectPageSection title="Grid Section" id="gridsection">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+						<m:Panel >
+							<f:GridList items="{
+								path:'gridItems>/items',
+								sorter: {
+									path:'gridItems>group',
+									descending:false,
+									group:true
+								}
+							}"
+								mode="MultiSelect"
+								delete="detailsPressGrid"
+								growing="true"
+								growingThreshold="10">
+								<f:headerToolbar>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:SearchField width="17.5rem"></m:SearchField>
+										</m:content>
+									</m:OverflowToolbar>
+								</f:headerToolbar>
+								<f:items>
+									<f:GridListItem
+									  type="Navigation"
+									  highlight="Success"
+									  detailPress="detailsPressGrid"
+									  press="pressGrid"
+									  counter="1"
+									  >
+										<m:VBox class="sapUiSmallMargin">
+											<m:layoutData>
+												<m:FlexItemData growFactor="1" shrinkFactor="0"></m:FlexItemData>
+											</m:layoutData>
+											<m:Text text="{gridItems>title}" ></m:Text>
+											<m:Text text="{gridItems>subtitle}"></m:Text>
+										</m:VBox>
+									</f:GridListItem>
+								</f:items>
+							</f:GridList>
+						</m:Panel>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+			<uxap:ObjectPageSection title="Grid Table" id="gridtable">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+				
+							<table:Table 
+								rows="{products>/ProductCollection}"
+								mode="MultiSelect">
+								<table:extension>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:Text text="Products"></m:Text>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:OverflowToolbarButton icon="sap-icon://sort"></m:OverflowToolbarButton>
+											<m:OverflowToolbarButton icon="sap-icon://close-command-field"></m:OverflowToolbarButton>
+										</m:content>
+									</m:OverflowToolbar>
+								</table:extension>
+								<table:columns>
+									<table:Column visible="true" >
+										<m:Label text="Name"></m:Label>
+										<table:template>
+											<m:Text text="{products>Name}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="ProductId"></m:Label>
+										<table:template>
+											<m:Input  value="{products>ProductId}"></m:Input>
+										</table:template>
+									</table:Column>
+									<table:Column hAlign="End" >
+										<m:Label text="Quantity"></m:Label>
+										<table:template>
+											<m:Text  text="{products>Quantity}"></m:Text>
+										</table:template>
+									</table:Column>
+								</table:columns>
+								<table:footer>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:OverflowToolbarButton icon="sap-icon://message-information"></m:OverflowToolbarButton>
+										</m:content>
+									</m:OverflowToolbar>
+								</table:footer>
+							</table:Table>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="actions" id="actionrevise">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+							<m:MenuButton text="click here" type="Accept">
+								<m:menu>
+									<m:Menu >
+										<m:items>
+											<m:MenuItem text="edit" icon="sap-icon://vehicle-repair"></m:MenuItem>
+											<m:MenuItem text="save"></m:MenuItem>
+											<m:MenuItem text="delete"></m:MenuItem>
+										</m:items>
+									</m:Menu>
+								</m:menu>
+							</m:MenuButton>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
 	</uxap:sections>
 	<uxap:footer>
 		<m:OverflowToolbar >
 			<m:content>
-				
-
-			
 			</m:content>
 		</m:OverflowToolbar>
 	</uxap:footer>

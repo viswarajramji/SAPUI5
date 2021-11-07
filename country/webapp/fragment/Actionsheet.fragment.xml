@@ -1,0 +1,15 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<ActionSheet
+    cancelButtonText=""
+    placement="Bottom"
+    showCancelButton="true"
+    title=""
+>
+    <buttons>
+        <Button text="button1"></Button>
+    </buttons>
+</ActionSheet>
+</c:FragmentDefinition>

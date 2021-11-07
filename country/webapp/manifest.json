@@ -81,6 +81,10 @@
       "feeds":{
         "type":"sap.ui.model.json.JSONModel",
         "uri":"feeds.json"
+      },
+      "gridItems":{
+        "type" : "sap.ui.model.json.JSONModel",
+        "uri":"gridItems.json"
       }
     },
     "resources": {
