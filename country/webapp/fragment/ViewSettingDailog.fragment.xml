@@ -1,0 +1,41 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<ViewSettingsDialog
+    filterSearchOperator="StartsWith"
+    groupDescending="false"
+    sortDescending="false"
+    title="">
+    <customTabs>
+        
+    </customTabs>
+    <filterItems>
+        <ViewSettingsFilterItem >
+            <items>
+                    <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+                    <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+                    <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+                    <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+                    <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+
+            </items>
+        </ViewSettingsFilterItem>
+    </filterItems>
+    <groupItems>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+    </groupItems>
+    <presetFilterItems>
+    </presetFilterItems>
+    <sortItems>
+        <ViewSettingsItem key="1" text="sortItem1"></ViewSettingsItem>
+        <ViewSettingsItem key="2" text="sortItem2"></ViewSettingsItem>
+        <ViewSettingsItem key="3" text="sortItem3"></ViewSettingsItem>
+        <ViewSettingsItem key="4" text="sortItem4"></ViewSettingsItem>
+    </sortItems>
+</ViewSettingsDialog>
+</c:FragmentDefinition>
