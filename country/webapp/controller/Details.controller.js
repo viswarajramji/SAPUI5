@@ -181,7 +181,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("gridtable")
+            var pageSection=this.getView().byId("gridtabledetails")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -562,8 +562,45 @@ sap.ui.define([
         this._actionsheet.then(function(oModel){
           oModel.openBy(oSource);
         });
-    }
+    },
 
+    showselected:function(){
+          var girdTables=this.getView().byId("myGridTable");
+          var selectedIndex=girdTables.getSelectedIndices();
+          if(selectedIndex<0){
+            MessageToast.show("no data selected");
+            return;
+          }
+          selectedIndex.forEach(function(index){
+            var content= girdTables.getContextByIndex(index);
+            console.log(content)
+          });
+         
+    },
+
+    
+    showByIndex:function(){
+
+    },
+
+    clearselection:function(){
+
+    },
+
+    clearsort:function(){
+        var gridTable=this.getView().byId("myGridTable");
+        var bindingDetails=gridTable.getBinding();
+        bindingDetails.sort(null);
+        this.clearAllTheColumns();
+
+    },
+
+    clearAllTheColumns:function(){
+      var gridTable=this.getView().byId("myGridTable");
+      gridTable.getColumns().forEach(function(oColumn){
+        oColumn.setSorted(false);
+      });
+    }
   
   });
     
