@@ -1,5 +1,5 @@
-<mvc:View xmlns:dnd="sap.ui.core.dnd" xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
-	controllerName="country.controller.Details"
+<mvc:View xmlns:layout="sap.ui.layout" xmlns:dnd="sap.ui.core.dnd" xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
+	controllerName="country.controller.Details" xmlns:grid="sap.ui.layout.cssgrid"
 	xmlns:mvc="sap.ui.core.mvc"
 	>
 	<tnt:ToolHeader >
@@ -560,6 +560,62 @@
 									</m:Menu>
 								</m:menu>
 							</m:MenuButton>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+			<uxap:ObjectPageSection title="griddetails" id="griddetails">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+							<f:GridList headerText="hello" mode="MultiSelect" items="{
+									path : 'gridItems>/items',
+									sorter: {
+										path:'gridItems>Name'
+									}
+								}" growing="true">	
+								<f:items>
+									<f:GridListItem 
+										type="{gridItems>type}"
+										highlight="{gridItems>Status}"
+									 >
+									 <f:layoutData>
+										<grid:ResponsiveColumnItemLayoutData columns="2" rows="2" />
+									 </f:layoutData>
+
+									
+										<m:HBox class="sapUiSmallMargin">
+											<m:Text text="{gridItems>Name}"></m:Text>
+											<m:Text text="{gridItems>Description}"></m:Text>
+										</m:HBox>
+										
+										</f:GridListItem>
+								</f:items>
+							</f:GridList>
+
+							<f:GridList headerText="MyOwnTile">
+								<f:items>
+									<f:GridListItem >
+										<f:layoutData>
+											<grid:ResponsiveColumnItemLayoutData columns="1" rows="1" />
+										 </f:layoutData>
+	
+										<m:HBox class="sapUiSmallMargin">
+											<m:items>
+												<core:Icon src="sap-icon://add-contact" size="5rem"></core:Icon>
+												<m:VBox class="sapUiSmallMargin ">
+													<m:Text text="Viswarajramji"></m:Text>
+													<m:Text text="SAP Labs india pvt"></m:Text>
+												</m:VBox>
+											</m:items>
+										</m:HBox>
+										
+									</f:GridListItem>
+								</f:items>
+							</f:GridList>
 						</uxap:blocks>
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>

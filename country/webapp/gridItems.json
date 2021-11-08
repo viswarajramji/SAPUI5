@@ -1,139 +1,80 @@
 {
-	"items": [
+	"items":[
 		{
-			"title": "Grid item title 1",
-			"subtitle": "Subtitle 1",
-			"group": "Group A"
+			"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+			"Name": "Notebook Basic 15",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
+			"Status": "Information",
+			"type": "DetailAndActive",
+			"Quantity": 24
 		},
 		{
-			"title": "Grid item title 2",
-			"subtitle": "Subtitle 2",
-			"group": "Group A"
+			"Description": "Notebook Basic 17 with 2,80 GHz quad core, 17\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+			"Name": "Notebook Basic 17",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg",
+			"Status": "Success",
+			"Quantity": 14,
+			"type": "DetailAndActive"
 		},
 		{
-			"title": "Grid item title 3",
-			"subtitle": "Subtitle 3",
-			"group": "Group A"
+			"Description": "Notebook Basic 18 with 2,80 GHz quad core, 18\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+			"Name": "Notebook Basic 18",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg",
+			"Status": "Success",
+			"Quantity": 37
 		},
 		{
-			"title": "Grid item title 4",
-			"subtitle": "Subtitle 4",
-			"group": "Group A"
+			"Description": "Notebook Basic 19 with 2,80 GHz quad core, 19\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+			"Name": "Notebook Basic 19",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg",
+			"Status": "Warning",
+			"Quantity": 2
 		},
 		{
-			"title": "Grid item title 5",
-			"subtitle": "Subtitle 5",
-			"group": "Group A"
+			"Description": "Digital Organizer with State-of-the-Art Storage Encryption",
+			"Name": "ITelO Vault",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1007.jpg",
+			"Status": "Error",
+			"Quantity": 0
 		},
 		{
-			"title": "Grid item title 6",
-			"subtitle": "Subtitle 6",
-			"group": "Group A"
+			"Description": "Notebook Professional 15 with 2,80 GHz quad core, 15\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
+			"Name": "Notebook Professional 15",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1010.jpg",
+			"Quantity": 22
 		},
 		{
-			"title": "Grid item title 7",
-			"subtitle": "Subtitle 7",
-			"group": "Group A"
+			"Description": "Notebook Professional 17 with 2,80 GHz quad core, 17\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
+			"Name": "Notebook Professional 17",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1011.jpg",
+			"Quantity": 31
 		},
 		{
-			"title": "Grid item title 8",
-			"subtitle": "Subtitle 8",
-			"group": "Group A"
+			"Description": "Digital Organizer with State-of-the-Art Encryption for Storage and Network Communications",
+			"Name": "ITelO Vault Net",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1020.jpg",
+			"Quantity": 14
 		},
 		{
-			"title": "Grid item title 9",
-			"subtitle": "Subtitle 9",
-			"group": "Group A"
+			"Description": "Digital Organizer with State-of-the-Art Encryption for Storage and Secure Stellite Link",
+			"Name": "ITelO Vault SAT",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1021.jpg",
+			"Quantity": 50
 		},
 		{
-			"title": "Grid item title 10",
-			"subtitle": "Subtitle 10",
-			"group": "Group B"
+			"Description": "32 GB Digital Assistant with high-resolution color screen",
+			"Name": "Comfort Easy",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1022.jpg",
+			"Quantity": 30
 		},
 		{
-			"title": "Grid item title 11",
-			"subtitle": "Subtitle 11",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 12",
-			"subtitle": "Subtitle 12",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 13",
-			"subtitle": "Subtitle 13",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 14",
-			"subtitle": "Subtitle 14",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 15",
-			"subtitle": "Subtitle 15",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 16",
-			"subtitle": "Subtitle 16",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 17",
-			"subtitle": "Subtitle 17",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 18",
-			"subtitle": "Subtitle 18",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 19 Grid item title 19 Grid item title 19 Grid item title 19 Grid item title 19 Grid item title 19 Grid item title 19 ",
-			"subtitle": "Subtitle 19",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 20",
-			"subtitle": "Subtitle 20",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 21",
-			"subtitle": "Subtitle 21",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 22",
-			"subtitle": "Subtitle 22",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 23",
-			"subtitle": "Subtitle 23",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 24",
-			"subtitle": "Subtitle 24",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 25",
-			"subtitle": "Subtitle 25",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 26",
-			"subtitle": "Subtitle 26",
-			"group": "Group B"
-		},
-		{
-			"title": "Grid item title 27",
-			"subtitle": "Subtitle 27",
-			"group": "Group B"
+			"Description": "4800 dpi x 1200 dpi - up to 35 ppm (mono) / up to 34 ppm (color) - capacity: 250 sheets - Hi-Speed USB2.0, Ethernet",
+			"Name": "Ultra Jet Super Highspeed",
+			"ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1065.jpg",
+			"Status": "None",
+			"Quantity": 25,
+			"onlyImage": true,
+			"type": "Navigation"
 		}
 	]
 }
