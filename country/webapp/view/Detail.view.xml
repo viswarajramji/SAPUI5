@@ -721,7 +721,42 @@
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
 
+			
 
+
+
+
+
+
+			<uxap:ObjectPageSection title="NotificationList" id="NotificationList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:NotificationList >
+								<m:NotificationListGroup
+								title="3 messages. They will be lazy loaded when 'Expand' button is pressed."
+								showCloseButton="true"
+								showItemsCounter="false"
+								collapsed="true"
+								onCollapse=".onToggleCollapse"
+								close=".onItemClose"
+								showEmptyGroup="true"
+								enableCollapseButtonWhenEmpty="true">
+				
+							</m:NotificationListGroup>
+
+		
+
+
+							</m:NotificationList>
+							
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			
 
 
 

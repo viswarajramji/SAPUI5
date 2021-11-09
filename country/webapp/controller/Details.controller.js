@@ -1,7 +1,6 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
   "sap/m/MessageBox",
-  "sap/f/library",
   "../model/formatter",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/Fragment",
@@ -17,11 +16,12 @@ sap.ui.define([
 	"sap/m/ViewSettingsFilterItem",
 	"sap/m/ViewSettingsItem",
   "sap/ui/core/CustomData",
-  "sap/ui/table/library",
+  "sap/m/NotificationListItem",
+  "sap/ui/table/library"
+
 ], function(
 	Controller,
 	MessageBox,
-	library,
 	formatter,
 	JSONModel,
 	Fragment,
@@ -37,12 +37,14 @@ sap.ui.define([
 	ViewSettingsFilterItem,
 	ViewSettingsItem,
 	CustomData,
-	sortLibrary
+  NotificationListItem,
+	library,
+	
 ) {
 	"use strict";
 
-  var urlHelper=library.urlHelper;
-  var SortOrder=sortLibrary.SortOrder;
+  // var urlHelper=library.urlHelper;
+  // var SortOrder=sortLibrary.SortOrder;
 	return Controller.extend("country.controller.Details", {
         /**
          * @override
@@ -184,7 +186,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("InputListItems")
+            var pageSection=this.getView().byId("NotificationList")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -616,10 +618,55 @@ sap.ui.define([
       oTable.sort(productId,SortOrder.Ascending, true);
       productName.setSortOrder(SortOrder.Ascending);
       productId.setSortOrder(SortOrder.Ascending);
+    },
+
+    processdata:function(oEvent){
+      var text=oEvent.getSource().getText();
+      MessageBox.information(text);
+    },
+
+    onToggleCollapse:function(oEvent){
+      var notificationGroup=oEvent.getSource();
+      var notificationListItem=new NotificationListItem({
+								    description:"Lorem ipsum dol",
+                    authorPicture:"sap-icon://add",
+                    title:"New Order",
+                    priority:"High",
+                    authorPicture:"sap-icon://add",	
+                    datetime:"1 hour",
+                    authorAvatarColor:"Accent8"
+      });
+      
+      var oButton=new Button({
+        text:"click me",
+        press:function(){
+          MessageBox.information("test") 
+        }
+      });
+
+      notificationListItem.addButton(oButton);
+      notificationGroup.addItem(notificationListItem);
     }
   });
     
-
+	// <m:NotificationListItem 
+	// 								authorPicture="sap-icon://add"
+	// 								title="New Order" unread="true"
+	// 							    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc. Mauris non elementum orci, ut sollicitudin ligula. Vestibulum in ligula imperdiet, posuere tortor id, dictum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc. Mauris non elementum orci, ut sollicitudin ligula. Vestibulum in ligula imperdiet, posuere tortor id, dictum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc. Mauris non elementum orci, ut sollicitudin ligula. Vestibulum in ligula imperdiet, posuere tortor id, dictum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc. Mauris non elementum orci, ut sollicitudin ligula. Vestibulum in ligula imperdiet, posuere tortor id, dictum nunc."
+	// 								datetime="1 hour"
+	// 								authorAvatarColor="Accent8" 
+	// 								showCloseButton="true"
+	// 								priority="High"
+	// 								>
+	// 									<m:buttons>
+	// 										<m:Button text="accept" press=".processdata"></m:Button>
+	// 										<m:Button text="delete" press=".processdata"></m:Button>
+	// 									</m:buttons>
+	// 									<m:processingMessage>
+	// 										<m:MessageStrip text="message strip"></m:MessageStrip>
+	// 									</m:processingMessage>
+	// 								</m:NotificationListItem>
+	
    
 
 
