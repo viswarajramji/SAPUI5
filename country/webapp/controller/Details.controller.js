@@ -16,7 +16,8 @@ sap.ui.define([
 	"sap/ui/model/FilterOperator",
 	"sap/m/ViewSettingsFilterItem",
 	"sap/m/ViewSettingsItem",
-  "sap/ui/core/CustomData"
+  "sap/ui/core/CustomData",
+  "sap/ui/table/library",
 ], function(
 	Controller,
 	MessageBox,
@@ -35,11 +36,13 @@ sap.ui.define([
 	FilterOperator,
 	ViewSettingsFilterItem,
 	ViewSettingsItem,
-	CustomData
+	CustomData,
+	sortLibrary
 ) {
 	"use strict";
 
   var urlHelper=library.urlHelper;
+  var SortOrder=sortLibrary.SortOrder;
 	return Controller.extend("country.controller.Details", {
         /**
          * @override
@@ -181,7 +184,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("gridtabledetails")
+            var pageSection=this.getView().byId("InputListItems")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -599,9 +602,21 @@ sap.ui.define([
       var gridTable=this.getView().byId("myGridTable");
       gridTable.getColumns().forEach(function(oColumn){
         oColumn.setSorted(false);
+        oColumn.setFiltered(null)
       });
+      gridTable.getBinding().filter(null);
+    },
+
+    DeafaultSortByNameAndId:function(){
+      var productName=this.getView().byId("ProductName");
+      var productId=this.getView().byId("ProductId");
+      var oTable=this.getView().byId("myGridTable");
+      this.clearAllTheColumns();
+      oTable.sort(productName,SortOrder.Ascending, false);
+      oTable.sort(productId,SortOrder.Ascending, true);
+      productName.setSortOrder(SortOrder.Ascending);
+      productId.setSortOrder(SortOrder.Ascending);
     }
-  
   });
     
 

@@ -634,8 +634,9 @@
 						 id="myGridTable"
 						 rows="{products>/ProductCollection}"
 						  noData="no data" 
-						 selectionMode="MultiToggle"
-						 selectionBehavior="Row">
+						 selectionMode="Multi"
+						 selectionBehavior="Row"
+						 enableCellFilter="true">
 						  <table:extension>
 							<m:OverflowToolbar >
 								<m:content>
@@ -644,18 +645,27 @@
 									<m:Button icon="sap-icon://icon-row-selected" press="showselected"></m:Button>
 									<m:Button text="resetsort" press="clearsort"></m:Button>
 									<m:Button text="clear" press="clearselection"></m:Button>
+									<m:Button text="DeafaultSort" press="DeafaultSortByNameAndId"></m:Button>
 								</m:content>
 							</m:OverflowToolbar>
 							</table:extension>
 							<table:columns>
 								<table:Column
+								 id="ProductName"
+								 filterProperty="products>Name"
+								 defaultFilterOperator="StartsWith"
 								 sortProperty="products>Name">
+
 									<m:Label text="Product Name"></m:Label>
 									<table:template>
 										<m:Text text="{products>Name}"></m:Text>
 									</table:template>
+
+
 								</table:Column>
-								<table:Column sortProperty="products/ProductId" >
+								<table:Column id="ProductId"
+										 sortProperty="products>ProductId"
+										>
 									<m:Label text="Product Id"></m:Label>
 									<table:template>
 										<m:Input value="{products>ProductId}"></m:Input>
@@ -682,6 +692,38 @@
 					</uxap:ObjectPageSubSection>
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="InputListItems" id="InputListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+					
+							<m:List items="{products>/ProductCollection}" headerText="Input List Items">
+							<m:items>
+								<m:InputListItem >
+									<m:Input  value="{products>Name}" textAlign="Begin"></m:Input>
+								</m:InputListItem>
+							</m:items>
+							</m:List>
+
+
+
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
 
 
 	</uxap:sections>
