@@ -823,6 +823,33 @@
 
 
 
+
+			<uxap:ObjectPageSection title="SelectListItems" id="SelectListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:SelectList items="{products>/ProductCollection}">
+								<m:items>
+									<core:ListItem key="{products>ProductId}" text="{products>Name}" icon="sap-icon://add" additionalText="test123"></core:ListItem>
+								</m:items>
+							</m:SelectList>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+			
+
+
+
+
+
 	</uxap:sections>
 	<uxap:footer>
 		<m:OverflowToolbar >
