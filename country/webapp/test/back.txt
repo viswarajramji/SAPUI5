@@ -1,0 +1,933 @@
+
+<!--
+
+
+
+
+			<uxap:ObjectPageSection title="Basic Details"  >
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+								<m:Text text="{country>countryName}">	</m:Text>
+								<m:Text text="{
+											path:'country>/date',
+											type:'sap.ui.model.type.Date',
+											formatOptions: {
+												style:'short'
+											}
+										}">	</m:Text>
+								<m:DatePicker value="{
+														path:'country>/datetime',
+														type:'sap.ui.model.type.Date',
+														formatOptions: {
+															style:'long'
+														}
+													}"></m:DatePicker>
+
+
+
+								<m:DateTimePicker value="{
+									path:'country>/datetime',
+									type:'sap.ui.model.type.DateTime',
+									formatOptions: {
+										style:'full'
+									}
+								}"></m:DateTimePicker>
+
+
+
+
+								<m:Text text=" date {
+									path:'country>/datetext',
+									type:'sap.ui.model.type.Date',
+									formatOptions: {
+										style:'short',
+										source:{
+											pattern:'MM/dd/yyyy'
+										}
+									}
+								}" >	</m:Text>
+													
+								<m:Input value="{
+									path:'country>cost',
+									type:'sap.ui.model.type.Currency',
+									formatOptions: {
+										minIntegerDigits:1,
+										maxIntegerDigits:3,
+										maxFractionDigits:2
+									}
+								
+								}" 
+								
+								description="{
+									path:'country>cost',
+									type:'sap.ui.model.type.Currency',
+									formatOptions: {
+										minIntegerDigits:1,
+										maxIntegerDigits:3,
+										maxFractionDigits:2
+									}
+								
+								}" valueLiveUpdate="true"
+								></m:Input>
+						
+
+								<m:Text text="{
+									path: 'country>/filesize',
+									type: 'sap.ui.model.type.FileSize',
+									formatOptions: {
+										maxIntegerDigits:3
+										
+									}
+								}"></m:Text>
+
+
+								<m:Text text="{
+										path: 'country>/floatValue',
+										type: 'sap.ui.model.type.Float',
+										formatOptions: {
+											maxIntegerDigits:4,
+											minIntegerDigits:2,
+											minFractionDigits:5
+										}
+								}"></m:Text>
+
+								<m:Text text="{
+									path: 'country>/integerValue',
+									type: 'sap.ui.model.type.Integer',
+									formatOptions: {
+										minIntegerDigits:5
+									}
+								}"></m:Text>
+
+								<m:Text text="{
+									path: 'country>/timedata',
+									type: 'sap.ui.model.type.Time',
+									formatOptions: {
+										style:'full'
+									}
+								}"></m:Text>
+
+							
+					
+								<m:Button type="Default" text="load the dailoag" press=".loadFragment"> </m:Button>
+								<m:Button type="Default" text="load the dailoag" press=".loadFragmentLight"> </m:Button>
+
+								<m:Button type="Default" text="Dailog" press=".dailogPress"> </m:Button>
+								<m:Button type="Default" text="MessageBox1" press=".MessageBox1"> </m:Button>
+								<m:Button type="Default" text="showMessagePop" press=".MessageBox2"> </m:Button>
+								<m:Button type="Default" text="messageToast" press=".MessageToast"> </m:Button>
+								<m:Button type="Default" text="P13n dailog" press=".p13ndailog"> </m:Button>
+								<m:Button type="Default" text="pop" press=".popover"> </m:Button>
+								<m:Button type="Default" text="quickView" press=".quickview"> </m:Button>
+								<m:Button type="Default" text="selectionDailog" press=".selectDailog">
+									<m:customData>
+										<core:CustomData key="title" value="userdata"></core:CustomData>
+										<core:CustomData key="multiSelect" value="true"></core:CustomData>
+										<core:CustomData key="noDataText" value="no data babe"></core:CustomData>
+										<core:CustomData key="rememberSelections" value="true"></core:CustomData>
+										<core:CustomData key="name" value="viswa"></core:CustomData>
+									</m:customData>
+								</m:Button>
+								<m:Button type="Default" text="tableDialog" press=".tableDialog"> 
+									<m:customData>
+										<core:CustomData key="remember" value="true"></core:CustomData>
+										<core:CustomData key="mutli" value="true"></core:CustomData>
+										<core:CustomData key="draggable" value="true"></core:CustomData>
+										<core:CustomData key="resizable" value="true"></core:CustomData>
+									</m:customData>
+								</m:Button>
+								<m:Button type="Default" text="viewsetting" press=".viewsettings"> </m:Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection title="More Details" >
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+								<m:MessageStrip text="hello word" close="alertClose" showCloseButton="true"></m:MessageStrip>
+								<tnt:InfoLabel text="{country>countryCode}" colorScheme="{
+
+									    formatter: '.formatter.selectTagColor',
+										parts: ['country>countryCode','country>countryCode']
+ 
+													}"></tnt:InfoLabel>
+
+									<m:Link text="show me babe" href="https://www.google.com" press=".alert"></m:Link>
+									<m:Slider value="100%"></m:Slider>
+
+
+							<table:TreeTable rows="{clothing>/catalog/clothing}" selectionMode="Multi" id="TreeTableBasic">
+								<table:extension>
+										<m:OverflowToolbar >
+												<m:content>
+												<m:Title text="clothes"></m:Title>
+												<m:ToolbarSpacer ></m:ToolbarSpacer>
+												<m:Button text="Collapse all" press="onCollapseAll"/>
+												<m:Button text="Collapse selection" press="onCollapseSelection"/>
+												<m:Button text="Expand first level" press="onExpandFirstLevel"/>
+												<m:Button text="Expand selection" press="onExpandSelection"/>
+												</m:content>
+										</m:OverflowToolbar>
+										
+								</table:extension>
+								<table:columns>
+									<table:Column >
+										<m:Label text="Categories"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>name}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="Price"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>amount}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="size"></m:Label>
+										<table:template>
+												<m:Select items="{
+													path:'clothing>/sizes',
+													templateShareable: true}"
+													visible="{= !!${clothing>size}}"
+												>
+													<core:Item key="{clothing>key}" text="{clothing>value}"/>
+
+													
+												</m:Select>
+										</table:template>
+									</table:Column>
+								</table:columns>
+						
+							</table:TreeTable>
+
+							<m:Button  text="hello" press="toggle">
+					<m:dependents>
+						<m:MessagePopover id="messagepop" items="{country>/countryList}" >
+							<m:items>
+								<m:MessageItem
+									activeTitle="true"
+									counter="1"
+									description="test description"
+									groupName="testGrup"
+									longtextUrl=""
+									subtitle=""
+									title="test title"
+									type="Error"
+								>
+									<m:link>
+										<m:Link href="google.com" text="hello world"></m:Link>
+									</m:link>
+								</m:MessageItem>
+							</m:items>
+					</m:MessagePopover>
+					</m:dependents>
+				</m:Button>
+							
+
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection title="ListItems" id="firstsection">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+					
+							<!-- <m:List headerText="actions">
+								<m:items>
+									<m:ActionListItem text="Accept"></m:ActionListItem>
+									<m:ActionListItem text="Reject"></m:ActionListItem>
+									<m:ActionListItem text="Cancel"></m:ActionListItem>
+								</m:items>
+							</m:List> -->
+<!-- 							
+							<m:Table id="idDetailTable"
+							items="{products>/ProductCollection}"
+							growing="true"
+							growingThreshold="10"
+							growingScrollToLoad="true">
+							<m:headerToolbar>
+								<m:OverflowToolbar >
+									<m:content>
+										<m:Title text="Products"></m:Title>
+										<m:ToolbarSpacer ></m:ToolbarSpacer>
+										<m:ComboBox>
+											<m:items>
+												<core:Item key="Block" text="Block"></core:Item>
+												<core:Item key="Grid Large" text="Grid Large"></core:Item>
+												<core:Item key="Grid Small" text="Grid Small"></core:Item>
+											</m:items>
+										</m:ComboBox>
+										<m:Text text="Sticky Notes"></m:Text>
+										<m:CheckBox text="Column Header"></m:CheckBox>
+										<m:CheckBox text="Header Toolbar"></m:CheckBox>
+										<m:CheckBox text="InfoToolbarr"></m:CheckBox>
+										<m:ToggleButton text="Hide/show" press="displayInfo"></m:ToggleButton>
+									</m:content>
+								</m:OverflowToolbar>
+							</m:headerToolbar>
+							<m:infoToolbar>
+								<m:OverflowToolbar >
+									<m:content>
+										<m:Text text="wide range of products"></m:Text>
+									</m:content>
+								</m:OverflowToolbar>
+							</m:infoToolbar>
+								<m:columns>
+									<m:Column>
+										<m:Text text="product"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="supplier"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="dimensions"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="weight"></m:Text>
+									</m:Column>
+									<m:Column>
+										<m:Text text="price"></m:Text>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem >
+											<m:ObjectIdentifier title="{products>Name}" text="{products>ProductId}"></m:ObjectIdentifier>
+											<m:Text text="{products>ProductId}"></m:Text>
+											<m:Text text="{products>Width} X {products>Height} X {products>Depth}"></m:Text>
+											
+											<m:ObjectIdentifier text="{products>ProductId}"></m:ObjectIdentifier>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+
+						 -->
+
+
+						 <!-- <m:List id="idDetailTable"
+						 items="{products>/ProductCollection}"
+						 growing="true"
+						 growingThreshold="10"
+						 growingScrollToLoad="true" mode="Delete">
+							 <m:items>
+								<m:CustomListItem >
+							 		<m:HBox >
+										 <m:items>
+											  <core:Icon size="2rem" src="sap-icon://attachment-photo" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom sapUiSmallMarginEnd" ></core:Icon>
+											  <m:VBox >
+												<m:Link text="{products>Name}" target="{products>ProductPicUrl}" press="handlePress" class="sapUiSmallMarginBottom"></m:Link>
+												<m:Text text="{products>ProductId}"></m:Text>
+											 </m:VBox>
+										</m:items>
+									</m:HBox >
+								</m:CustomListItem>
+							 </m:items>
+						 </m:List> -->
+
+
+						 <!-- <m:Tree items="{tree>/}">
+							 <m:items>
+								 <m:CustomTreeItem >
+									 <m:FlexBox fitContainer="true">
+						 				<m:items>
+						 					  <core:Icon src="{tree>ref}" size="2rem"></core:Icon>
+											   <m:Text text="{tree>text}" class="sapUiSmallMarginBegin"></m:Text>
+										 </m:items>
+									 </m:FlexBox>
+								 </m:CustomTreeItem>
+							 </m:items>
+						 </m:Tree> -->
+
+						 <!-- <m:List items="{products>/ProductCollection}">
+							 <m:items>
+								<m:DisplayListItem label="Name" value="{products>Name}">	 </m:DisplayListItem>
+							 </m:items>
+						 </m:List> -->
+				
+						 <m:FeedInput placeholder="Post something here" icon="{feeds>/EntryCollection/0/AuthorPicUrl}" post="createPost"></m:FeedInput>
+					 	<m:List items="{feeds>/EntryCollection}">
+							 <m:items>
+								
+						 		<m:FeedListItem text="{feeds>Text}" 
+									 			sender="{feeds>Author}"
+												 icon="{feeds>AuthorPicUrl}"
+												 iconPress=".iconpress"
+												 senderPress=".sendPress"
+						 						 info="{feeds>Type}"
+												  timestamp="{feeds>Date}"
+												  actions="{
+													  path:'feeds>Actions',
+													  templateShareable:false
+													}"
+												
+												  >	
+												  	
+												  <m:FeedListItemAction 
+												 		 icon="{feeds>Icon}"
+														 key="{feeds>Key}"
+												 	     text="{feeds>Text}"
+														 press="actionPressed"
+									
+												  ></m:FeedListItemAction>		
+										</m:FeedListItem>
+							 </m:items>
+						 </m:List> 
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+			<uxap:ObjectPageSection title="Grid Section" id="gridsection">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+						<m:Panel >
+							<f:GridList items="{
+								path:'gridItems>/items',
+								sorter: {
+									path:'gridItems>group',
+									descending:false,
+									group:true
+								}
+							}"
+								mode="MultiSelect"
+								delete="detailsPressGrid"
+								growing="true"
+								growingThreshold="10">
+								<f:headerToolbar>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:SearchField width="17.5rem"></m:SearchField>
+										</m:content>
+									</m:OverflowToolbar>
+								</f:headerToolbar>
+								<f:items>
+									<f:GridListItem
+									  type="Navigation"
+									  highlight="Success"
+									  detailPress="detailsPressGrid"
+									  press="pressGrid"
+									  counter="1"
+									  >
+										<m:VBox class="sapUiSmallMargin">
+											<m:layoutData>
+												<m:FlexItemData growFactor="1" shrinkFactor="0"></m:FlexItemData>
+											</m:layoutData>
+											<m:Text text="{gridItems>title}" ></m:Text>
+											<m:Text text="{gridItems>subtitle}"></m:Text>
+										</m:VBox>
+									</f:GridListItem>
+								</f:items>
+							</f:GridList>
+						</m:Panel>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+			<uxap:ObjectPageSection title="Grid Table" id="gridtable">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+				
+							<table:Table 
+								rows="{products>/ProductCollection}"
+								mode="MultiSelect">
+								<table:extension>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:Text text="Products"></m:Text>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:OverflowToolbarButton icon="sap-icon://sort"></m:OverflowToolbarButton>
+											<m:OverflowToolbarButton icon="sap-icon://close-command-field"></m:OverflowToolbarButton>
+										</m:content>
+									</m:OverflowToolbar>
+								</table:extension>
+								<table:columns>
+									<table:Column visible="true" >
+										<m:Label text="Name"></m:Label>
+										<table:template>
+											<m:Text text="{products>Name}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="ProductId"></m:Label>
+										<table:template>
+											<m:Input  value="{products>ProductId}"></m:Input>
+										</table:template>
+									</table:Column>
+									<table:Column hAlign="End" >
+										<m:Label text="Quantity"></m:Label>
+										<table:template>
+											<m:Text  text="{products>Quantity}"></m:Text>
+										</table:template>
+									</table:Column>
+								</table:columns>
+								<table:footer>
+									<m:OverflowToolbar >
+										<m:content>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:OverflowToolbarButton icon="sap-icon://message-information"></m:OverflowToolbarButton>
+										</m:content>
+									</m:OverflowToolbar>
+								</table:footer>
+							</table:Table>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="actions" id="actionrevise">
+				<uxap:subSections >
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+							<m:MenuButton text="click here" type="Accept">
+								<m:menu>
+									<m:Menu >
+										<m:items>
+											<m:MenuItem text="edit" icon="sap-icon://vehicle-repair"></m:MenuItem>
+											<m:MenuItem text="save"></m:MenuItem>
+											<m:MenuItem text="delete"></m:MenuItem>
+										</m:items>
+									</m:Menu>
+								</m:menu>
+							</m:MenuButton>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+			<uxap:ObjectPageSection title="griddetails" id="griddetails">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+							<f:GridList headerText="hello" mode="MultiSelect" items="{
+									path : 'gridItems>/items',
+									sorter: {
+										path:'gridItems>Name'
+									}
+								}" growing="true">	
+								<f:items>
+									<f:GridListItem 
+										type="{gridItems>type}"
+										highlight="{gridItems>Status}"
+									 >
+									 <f:layoutData>
+										<grid:ResponsiveColumnItemLayoutData columns="2" rows="2" />
+									 </f:layoutData>
+
+									
+										<m:HBox class="sapUiSmallMargin">
+											<m:Text text="{gridItems>Name}"></m:Text>
+											<m:Text text="{gridItems>Description}"></m:Text>
+										</m:HBox>
+										
+										</f:GridListItem>
+								</f:items>
+							</f:GridList>
+
+							<f:GridList headerText="MyOwnTile">
+								<f:items>
+									<f:GridListItem >
+										<f:layoutData>
+											<grid:ResponsiveColumnItemLayoutData columns="1" rows="1" />
+										 </f:layoutData>
+	
+										<m:HBox class="sapUiSmallMargin">
+											<m:items>
+												<core:Icon src="sap-icon://add-contact" size="5rem"></core:Icon>
+												<m:VBox class="sapUiSmallMargin ">
+													<m:Text text="Viswarajramji"></m:Text>
+													<m:Text text="SAP Labs india pvt"></m:Text>
+												</m:VBox>
+											</m:items>
+										</m:HBox>
+										
+									</f:GridListItem>
+								</f:items>
+							</f:GridList>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+			<uxap:ObjectPageSection title="gridtabledetails" id="gridtabledetails">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+
+						<table:Table  
+						 id="myGridTable"
+						 rows="{products>/ProductCollection}"
+						  noData="no data" 
+						 selectionMode="Multi"
+						 selectionBehavior="Row"
+						 enableCellFilter="true">
+						  <table:extension>
+							<m:OverflowToolbar >
+								<m:content>
+									<m:Title  text="Products" level="H2"></m:Title>
+									<m:ToolbarSpacer ></m:ToolbarSpacer>
+									<m:Button icon="sap-icon://icon-row-selected" press="showselected"></m:Button>
+									<m:Button text="resetsort" press="clearsort"></m:Button>
+									<m:Button text="clear" press="clearselection"></m:Button>
+									<m:Button text="DeafaultSort" press="DeafaultSortByNameAndId"></m:Button>
+								</m:content>
+							</m:OverflowToolbar>
+							</table:extension>
+							<table:columns>
+								<table:Column
+								 id="ProductName"
+								 filterProperty="products>Name"
+								 defaultFilterOperator="StartsWith"
+								 sortProperty="products>Name">
+
+									<m:Label text="Product Name"></m:Label>
+									<table:template>
+										<m:Text text="{products>Name}"></m:Text>
+									</table:template>
+
+
+								</table:Column>
+								<table:Column id="ProductId"
+										 sortProperty="products>ProductId"
+										>
+									<m:Label text="Product Id"></m:Label>
+									<table:template>
+										<m:Input value="{products>ProductId}"></m:Input>
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Right"
+								sortProperty="products>Quantity">
+									<m:Label text="Quantity" ></m:Label>
+									<table:template><m:Text text="{
+										path:'products>Quantity',
+										type: 'sap.ui.model.type.Integer'
+									}"></m:Text>
+								</table:template>
+									
+								</table:Column>
+							</table:columns>
+
+						</table:Table>
+
+
+
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="InputListItems" id="InputListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+					
+							<m:List items="{products>/ProductCollection}" headerText="Input List Items">
+							<m:items>
+								<m:InputListItem >
+									<m:Input  value="{products>Name}" textAlign="Begin"></m:Input>
+								</m:InputListItem>
+							</m:items>
+							</m:List>
+
+
+
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="NotificationList" id="NotificationList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:NotificationList >
+								<m:NotificationListGroup
+								title="3 messages. They will be lazy loaded when 'Expand' button is pressed."
+								showCloseButton="true"
+								showItemsCounter="false"
+								collapsed="true"
+								onCollapse=".onToggleCollapse"
+								close=".onItemClose"
+								showEmptyGroup="true"
+								enableCollapseButtonWhenEmpty="true">
+			
+							</m:NotificationListGroup>
+							</m:NotificationList>
+							
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+			
+
+
+
+			<uxap:ObjectPageSection title="ObjectListItems" id="ObjectListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:List items="{products>/ProductCollection}">
+								<m:items>
+									<m:ObjectListItem 
+									type="Navigation"
+									title="{products>Name}"
+									
+									number="{
+										parts:[{path:'products>Price'},{path:'products>CurrencyCode'}],
+										type: 'sap.ui.model.type.Currency',
+										formatOptions: {showMeasure: false}
+									}"
+									numberUnit="{products>CurrencyCode}"
+									>
+									<m:firstStatus>
+										<m:ObjectStatus 
+										text="{
+												path: 'products>Quantity',
+												formatter: '.formatter.setStatus'									
+										}" 
+										state="{= ${path: 'products>Quantity',formatter: '.formatter.setStatus'} === 'Present' ? 'Success':'Error' }"
+					
+
+										>
+										</m:ObjectStatus>
+									</m:firstStatus>
+									<m:markers>
+										
+										<m:ObjectMarker type="Locked">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="Flagged">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="Favorite">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="">
+		
+										</m:ObjectMarker>
+
+									</m:markers>
+									<m:attributes>
+										<m:ObjectAttribute text="{products>ProductId}"></m:ObjectAttribute>
+									</m:attributes>
+
+									</m:ObjectListItem>
+								</m:items>
+
+							</m:List>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="SelectListItems" id="SelectListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:SelectList items="{products>/ProductCollection}">
+								<m:items>
+									<core:ListItem key="{products>ProductId}" text="{products>Name}" icon="sap-icon://add" additionalText="test123"></core:ListItem>
+								</m:items>
+							</m:SelectList>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+			<uxap:ObjectPageSection title="StandardList" id="StandardList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+								<m:List items="{products>/ProductCollection}">
+									<m:items>
+										<m:StandardListItem 
+										title="{products>Name}" 
+										description="{products>Description}"
+										type="Navigation" 
+										adaptTitleSize="false"
+										icon="sap-icon://add-coursebook"  
+										iconInset="false"
+										info="{
+											formatter: '.formatter.standardItemInfo',
+											path: 'products>Quantity'
+										}"
+										infoState="{
+											formatter: '.formatter.standardItemInfoState',
+											path:'products>Quantity'
+										}"
+										infoStateInverted="true"
+										highlight="{
+											formatter: '.formatter.displayHighlight',
+											path:'products>Quantity'
+											}"
+										wrapping="true"
+										wrapCharLimit="10"
+											
+											>
+
+										</m:StandardListItem>
+									</m:items>
+								</m:List>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="TreeList" id="TreeList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+				
+							<table:TreeTable id="treeApp"
+									rows="{path:'clothing>/catalog/clothing', parameters: {arrayNames:['categories']}}"
+									selectionMode="Multi"
+							 >
+								<table:noData>
+									<m:Text text="Oops !!! No data"></m:Text>
+								</table:noData>
+								<table:extension>
+									<m:OverflowToolbar >
+										
+										<m:content>
+											<m:Title text="Product"/>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:Button text="collapseAll" press="collapseAll"></m:Button>
+											<m:Button text="collapseSelected" press="collapseSelected" type="Emphasized"></m:Button>
+											<m:Button text="expandLevel" type="Emphasized" press="expandLevel"></m:Button>
+											<m:Button text="expandAll" type="Emphasized" press="expandAll"></m:Button>
+
+										</m:content>
+									</m:OverflowToolbar>
+								</table:extension>
+								<table:columns>
+									<table:Column >
+										<table:label>
+											<m:Label text="Categories"></m:Label>
+										</table:label>
+										<table:template>
+												<m:Text text="{clothing>name}"></m:Text>
+										</table:template>
+									</table:Column>
+
+
+									<table:Column >
+										<m:Label text="Price"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>amount}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="currency"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>currency}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="Size"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>size}"></m:Text>
+										</table:template>
+									</table:Column>
+								</table:columns>
+							</table:TreeTable>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
+
+
+			<uxap:ObjectPageSection title="ActionSelect" id="ActionSelect">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+								<m:ActionSelect 
+								    buttons="b1 b2"
+									items="{products>/ProductCollection}">
+									<m:items>
+										<core:Item key="{products>ProductId}" text="{products>Name}"></core:Item>
+									</m:items>
+									<m:dependents>
+										<m:Button id="b1" text="Action1" press="processdata"></m:Button>
+										<m:Button id="b2" text="Action2" press="processdata"></m:Button>
+									</m:dependents>
+								</m:ActionSelect>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+-->

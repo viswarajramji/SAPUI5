@@ -17,7 +17,8 @@ sap.ui.define([
 	"sap/m/ViewSettingsItem",
   "sap/ui/core/CustomData",
   "sap/m/NotificationListItem",
-  "sap/ui/table/library"
+  "sap/ui/table/library",
+  "sap/ui/unified/DateRange"
 
 ], function(
 	Controller,
@@ -37,8 +38,9 @@ sap.ui.define([
 	ViewSettingsFilterItem,
 	ViewSettingsItem,
 	CustomData,
-  NotificationListItem,
+	NotificationListItem,
 	library,
+	DateRange,
 	
 ) {
 	"use strict";
@@ -186,7 +188,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("ActionSelect")
+            var pageSection=this.getView().byId("CalenderInterval")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -670,6 +672,30 @@ sap.ui.define([
       var tressApp=this.getView().byId("treeApp");
       var selectedIndices=tressApp.getSelectedIndices();
       tressApp.expand(selectedIndices)
+
+    },
+
+    computetoday:function(){
+         var calenderInterval=this.getView().byId("CalenderIntervalId");
+         calenderInterval.removeAllSelectedDates();
+
+        var dateRange=new DateRange({
+          startDate:new  Date()
+        })
+         calenderInterval.addSelectedDate(dateRange);
+         this.displayCurrentDate(dateRange);
+
+    },
+
+    displayCurrentDate:function(dateRange){
+     var txtObject= this.getView().byId("txtField");
+     txtObject.setText(dateRange.getStartDate());
+    },
+
+    changeDateToSelected:function(oEvent){
+      var calenderInterval=oEvent.getSource();
+      var dateRange=calenderInterval.getSelectedDates()[0];
+      this.displayCurrentDate(dateRange);
 
     }
 
