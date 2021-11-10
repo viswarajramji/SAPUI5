@@ -186,7 +186,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("SelectListItems")
+            var pageSection=this.getView().byId("StandardList")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 

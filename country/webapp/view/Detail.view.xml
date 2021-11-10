@@ -844,6 +844,50 @@
 
 
 
+			<uxap:ObjectPageSection title="StandardList" id="StandardList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+								<m:List items="{products>/ProductCollection}">
+									<m:items>
+										<m:StandardListItem 
+										title="{products>Name}" 
+										description="{products>Description}"
+										type="Navigation" 
+										adaptTitleSize="false"
+										icon="sap-icon://add-coursebook"  
+										iconInset="false"
+										info="{
+											formatter: '.formatter.standardItemInfo',
+											path: 'products>Quantity'
+										}"
+										infoState="{
+											formatter: '.formatter.standardItemInfoState',
+											path:'products>Quantity'
+										}"
+										infoStateInverted="true"
+										highlight="{
+											formatter: '.formatter.displayHighlight',
+											path:'products>Quantity'
+											}"
+										wrapping="true"
+										wrapCharLimit="10"
+											
+											>
+
+										</m:StandardListItem>
+									</m:items>
+								</m:List>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
 			
 
 

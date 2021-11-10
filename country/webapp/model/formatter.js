@@ -22,6 +22,29 @@ sap.ui.define([], function() {
                                     return "Present";
                                 }
                                 return "Not Present";
+                        },
+
+                        standardItemInfo:function(oQuantity){
+                            if(oQuantity>0){
+                                return "Present";
+                            }
+                            return "Not Present";
+                        },
+
+                        standardItemInfoState:function(oQuantity){
+                            if(oQuantity>0){
+                                return "Success";
+                            }
+                            return "Error";
+                        },
+
+                        displayHighlight:function(oQuantity){
+                            if(oQuantity>0){
+                                return "Success";
+                            }
+                            return "Error";
                         }
+
+
                     };
                 });
