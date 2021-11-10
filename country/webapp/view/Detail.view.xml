@@ -960,6 +960,32 @@
 
 
 
+
+			<uxap:ObjectPageSection title="ActionSelect" id="ActionSelect">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+								<m:ActionSelect 
+								    buttons="b1 b2"
+									items="{products>/ProductCollection}">
+									<m:items>
+										<core:Item key="{products>ProductId}" text="{products>Name}"></core:Item>
+									</m:items>
+									<m:dependents>
+										<m:Button id="b1" text="Action1" press="processdata"></m:Button>
+										<m:Button id="b2" text="Action2" press="processdata"></m:Button>
+									</m:dependents>
+								</m:ActionSelect>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+
+
+
+
 	</uxap:sections>
 	<uxap:footer>
 		<m:OverflowToolbar >
