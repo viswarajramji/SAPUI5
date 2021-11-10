@@ -888,7 +888,73 @@
 
 
 
-			
+
+
+
+
+			<uxap:ObjectPageSection title="TreeList" id="TreeList">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+				
+							<table:TreeTable id="treeApp"
+									rows="{path:'clothing>/catalog/clothing', parameters: {arrayNames:['categories']}}"
+									selectionMode="Multi"
+							 >
+								<table:noData>
+									<m:Text text="Oops !!! No data"></m:Text>
+								</table:noData>
+								<table:extension>
+									<m:OverflowToolbar >
+										
+										<m:content>
+											<m:Title text="Product"/>
+											<m:ToolbarSpacer ></m:ToolbarSpacer>
+											<m:Button text="collapseAll" press="collapseAll"></m:Button>
+											<m:Button text="collapseSelected" press="collapseSelected" type="Emphasized"></m:Button>
+											<m:Button text="expandLevel" type="Emphasized" press="expandLevel"></m:Button>
+											<m:Button text="expandAll" type="Emphasized" press="expandAll"></m:Button>
+
+										</m:content>
+									</m:OverflowToolbar>
+								</table:extension>
+								<table:columns>
+									<table:Column >
+										<table:label>
+											<m:Label text="Categories"></m:Label>
+										</table:label>
+										<table:template>
+												<m:Text text="{clothing>name}"></m:Text>
+										</table:template>
+									</table:Column>
+
+
+									<table:Column >
+										<m:Label text="Price"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>amount}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="currency"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>currency}"></m:Text>
+										</table:template>
+									</table:Column>
+									<table:Column >
+										<m:Label text="Size"></m:Label>
+										<table:template>
+											<m:Text text="{clothing>size}"></m:Text>
+										</table:template>
+									</table:Column>
+								</table:columns>
+							</table:TreeTable>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
 
 
 

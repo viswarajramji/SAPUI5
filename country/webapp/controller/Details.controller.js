@@ -186,7 +186,7 @@ sap.ui.define([
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("StandardList")
+            var pageSection=this.getView().byId("TreeList")
             pageLayout.setSelectedSection(pageSection);        },
         _attachRoutePatterMatched:function(oEvent){
 
@@ -647,6 +647,36 @@ sap.ui.define([
       notificationListItem.addButton(oButton);
       notificationGroup.addItem(notificationListItem);
     }
+
+    ,
+
+    collapseAll:function(){
+      var tressApp=this.getView().byId("treeApp");
+      tressApp.collapseAll();
+    },
+
+    collapseSelected:function(oEvent){
+      var tressApp=this.getView().byId("treeApp");
+      var selectedIndices=tressApp.getSelectedIndices();
+      tressApp.collapse(selectedIndices)
+    },
+
+    expandLevel:function(oEvent){
+      var tressApp=this.getView().byId("treeApp");
+      tressApp.expandToLevel(2);
+    },
+
+    expandAll:function(){
+      var tressApp=this.getView().byId("treeApp");
+      var selectedIndices=tressApp.getSelectedIndices();
+      tressApp.expand(selectedIndices)
+
+    }
+
+  
+
+
+
   });
     
 	// <m:NotificationListItem 
