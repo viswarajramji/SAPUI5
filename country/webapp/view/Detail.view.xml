@@ -743,12 +743,8 @@
 								close=".onItemClose"
 								showEmptyGroup="true"
 								enableCollapseButtonWhenEmpty="true">
-				
+			
 							</m:NotificationListGroup>
-
-		
-
-
 							</m:NotificationList>
 							
 						</uxap:blocks>
@@ -756,7 +752,73 @@
 				</uxap:subSections>
 			</uxap:ObjectPageSection>
 
+
+
+
 			
+
+
+
+			<uxap:ObjectPageSection title="ObjectListItems" id="ObjectListItems">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection >
+						<uxap:blocks>
+
+							<m:List items="{products>/ProductCollection}">
+								<m:items>
+									<m:ObjectListItem 
+									type="Navigation"
+									title="{products>Name}"
+									
+									number="{
+										parts:[{path:'products>Price'},{path:'products>CurrencyCode'}],
+										type: 'sap.ui.model.type.Currency',
+										formatOptions: {showMeasure: false}
+									}"
+									numberUnit="{products>CurrencyCode}"
+									>
+									<m:firstStatus>
+										<m:ObjectStatus 
+										text="{
+												path: 'products>Quantity',
+												formatter: '.formatter.setStatus'									
+										}" 
+										state="{= ${path: 'products>Quantity',formatter: '.formatter.setStatus'} === 'Present' ? 'Success':'Error' }"
+					
+
+										>
+										</m:ObjectStatus>
+									</m:firstStatus>
+									<m:markers>
+										
+										<m:ObjectMarker type="Locked">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="Flagged">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="Favorite">
+		
+										</m:ObjectMarker>
+										<m:ObjectMarker type="">
+		
+										</m:ObjectMarker>
+
+									</m:markers>
+									<m:attributes>
+										<m:ObjectAttribute text="{products>ProductId}"></m:ObjectAttribute>
+									</m:attributes>
+
+									</m:ObjectListItem>
+								</m:items>
+
+							</m:List>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
 
 
 

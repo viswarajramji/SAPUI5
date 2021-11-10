@@ -15,6 +15,13 @@ sap.ui.define([], function() {
                                     return 2;
                                 
                             }
+                        },
+
+                        setStatus:function(quantity){
+                                if(quantity>0){
+                                    return "Present";
+                                }
+                                return "Not Present";
                         }
                     };
                 });

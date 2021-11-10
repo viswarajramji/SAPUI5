@@ -35,7 +35,7 @@
     "DateOfSale": "2017-04-17",
     "ProductPicUrl": "test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg",
     "Status": "Available",
-    "Quantity": 20,
+    "Quantity": 0,
     "UoM": "PC",
     "CurrencyCode": "EUR",
     "Price": 1249,
