@@ -18,7 +18,8 @@ sap.ui.define([
   "sap/ui/core/CustomData",
   "sap/m/NotificationListItem",
   "sap/ui/table/library",
-  "sap/ui/unified/DateRange"
+  "sap/ui/unified/DateRange",
+  "sap/m/ColorPalettePopover"
 
 ], function(
 	Controller,
@@ -41,6 +42,7 @@ sap.ui.define([
 	NotificationListItem,
 	library,
 	DateRange,
+	ColorPalettePopover,
 	
 ) {
 	"use strict";
@@ -708,7 +710,25 @@ sap.ui.define([
               c2:selected,
               c3:selected,
       });
+    },
+
+    loadColorPalltee:function(oEvent){
+      var oButton=oEvent.getSource();
+      if(!this.colorPalette){
+      this.colorPalette=new ColorPalettePopover("colorPalletteId",{
+        defaultColor:"black",
+        showDefaultColorButton:true,
+        colorSelect:this.showColor.bind(this)
+      });
     }
+
+      this.colorPalette.openBy(oButton);
+    },
+
+    showColor:function(oselected){
+      MessageBox.show(oselected.getParameter("value"))
+    }
+
   
 
 

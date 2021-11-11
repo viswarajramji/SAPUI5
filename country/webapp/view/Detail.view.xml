@@ -60,15 +60,15 @@
 	<uxap:sections >
 
 
-	<uxap:ObjectPageSection title="Actions" id="Actions">
-		<uxap:subSections>
-			<uxap:ObjectPageSubSection >
-				<uxap:blocks>
-						
-				</uxap:blocks>
-			</uxap:ObjectPageSubSection>
-		</uxap:subSections>
-	</uxap:ObjectPageSection>
+		<uxap:ObjectPageSection title="Actions" id="Actions">
+			<uxap:subSections>
+				<uxap:ObjectPageSubSection >
+					<uxap:blocks>
+							<m:Button text="colorPaletter" press="loadColorPalltee"></m:Button>
+					</uxap:blocks>
+				</uxap:ObjectPageSubSection>
+			</uxap:subSections>
+		</uxap:ObjectPageSection>
 
 
 
