@@ -19,7 +19,8 @@ sap.ui.define([
   "sap/m/NotificationListItem",
   "sap/ui/table/library",
   "sap/ui/unified/DateRange",
-  "sap/m/ColorPalettePopover"
+  "sap/m/ColorPalettePopover",
+  "sap/ui/core/ValueState"
 
 ], function(
 	Controller,
@@ -43,6 +44,7 @@ sap.ui.define([
 	library,
 	DateRange,
 	ColorPalettePopover,
+	ValueState
 	
 ) {
 	"use strict";
@@ -727,6 +729,21 @@ sap.ui.define([
 
     showColor:function(oselected){
       MessageBox.show(oselected.getParameter("value"))
+    },
+
+    dateSelected:function(oEvent){
+      var datePicker=oEvent.getSource();
+      var value=oEvent.getParameter("value");
+      var valid=oEvent.getParameter("valid");
+
+      if(!valid){
+        datePicker.setValueState(ValueState.Error)
+      }else{
+        datePicker.setValueState(ValueState.Success);
+        MessageBox.information(value);
+      }
+
+
     }
 
   

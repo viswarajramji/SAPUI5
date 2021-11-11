@@ -64,7 +64,14 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-							<m:Button text="colorPaletter" press="loadColorPalltee"></m:Button>
+							<m:DatePicker 
+							id="MyDate"
+							  value="2015-03-26" 
+							  valueFormat="yyyy-MM-dd" 
+							  displayFormat="long" showFooter="true"
+							  showCurrentDateButton="true"
+							  change="dateSelected"
+						></m:DatePicker>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
