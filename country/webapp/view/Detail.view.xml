@@ -60,14 +60,19 @@
 	<uxap:sections >
 
 
-		<uxap:ObjectPageSection title="CalenderInterval" id="CalenderInterval">
+		<uxap:ObjectPageSection title="Actions" id="Actions">
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
 							
-							<unified:CalendarDateInterval id="CalenderIntervalId" select="changeDateToSelected" ></unified:CalendarDateInterval>
-							<m:Button text="today" press="computetoday"></m:Button>
-							<m:Text id="txtField" text="NoDate"></m:Text>
+							<m:CheckBox  text="check all" selected="{= ${checkbox>/c1} || ${checkbox>/c2} || ${checkbox>/c3}}" select="onSelect"></m:CheckBox>
+
+
+							<m:CheckBox  text="Button1 " enabled="true"  selected="{checkbox>/c1}"></m:CheckBox>
+							<m:CheckBox  text="Button2 " enabled="true"  selected="{checkbox>/c2}"></m:CheckBox>
+							<m:CheckBox  text="Button3 " enabled="true"  selected="{checkbox>/c3}"></m:CheckBox>
+							
+
 
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>

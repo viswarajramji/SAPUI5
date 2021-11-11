@@ -930,4 +930,18 @@
 
 
 
+
+		<uxap:ObjectPageSection title="CalenderInterval" id="CalenderInterval">
+			<uxap:subSections>
+				<uxap:ObjectPageSubSection >
+					<uxap:blocks>
+							
+							<unified:CalendarDateInterval id="CalenderIntervalId" select="changeDateToSelected" ></unified:CalendarDateInterval>
+							<m:Button text="today" press="computetoday"></m:Button>
+							<m:Text id="txtField" text="NoDate"></m:Text>
+
+					</uxap:blocks>
+				</uxap:ObjectPageSubSection>
+			</uxap:subSections>
+		</uxap:ObjectPageSection>
 -->

@@ -183,13 +183,14 @@ sap.ui.define([
             
             this.oJSONModel = new JSONModel(this.oDataInitial);
 
-  
+            this.getView().setModel(new JSONModel(),"checkbox");
             this.getView().setModel(this.oJSONModel,"dataModel");
 
 
             var pageLayout=this.getView().byId("pageLayout");
-            var pageSection=this.getView().byId("CalenderInterval")
-            pageLayout.setSelectedSection(pageSection);        },
+            var pageSection=this.getView().byId("Actions")
+            pageLayout.setSelectedSection(pageSection);      
+          },
         _attachRoutePatterMatched:function(oEvent){
 
 
@@ -697,8 +698,17 @@ sap.ui.define([
       var dateRange=calenderInterval.getSelectedDates()[0];
       this.displayCurrentDate(dateRange);
 
-    }
+    },
 
+
+    onSelect:function(oEvent){
+      var selected=oEvent.getParameter("selected");
+      this.getView().getModel("checkbox").setData({
+              c1:selected,
+              c2:selected,
+              c3:selected,
+      });
+    }
   
 
 
