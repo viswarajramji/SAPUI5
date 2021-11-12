@@ -64,11 +64,12 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:VBox>
-						<unified:FileUploader id="fileUpoad" name="uploadFile" placeholder="upload file" uploadUrl="www.sap.com" uploadStart="setUploadStarted" uploadComplete="Complete"></unified:FileUploader>
-						<m:Button text="upload" press="uploadfile"></m:Button>
-						</m:VBox>
-						
+						<m:MaskInput mask="SAP-XXX-XXX" placeholderSymbol="_" placeholder="Enter Input">
+							<m:rules>
+								<m:MaskInputRule maskFormatSymbol="X" regex="[A-Z0-9]"></m:MaskInputRule>
+							</m:rules>
+						</m:MaskInput>
+						<m:MaskInput mask="999-999-9" placeholderSymbol="_" placeholder="Enter value"></m:MaskInput>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

@@ -212,7 +212,6 @@ sap.ui.define([
 
 
           uploadfile:function(){
-            this.getView().setBusy(true);
             var fileUploadObject=this.getView().byId("fileUpoad");
             fileUploadObject.checkFileReadable().then(function(){
               fileUploadObject.upload();
