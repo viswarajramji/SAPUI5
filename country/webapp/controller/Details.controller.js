@@ -196,12 +196,35 @@ sap.ui.define([
             pageLayout.setSelectedSection(pageSection);   
             
               
-          var dataTimePicker=this.getView().byId("dataTimePicker");
-          dataTimePicker.setInitialFocusedDateValue(new Date(2017, 5, 13, 11, 12, 13))
+
 
 
 
           },
+
+          setUploadStarted:function(){
+            this.getView().setBusy(true);
+          },
+
+          Complete:function(){
+            this.getView().setBusy(false);
+          },
+
+
+          uploadfile:function(){
+            this.getView().setBusy(true);
+            var fileUploadObject=this.getView().byId("fileUpoad");
+            fileUploadObject.checkFileReadable().then(function(){
+              fileUploadObject.upload();
+            },function(oErr){
+              MessageBox.error("File error occured");
+            }).then(function(){
+              fileUploadObject.clear();
+            })
+            this.getView().setBusy(false);
+          },
+
+
 
           performChangeCheck:function(oEvent){
             var dateTimePickerObject=oEvent.getSource();

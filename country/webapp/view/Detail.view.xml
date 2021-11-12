@@ -64,16 +64,11 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:DateTimePicker 
-						id="dataTimePicker"
-						 value="2017-5-13-11-12-13" 
-						 valueFormat="yyyy-MM-dd-HH-mm-ss" 
-						 showCurrentDateButton="true"
-						 displayFormat="long"
-						 displayFormatType="Gregorian"
-						 minutesStep="5" secondsStep="5"
-						 showFooter="false"
-						 change="performChangeCheck"></m:DateTimePicker>
+						<m:VBox>
+						<unified:FileUploader id="fileUpoad" name="uploadFile" placeholder="upload file" uploadUrl="www.sap.com" uploadStart="setUploadStarted" uploadComplete="Complete"></unified:FileUploader>
+						<m:Button text="upload" press="uploadfile"></m:Button>
+						</m:VBox>
+						
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
