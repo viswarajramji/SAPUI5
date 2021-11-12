@@ -64,9 +64,16 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:DateRangeSelection id ="dateSelection"
-					
-						></m:DateRangeSelection>
+						<m:DateTimePicker 
+						id="dataTimePicker"
+						 value="2017-5-13-11-12-13" 
+						 valueFormat="yyyy-MM-dd-HH-mm-ss" 
+						 showCurrentDateButton="true"
+						 displayFormat="long"
+						 displayFormatType="Gregorian"
+						 minutesStep="5" secondsStep="5"
+						 showFooter="false"
+						 change="performChangeCheck"></m:DateTimePicker>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

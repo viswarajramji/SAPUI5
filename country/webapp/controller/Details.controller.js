@@ -193,8 +193,40 @@ sap.ui.define([
 
             var pageLayout=this.getView().byId("pageLayout");
             var pageSection=this.getView().byId("Actions")
-            pageLayout.setSelectedSection(pageSection);      
+            pageLayout.setSelectedSection(pageSection);   
+            
+              
+          var dataTimePicker=this.getView().byId("dataTimePicker");
+          dataTimePicker.setInitialFocusedDateValue(new Date(2017, 5, 13, 11, 12, 13))
+
+
+
           },
+
+          performChangeCheck:function(oEvent){
+            var dateTimePickerObject=oEvent.getSource();
+            var valid= oEvent.getParameter("valid");
+            var value= oEvent.getParameter("value");
+            if(!valid){
+              dateTimePickerObject.setValueState(ValueState.Error);
+            }else{
+              dateTimePickerObject.setValueState(ValueState.Success);
+              MessageBox.show(value);
+            }
+          },
+
+        showDateRangeDate:function(oEvent){
+        var dateRange=oEvent.getSource();
+         var isValid= oEvent.getParameter("valid");
+         var date=oEvent.getParameter("value");
+
+         if(!isValid){
+          dateRange.setValueState(ValueState.Error);
+         }else{
+          dateRange.setValueState(ValueState.Success);
+          MessageBox.show(date);
+         }
+        },
         _attachRoutePatterMatched:function(oEvent){
 
 

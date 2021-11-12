@@ -977,4 +977,17 @@
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
 		</uxap:ObjectPageSection>
+
+
+			<uxap:ObjectPageSection title="Actions" id="Actions">
+			<uxap:subSections>
+				<uxap:ObjectPageSubSection >
+					<uxap:blocks>
+						<m:DateRangeSelection id ="dateRangeSelection"
+					
+						></m:DateRangeSelection>
+					</uxap:blocks>
+				</uxap:ObjectPageSubSection>
+			</uxap:subSections>
+		</uxap:ObjectPageSection>
 -->
