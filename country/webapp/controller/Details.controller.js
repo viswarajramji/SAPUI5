@@ -798,6 +798,11 @@ sap.ui.define([
       }
 
 
+    },
+
+    changed:function(oEvent){
+      var rangeValue= oEvent.getSource().getValue();
+      console.log(rangeValue);
     }
 
   

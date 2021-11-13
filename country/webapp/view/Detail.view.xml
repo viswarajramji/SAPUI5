@@ -64,7 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:RangeSlider min="0" max="100" range="10,50" enableTickmarks="true" step="10" showAdvancedTooltip="true" ></m:RangeSlider>
+						<m:RatingIndicator maxValue="10" iconSize="25px" value="5"  change=".changed"></m:RatingIndicator>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
