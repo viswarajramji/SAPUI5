@@ -64,11 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:RadioButtonGroup id ="RadioButtonGroup" valueState="Error">
-							<m:RadioButton id="RadioButton1" text="Test1"  editable="false"></m:RadioButton>
-							<m:RadioButton id="RadioButton2" text="Test2" editable="true"></m:RadioButton>
-							<m:RadioButton id="RadioButton3" text="Test3" enabled="false"></m:RadioButton>
-						</m:RadioButtonGroup>
+						<m:RangeSlider min="0" max="100" range="10,50" enableTickmarks="true" step="10" showAdvancedTooltip="true" ></m:RangeSlider>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
