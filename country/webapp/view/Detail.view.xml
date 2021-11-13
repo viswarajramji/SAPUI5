@@ -64,12 +64,11 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:MaskInput mask="SAP-XXX-XXX" placeholderSymbol="_" placeholder="Enter Input">
-							<m:rules>
-								<m:MaskInputRule maskFormatSymbol="X" regex="[A-Z0-9]"></m:MaskInputRule>
-							</m:rules>
-						</m:MaskInput>
-						<m:MaskInput mask="999-999-9" placeholderSymbol="_" placeholder="Enter value"></m:MaskInput>
+						<m:RadioButtonGroup id ="RadioButtonGroup" valueState="Error">
+							<m:RadioButton id="RadioButton1" text="Test1"></m:RadioButton>
+							<m:RadioButton id="RadioButton2" text="Test2"></m:RadioButton>
+							<m:RadioButton id="RadioButton3" text="Test3"></m:RadioButton>
+						</m:RadioButtonGroup>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
