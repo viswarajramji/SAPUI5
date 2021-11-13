@@ -64,14 +64,16 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<richtexteditor:RichTextEditor 
-						editorType="TinyMCE4" 
-						height="1000px" 
-						width="100%" 
-						customToolbar="true" 
-						showGroupFont="true" 
-						showGroupLink="true" 
-						showGroupInsert="true"></richtexteditor:RichTextEditor>
+						<m:SegmentedButton selectedKey="C" selectionChange="proccessSelection">
+							<m:items>
+								<m:SegmentedButtonItem key="A" text="A"></m:SegmentedButtonItem>
+								<m:SegmentedButtonItem key="B" text="B"></m:SegmentedButtonItem>
+								<m:SegmentedButtonItem key="C" text="C"></m:SegmentedButtonItem>
+							</m:items>
+						</m:SegmentedButton>
+
+
+
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

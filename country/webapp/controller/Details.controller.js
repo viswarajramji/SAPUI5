@@ -803,6 +803,33 @@ sap.ui.define([
     changed:function(oEvent){
       var rangeValue= oEvent.getSource().getValue();
       console.log(rangeValue);
+    },
+
+    search:function(oEvent){
+      var searchValue=oEvent.getSource().getValue();
+      alert(searchValue);
+    },
+
+    showDailog:function(){
+      if(!this._dailog){
+        this._dailog=Fragment.load({
+          name:"country.fragment.DialogBox",
+          controller:this
+        }).then(function(oDialog){
+            this.getView().addDependent(oDialog);
+            return oDialog;
+        }.bind(this));
+      }
+
+      this._dailog.then(function(oDialog){
+        oDialog.open();
+      })
+
+    },
+
+    proccessSelection:function(oEvent){
+      var segementItem= oEvent.getParameter("item");
+      MessageBox.show(segementItem.getText());
     }
 
   

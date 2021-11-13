@@ -20,6 +20,10 @@
     <Button text="cancel" press="cancel"></Button>
     </endButton>
     <subHeader>
+        <OverflowToolbar
+        >
+            <SearchField id ="mysearch"></SearchField>
+        </OverflowToolbar>
     </subHeader>
 </Dialog>
 </c:FragmentDefinition>
