@@ -1,4 +1,4 @@
-<mvc:View xmlns:codeeditor="sap.ui.codeeditor" xmlns:unified="sap.ui.unified" xmlns:layout="sap.ui.layout" xmlns:dnd="sap.ui.core.dnd" xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
+<mvc:View xmlns:richtexteditor="sap.ui.richtexteditor" xmlns:codeeditor="sap.ui.codeeditor" xmlns:unified="sap.ui.unified" xmlns:layout="sap.ui.layout" xmlns:dnd="sap.ui.core.dnd" xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:uxap="sap.uxap"
 	controllerName="country.controller.Details" xmlns:grid="sap.ui.layout.cssgrid"
 	xmlns:mvc="sap.ui.core.mvc"
 	>
@@ -64,7 +64,14 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:RatingIndicator maxValue="10" iconSize="25px" value="5"  change=".changed"></m:RatingIndicator>
+						<richtexteditor:RichTextEditor 
+						editorType="TinyMCE4" 
+						height="1000px" 
+						width="100%" 
+						customToolbar="true" 
+						showGroupFont="true" 
+						showGroupLink="true" 
+						showGroupInsert="true"></richtexteditor:RichTextEditor>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
