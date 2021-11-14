@@ -64,16 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-							<f:Avatar 
-							displaySize="XL"
-							displayShape="Square"
-							initials="AS"
-							backgroundColor="Accent9"
-							showBorder="true"
-							imageFitType="Contain"
-							badgeIcon="sap-icon://camera"
-							>
-						</f:Avatar>
+							<m:BusyIndicator size="1.5rem" ></m:BusyIndicator>
 			     	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
