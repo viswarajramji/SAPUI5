@@ -64,9 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:Button press="loadData"></m:Button>
-						<m:Text  id="textId" text="kjsdhfkjdsfjkdsfkdsjkfdsjkfsdkjfsd
-						sdfdsfdskfsdlfsdlkflksdfsdfdsfkljds"></m:Text>
+						<unified:Currency currency="EUR" stringValue="1234561232132112423424234234" useSymbol="false"></unified:Currency>
 			     	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
