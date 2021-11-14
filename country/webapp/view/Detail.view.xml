@@ -64,7 +64,10 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<unified:Currency currency="EUR" stringValue="1234561232132112423424234234" useSymbol="false"></unified:Currency>
+						<m:DraftIndicator id="draftIndicator"></m:DraftIndicator>
+						<m:Button text="showDraftSaving" press="showDraftSaving"></m:Button>
+						<m:Button text="showDraftSaved" press="showDraftSaved"></m:Button>
+						<m:Button text="clearDraftState" press="clearDraftState"></m:Button>
 			     	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

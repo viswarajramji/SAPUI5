@@ -906,7 +906,26 @@ sap.ui.define([
      setTimeout(function(){
       textId.setBusy(false);
      },5000);
+    },
+
+    showDraftSaving:function(){
+      var draftIndicator=this.getView().byId("draftIndicator");
+      draftIndicator.showDraftSaving();
+    },
+
+
+    showDraftSaved:function(){
+      var draftIndicator=this.getView().byId("draftIndicator");
+      draftIndicator.showDraftSaved();
+    },
+
+
+    clearDraftState:function(){
+      var draftIndicator=this.getView().byId("draftIndicator");
+      draftIndicator.clearDraftState();
     }
+
+    
 
 	// oSettings = {
 	// 			workbook: {
