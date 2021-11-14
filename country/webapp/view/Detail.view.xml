@@ -64,7 +64,8 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:ExpandableText overflowMode="Inplace" text="The full text is displayed in place. Lorem ipsum dolor sit amet, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr"></m:ExpandableText>			   	</uxap:blocks>
+						<m:Button text="show busy Indicator" press="loadBusyDailog"></m:Button>
+					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
 		</uxap:ObjectPageSection>

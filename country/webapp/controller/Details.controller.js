@@ -22,6 +22,7 @@ sap.ui.define([
   "sap/m/ColorPalettePopover",
   "sap/ui/core/ValueState",
   "sap/ui/export/Spreadsheet",
+  "sap/ui/core/BusyIndicator",
 	'sap/ui/export/library',
 
 ], function(
@@ -48,6 +49,7 @@ sap.ui.define([
 	ColorPalettePopover,
 	ValueState,
 	Spreadsheet,
+	BusyIndicator,
 	exportLibrary
 	
 ) {
@@ -923,7 +925,16 @@ sap.ui.define([
     clearDraftState:function(){
       var draftIndicator=this.getView().byId("draftIndicator");
       draftIndicator.clearDraftState();
-    }
+    },
+
+    loadBusyDailog:function(){
+        BusyIndicator.show(5000);
+        setTimeout(function(){
+          BusyIndicator.hide();
+        },10000);
+    },
+
+
 
     
 
