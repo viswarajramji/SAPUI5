@@ -64,68 +64,17 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-	
-							<m:Table id="idDetailTable"
-							items="{products>/ProductCollection}"
-							growing="true"
-							growingThreshold="10"
-							growingScrollToLoad="true">
-							<m:headerToolbar>
-								<m:OverflowToolbar >
-									<m:content>
-										<m:Title text="Products"></m:Title>
-										<m:ToolbarSpacer ></m:ToolbarSpacer>
-										<m:ComboBox>
-											<m:items>
-												<core:Item key="Block" text="Block"></core:Item>
-												<core:Item key="Grid Large" text="Grid Large"></core:Item>
-												<core:Item key="Grid Small" text="Grid Small"></core:Item>
-											</m:items>
-										</m:ComboBox>
-										<m:Text text="Sticky Notes"></m:Text>
-										<m:CheckBox text="Column Header"></m:CheckBox>
-										<m:CheckBox text="Header Toolbar"></m:CheckBox>
-										<m:CheckBox text="InfoToolbarr"></m:CheckBox>
-										<m:ToggleButton text="Hide/show" press="displayInfo"></m:ToggleButton>
-										<m:Button icon="sap-icon://download" press="download"></m:Button>
-									</m:content>
-								</m:OverflowToolbar>
-							</m:headerToolbar>
-							<m:infoToolbar>
-								<m:OverflowToolbar >
-									<m:content>
-										<m:Text text="wide range of products"></m:Text>
-									</m:content>
-								</m:OverflowToolbar>
-							</m:infoToolbar>
-								<m:columns>
-									<m:Column>
-										<m:Text text="product"></m:Text>
-									</m:Column>
-									<m:Column>
-										<m:Text text="supplier"></m:Text>
-									</m:Column>
-									<m:Column>
-										<m:Text text="dimensions"></m:Text>
-									</m:Column>
-									<m:Column>
-										<m:Text text="weight"></m:Text>
-									</m:Column>
-									<m:Column>
-										<m:Text text="price"></m:Text>
-									</m:Column>
-								</m:columns>
-								<m:items>
-									<m:ColumnListItem >
-											<m:ObjectIdentifier title="{products>Name}" text="{products>ProductId}"></m:ObjectIdentifier>
-											<m:Text text="{products>ProductId}"></m:Text>
-											<m:Text text="{products>Width} X {products>Height} X {products>Depth}"></m:Text>
-											
-											<m:ObjectIdentifier text="{products>ProductId}"></m:ObjectIdentifier>
-									</m:ColumnListItem>
-								</m:items>
-							</m:Table>
-					</uxap:blocks>
+							<f:Avatar 
+							displaySize="XL"
+							displayShape="Square"
+							initials="AS"
+							backgroundColor="Accent9"
+							showBorder="true"
+							imageFitType="Contain"
+							badgeIcon="sap-icon://camera"
+							>
+						</f:Avatar>
+			     	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
 		</uxap:ObjectPageSection>
