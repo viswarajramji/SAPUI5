@@ -64,29 +64,9 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<f:Card width="300px">
-							<f:header>
-								<cards:Header 
-								title="Buy bus ticket on-line"
-								subtitle="Buy a single-ride ticket for a date"
-								iconSrc="sap-icon://bus-public-transport"
-								 ></cards:Header>
-							</f:header>
-							<f:content>
-							 <m:VBox>
-								<m:HBox justifyContent="SpaceBetween" class="sapUiSmallMargin">
-									<m:Input  placeholder="From City"	width="120px" class="sapUiSmallMarginEnd"  ></m:Input>
-									<m:Input  placeholder="To City" 	width="120px"></m:Input>
-								</m:HBox>
-								<m:HBox justifyContent="SpaceBetween" class="sapUiSmallMargin">
-									<m:items>
-										<m:DateTimePicker  placeholder="select Date" showCurrentDateButton="true"></m:DateTimePicker>
-										<m:Button type="Emphasized" text="Search" class="sapUiMediumMarginBegin"></m:Button>
-									</m:items>
-								</m:HBox>
-							</m:VBox>
-							</f:content>
-						</f:Card>
+						<m:Button press="loadData"></m:Button>
+						<m:Text  id="textId" text="kjsdhfkjdsfjkdsfkdsjkfdsjkfsdkjfsd
+						sdfdsfdskfsdlfsdlkflksdfsdfdsfkljds"></m:Text>
 			     	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

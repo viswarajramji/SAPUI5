@@ -893,11 +893,19 @@ sap.ui.define([
         fileName:"Result.xlsx",
       }
 
-     var oSheet = new Spreadsheet(oSettings);
+      var oSheet = new Spreadsheet(oSettings);
 			oSheet.build().finally(function() {
 				oSheet.destroy();
 			});
 
+    },
+
+    loadData:function(oEvent){
+     var textId= this.getView().byId("textId");
+     textId.setBusy(true);
+     setTimeout(function(){
+      textId.setBusy(false);
+     },5000);
     }
 
 	// oSettings = {
