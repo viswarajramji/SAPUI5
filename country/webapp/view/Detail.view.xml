@@ -64,11 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:DraftIndicator id="draftIndicator"></m:DraftIndicator>
-						<m:Button text="showDraftSaving" press="showDraftSaving"></m:Button>
-						<m:Button text="showDraftSaved" press="showDraftSaved"></m:Button>
-						<m:Button text="clearDraftState" press="clearDraftState"></m:Button>
-			     	</uxap:blocks>
+						<m:ExpandableText overflowMode="Inplace" text="The full text is displayed in place. Lorem ipsum dolor sit amet, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr"></m:ExpandableText>			   	</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
 		</uxap:ObjectPageSection>
