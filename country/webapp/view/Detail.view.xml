@@ -64,21 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:Select 
-							wrapItemsText="true"
-							id="select"
-							forceSelection="false"
-							showSecondaryValues="true"
-							selectedKey="{products>/selectedKey}"
-							change="selectedValue"
-							items="{
-								path:'products>/ProductCollection'
-							}" >
-							<m:items>
-								<core:ListItem  key="{products>ProductId}" text="{products>Name}" icon="sap-icon://add" additionalText="{products>Name}" ></core:ListItem>
-							</m:items>
-						</m:Select>
-						<m:Button text="save" press="onsavevalue"></m:Button>
+						<m:Switch customTextOn="1" customTextOff="0" type="AcceptReject"  ></m:Switch>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
