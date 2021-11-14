@@ -64,16 +64,21 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:SegmentedButton selectedKey="C" selectionChange="proccessSelection">
+						<m:Select 
+							wrapItemsText="true"
+							id="select"
+							forceSelection="false"
+							showSecondaryValues="true"
+							selectedKey="{products>/selectedKey}"
+							change="selectedValue"
+							items="{
+								path:'products>/ProductCollection'
+							}" >
 							<m:items>
-								<m:SegmentedButtonItem key="A" text="A"></m:SegmentedButtonItem>
-								<m:SegmentedButtonItem key="B" text="B"></m:SegmentedButtonItem>
-								<m:SegmentedButtonItem key="C" text="C"></m:SegmentedButtonItem>
+								<core:ListItem  key="{products>ProductId}" text="{products>Name}" icon="sap-icon://add" additionalText="{products>Name}" ></core:ListItem>
 							</m:items>
-						</m:SegmentedButton>
-
-
-
+						</m:Select>
+						<m:Button text="save" press="onsavevalue"></m:Button>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>

@@ -830,7 +830,26 @@ sap.ui.define([
     proccessSelection:function(oEvent){
       var segementItem= oEvent.getParameter("item");
       MessageBox.show(segementItem.getText());
-    }
+    },
+    selectedValue:function(oEvent){
+      var selectItem=oEvent.getParameter("selectedItem");
+      MessageBox.show(selectItem.getKey()+"_"+selectItem.getText());
+
+    },
+
+    onsavevalue:function(){
+      var select= this.getView().byId("select");
+      var selectedKey=this.getView().getModel("products").getProperty("/selectedKey");
+      if(!selectedKey){
+         select.setValueState(ValueState.Error);
+         return;
+      }
+      MessageBox.show(selectedKey);
+      select.setValueState(ValueState.Success);
+    },
+
+
+
 
   
 
