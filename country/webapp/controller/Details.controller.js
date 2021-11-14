@@ -848,6 +848,13 @@ sap.ui.define([
       select.setValueState(ValueState.Success);
     },
 
+    handleLiveChange:function(oEvent){
+      var oTextArea=oEvent.getSource();
+      var textValue=oTextArea.getValue();
+      var isValid=textValue.length>10;
+      oTextArea.setValueState(isValid?ValueState.Warning:ValueState.None);
+    },
+
 
 
 
