@@ -63,13 +63,12 @@
 		<uxap:ObjectPageSection title="Actions" id="Actions">
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
-					<uxap:blocks>
-						<m:VBox width="300px">
-						<m:Label id="label"  design="Bold" text="Namesdsdgdgdfgd"  wrapping="true"  labelFor="label-input1"></m:Label>
-						<m:Input id="label-input1" required="true"></m:Input>
-					  </m:VBox>	
-
-					 
+					<uxap:blocks>	
+						<m:ObjectAttribute title="helo">
+							<m:customContent>
+									<m:Text text="hello guys"></m:Text>
+							</m:customContent>
+						</m:ObjectAttribute>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
