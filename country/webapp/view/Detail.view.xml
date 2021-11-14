@@ -64,7 +64,7 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:TimePicker value="19:15:15" valueFormat="HH:MM:SS" displayFormat="HH:MM:SS" maskMode="off"> </m:TimePicker>
+						<m:TimePickerSliders valueFormat="hh:mms:ss a" displayFormat="hh:mms:ss a"></m:TimePickerSliders>
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
