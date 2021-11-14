@@ -20,7 +20,9 @@ sap.ui.define([
   "sap/ui/table/library",
   "sap/ui/unified/DateRange",
   "sap/m/ColorPalettePopover",
-  "sap/ui/core/ValueState"
+  "sap/ui/core/ValueState",
+  "sap/ui/export/Spreadsheet",
+	'sap/ui/export/library',
 
 ], function(
 	Controller,
@@ -44,13 +46,17 @@ sap.ui.define([
 	library,
 	DateRange,
 	ColorPalettePopover,
-	ValueState
+	ValueState,
+	Spreadsheet,
+	exportLibrary
 	
 ) {
 	"use strict";
 
   // var urlHelper=library.urlHelper;
   // var SortOrder=sortLibrary.SortOrder;
+	var EdmType = exportLibrary.EdmType;
+
 	return Controller.extend("country.controller.Details", {
         /**
          * @override
@@ -855,8 +861,59 @@ sap.ui.define([
       oTextArea.setValueState(isValid?ValueState.Warning:ValueState.None);
     },
 
+    getColumns:function(){
+       var columns=[];
+       columns.push({
+        label:"productId",
+        property:"ProductId",
+        type: EdmType.String
+       });
 
+       columns.push({
+        label:"productDetails",
+        property:["Width","Height","Depth"],
+        type: EdmType.String,
+        template:"{0} X {1} X {2}"
+       });
 
+       return columns;
+
+    },
+
+    download:function(oEvent){    
+      var detailsTable= this.getView().byId("idDetailTable");
+      var items=detailsTable.getBinding("items");
+      var cols=this.getColumns();
+      var oSettings={
+        workbook:{
+          columns:cols,
+          hierarchyLevel: 'Level'
+        },
+        dataSource:items,
+        fileName:"Result.xlsx",
+      }
+
+     var oSheet = new Spreadsheet(oSettings);
+			oSheet.build().finally(function() {
+				oSheet.destroy();
+			});
+
+    }
+
+	// oSettings = {
+	// 			workbook: {
+	// 				columns: aCols,
+	// 				hierarchyLevel: 'Level'
+	// 			},
+	// 			dataSource: oRowBinding,
+	// 			fileName: 'Table export sample.xlsx',
+	// 			worker: false // We need to disable worker because we are using a MockServer as OData Service
+	// 		};
+
+	// 		oSheet = new Spreadsheet(oSettings);
+	// 		oSheet.build().finally(function() {
+	// 			oSheet.destroy();
+	// 		});
 
   
 
