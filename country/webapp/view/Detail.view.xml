@@ -64,7 +64,12 @@
 			<uxap:subSections>
 				<uxap:ObjectPageSubSection >
 					<uxap:blocks>
-						<m:Button text="show busy Indicator" press="loadBusyDailog"></m:Button>
+						<m:VBox width="300px">
+						<m:Label id="label"  design="Bold" text="Namesdsdgdgdfgd"  wrapping="true"  labelFor="label-input1"></m:Label>
+						<m:Input id="label-input1" required="true"></m:Input>
+					  </m:VBox>	
+
+					 
 					</uxap:blocks>
 				</uxap:ObjectPageSubSection>
 			</uxap:subSections>
