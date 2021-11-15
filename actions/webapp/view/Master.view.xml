@@ -8,9 +8,21 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						<GenericTag status="Warning" text="Project Cost" >
-							<ObjectNumber number="123" unit="%" state="Error" ></ObjectNumber>
-						</GenericTag>
+					
+					<Button >
+						<dependents>
+							<Menu title="My Menu"  visible="true">
+								<items>
+									<MenuItem text="a"></MenuItem>
+									<MenuItem text="a"></MenuItem>
+									<MenuItem text="a"></MenuItem>
+	
+								</items>
+							</Menu>
+						</dependents>
+						
+					</Button>
+						
 				</Page>
 			</pages>
 		</App>
