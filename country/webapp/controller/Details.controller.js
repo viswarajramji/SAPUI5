@@ -24,6 +24,8 @@ sap.ui.define([
   "sap/ui/export/Spreadsheet",
   "sap/ui/core/BusyIndicator",
 	'sap/ui/export/library',
+	"sap/f/library",
+
 
 ], function(
 	Controller,
@@ -50,7 +52,8 @@ sap.ui.define([
 	ValueState,
 	Spreadsheet,
 	BusyIndicator,
-	exportLibrary
+	exportLibrary,
+  fioriLibrary
 	
 ) {
 	"use strict";
@@ -933,6 +936,14 @@ sap.ui.define([
           BusyIndicator.hide();
         },10000);
     },
+
+    navigateToObject:function(){
+      this._oRouter.navTo("object",{
+        layout: fioriLibrary.LayoutType.EndColumnFullScreen
+    });
+    }
+
+
 
 
 

@@ -118,6 +118,11 @@
             "Master",
             "Detail"
           ]
+        },
+        {
+          "name":"object",
+          "pattern":"object/{layout}",
+          "target":["object"]
         }
       ],
       "targets": {
@@ -135,6 +140,13 @@
           "viewType":"XML",
           "transition": "flip",
           "controlAggregation": "midColumnPages",
+          "clearControlAggregation": false
+        },
+        "object":{
+          "viewId": "ObjectPage",
+          "viewName": "ObjectPage",
+          "viewType": "XML",
+          "controlAggregation": "endColumnPages",
           "clearControlAggregation": false
         }
       }
