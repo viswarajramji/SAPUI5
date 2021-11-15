@@ -9,12 +9,9 @@
 >
 <uxap:ObjectPageHeaderContent >
     <uxap:content>
-		<layout:VerticalLayout >
-			<ObjectAttribute title="User Id" text="123455"></ObjectAttribute>
-			<ObjectAttribute title="Functional Area:" text="Developement"></ObjectAttribute>
-			<ObjectAttribute title="Cost Center" text="PI DFA GD Programs and Produc"></ObjectAttribute>
-			<ObjectAttribute title="Email" text="email@address.com"></ObjectAttribute>
-		</layout:VerticalLayout>
+			<Title level="H1" wrapping="true" wrappingType="Hyphenated"> 
+				
+			</Title>
     </uxap:content>
 </uxap:ObjectPageHeaderContent>
 </mvc:View>
