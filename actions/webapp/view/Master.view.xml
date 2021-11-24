@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:layout="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -8,7 +8,33 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						
+						<layout:BlockLayout background="Dashboard">
+							<layout:BlockLayoutRow  accentCells="Accent1">
+								<layout:BlockLayoutCell
+									title="Title of the Layout"
+									width="50%"
+									scrollable="true"
+								>
+									<layout:content>
+										<Text text="hey there "></Text>
+									</layout:content>
+									<layout:titleLink>
+									</layout:titleLink>
+								</layout:BlockLayoutCell>
+								<layout:BlockLayoutCell
+								title="Title of the Layout"
+								width="50%"
+								scrollable="true"
+							>
+								<layout:content>
+									<Text text="hey there "></Text>
+								</layout:content>
+								<layout:titleLink>
+								</layout:titleLink>
+							</layout:BlockLayoutCell>
+							</layout:BlockLayoutRow>
+
+						</layout:BlockLayout>
 				</Page>
 			</pages>
 		</App>
