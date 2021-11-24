@@ -8,11 +8,7 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						<layout:Grid 
-						defaultSpan="XL3 L4 M6 S12"
-						defaultIndent="XL1 L1 M1 S1"
-						hSpacing="0"
-						vSpacing="1">
+						<layout:Grid >
 								<f:Card >
 									<f:header>
 										<cards:Header title="Personal Detail" ></cards:Header>
@@ -23,6 +19,9 @@
 											<Text text="this is my personal detail"></Text>
 										</VBox>
 									</f:content>
+									<f:layoutData>
+										<layout:GridData span="XL6 L6 M6 S6"></layout:GridData>
+									</f:layoutData>
 								</f:Card>
 
 								<f:Card >
@@ -35,6 +34,9 @@
 											<Text text="this is my personal detail"></Text>
 										</VBox>
 									</f:content>
+									<f:layoutData>
+										<layout:GridData span="XL6 L6 M6 S6"></layout:GridData>
+									</f:layoutData>
 								</f:Card>
 
 								<f:Card >
@@ -47,6 +49,9 @@
 											<Text text="this is my personal detail"></Text>
 										</VBox>
 									</f:content>
+									<f:layoutData>
+										<layout:GridData span="XL6 L6 M6 S6"></layout:GridData>
+									</f:layoutData>
 								</f:Card>
 								<f:Card >
 									<f:header>
@@ -58,8 +63,11 @@
 											<Text text="this is my personal detail"></Text>
 										</VBox>
 									</f:content>
+									<f:layoutData>
+										<layout:GridData span="XL6 L6 M6 S6"></layout:GridData>
+									</f:layoutData>
 								</f:Card>
-						</layout:Grid>
+							</layout:Grid>
 				</Page>
 			</pages>
 		</App>
