@@ -1,4 +1,4 @@
-<mvc:View xmlns:layout="sap.ui.layout"
+<mvc:View xmlns:cards="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -8,20 +8,58 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<layout:DynamicSideContent id="DynamicSideContent"
-					class="sapUiDSCExplored sapUiContentPadding"
-					containerQuery="true" sideContentPosition="Begin" equalSplit="true">
-					<VBox >
-						<Title text="Main Content"></Title>
-						<Text text="hello this is viswarajramji "></Text>
-					</VBox>
-						<layout:sideContent>
-							<VBox >
-								<Title text="Main Content side"></Title>
-								<Text text="hello this is viswarajramji "></Text>
-							</VBox>
-						</layout:sideContent>
-					</layout:DynamicSideContent>
+						<layout:Grid 
+						defaultSpan="XL3 L4 M6 S12"
+						defaultIndent="XL1 L1 M1 S1"
+						hSpacing="0"
+						vSpacing="1">
+								<f:Card >
+									<f:header>
+										<cards:Header title="Personal Detail" ></cards:Header>
+									</f:header>
+									<f:content>
+										
+										<VBox  class="sapUiSmallMargin">
+											<Text text="this is my personal detail"></Text>
+										</VBox>
+									</f:content>
+								</f:Card>
+
+								<f:Card >
+									<f:header>
+										<cards:Header title="Personal Detail" ></cards:Header>
+									</f:header>
+									<f:content>
+										
+										<VBox  class="sapUiSmallMargin">
+											<Text text="this is my personal detail"></Text>
+										</VBox>
+									</f:content>
+								</f:Card>
+
+								<f:Card >
+									<f:header>
+										<cards:Header title="Personal Detail" ></cards:Header>
+									</f:header>
+									<f:content>
+										
+										<VBox  class="sapUiSmallMargin">
+											<Text text="this is my personal detail"></Text>
+										</VBox>
+									</f:content>
+								</f:Card>
+								<f:Card >
+									<f:header>
+										<cards:Header title="Personal Detail" ></cards:Header>
+									</f:header>
+									<f:content>
+										
+										<VBox  class="sapUiSmallMargin">
+											<Text text="this is my personal detail"></Text>
+										</VBox>
+									</f:content>
+								</f:Card>
+						</layout:Grid>
 				</Page>
 			</pages>
 		</App>
