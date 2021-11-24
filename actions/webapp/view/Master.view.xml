@@ -8,24 +8,18 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						<layout:BlockLayout background="Dashboard">
-							<layout:BlockLayoutRow  accentCells="Accent1">
-								<layout:BlockLayoutCell
-									title="Title of the Layout"
-									width="50%"
-									scrollable="true"
-									
-								>
-									<layout:content>
-										<Text text="hey there "></Text>
-									</layout:content>
-									<layout:titleLink>
-										<Link text="This is a title link" href="https://openui5.hana.ondemand.com/" target="_blank" />
-									</layout:titleLink>
-								</layout:BlockLayoutCell>
-							</layout:BlockLayoutRow>
-
-						</layout:BlockLayout>
+						<layout:DynamicSideContent 	
+						class="sapUiDSCExplored sapUiContentPadding"
+						sideContentFallDown="BelowM"
+						containerQuery="true"
+						breakpointChanged="handleBreakpointChanged">
+							<Title text="Main content Area"></Title>
+							<Text text="hello world this is viswa"></Text>
+							<layout:sideContent>
+								<Title text="this is title content"></Title>
+								<Text text="this is second world"></Text>
+							</layout:sideContent>
+						</layout:DynamicSideContent>
 				</Page>
 			</pages>
 		</App>
