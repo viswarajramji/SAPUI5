@@ -8,21 +8,20 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<layout:BlockLayout background="Dashboard" >
-						<layout:BlockLayoutRow accentCells="background" scrollable="true">
-							<layout:BlockLayoutCell width="100%" >
-								<layout:titleLink>
-									<Link text="Personal Details" href="www.google.com"></Link>
-								</layout:titleLink>
-							</layout:BlockLayoutCell>
-							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
-								<Text text="sdfsdfs"></Text>
-							</layout:BlockLayoutCell>
-							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
-								<Text text="sdfsdfs"></Text>
-							</layout:BlockLayoutCell>
-						</layout:BlockLayoutRow>
-					</layout:BlockLayout>
+					<layout:DynamicSideContent id="DynamicSideContent"
+					class="sapUiDSCExplored sapUiContentPadding"
+					containerQuery="true" sideContentPosition="Begin" equalSplit="true">
+					<VBox >
+						<Title text="Main Content"></Title>
+						<Text text="hello this is viswarajramji "></Text>
+					</VBox>
+						<layout:sideContent>
+							<VBox >
+								<Title text="Main Content side"></Title>
+								<Text text="hello this is viswarajramji "></Text>
+							</VBox>
+						</layout:sideContent>
+					</layout:DynamicSideContent>
 				</Page>
 			</pages>
 		</App>
