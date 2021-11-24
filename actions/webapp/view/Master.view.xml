@@ -1,56 +1,28 @@
-<mvc:View xmlns:l="sap.ui.layout"
+<mvc:View xmlns:layout="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
 >
 	<Shell id="shell">
-	<l:Grid
-		binding="{/PersonCollection}"
-		class="sapUiSmallMarginTop"
-		hSpacing="2"
-		defaultSpan="L6 M6 S10">
-		<l:content>
-			<Image src="{0/ContactPicUrl}" width="100%">
-				<layoutData>
-					<l:GridData
-						span="L3 M3 S8"
-						linebreakL="true"
-						linebreakM="true"
-						linebreakS="true" />
-				</layoutData>
-			</Image>
-			<VBox>
-				<Text text="{0/FirstName} {0/LastName}" class="nameTitle" />
-				<Text text="{0/Description}" />
-			</VBox>
-			<Image src="{1/ContactPicUrl}" width="100%">
-				<layoutData>
-					<l:GridData
-						span="L3 M3 S8"
-						linebreakL="true"
-						linebreakM="true"
-						linebreakS="true" />
-				</layoutData>
-			</Image>
-			<VBox>
-				<Text text="{1/FirstName} {1/LastName}" class="nameTitle" />
-				<Text text="{1/Description}" />
-			</VBox>
-			<Image src="{2/ContactPicUrl}" width="100%">
-				<layoutData>
-					<l:GridData
-						span="L3 M3 S8"
-						linebreakL="true"
-						linebreakM="true"
-						linebreakS="true" />
-				</layoutData>
-			</Image>
-			<VBox>
-				<Text text="{2/FirstName} {2/LastName}" class="nameTitle" />
-				<Text text="{2/Description}" />
-			</VBox>
-		</l:content>
-	</l:Grid>
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<layout:BlockLayout background="Dashboard" >
+						<layout:BlockLayoutRow accentCells="background" scrollable="true">
+							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
+								<Text text="sdfsdfs"></Text>
+							</layout:BlockLayoutCell>
+							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
+								<Text text="sdfsdfs"></Text>
+							</layout:BlockLayoutCell>
+							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
+								<Text text="sdfsdfs"></Text>
+							</layout:BlockLayoutCell>
+						</layout:BlockLayoutRow>
+					</layout:BlockLayout>
+				</Page>
+			</pages>
+		</App>
 	</Shell>
 </mvc:View>
