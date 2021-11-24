@@ -1,23 +1,56 @@
-<mvc:View xmlns:layout="sap.ui.layout"
+<mvc:View xmlns:l="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
 >
 	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-						<layout:FixFlex vertical="false" >
-							<layout:fixContent>
-								<Text text="hello world"></Text>
-							</layout:fixContent>
-							<layout:fixContent>
-								<Text class="column1" text="This container is flexible and it will adapts its size to fill the remaining size in the FixFlex control" />
-							</layout:fixContent>
-						</layout:FixFlex>
-				</Page>
-			</pages>
-		</App>
+	<l:Grid
+		binding="{/PersonCollection}"
+		class="sapUiSmallMarginTop"
+		hSpacing="2"
+		defaultSpan="L6 M6 S10">
+		<l:content>
+			<Image src="{0/ContactPicUrl}" width="100%">
+				<layoutData>
+					<l:GridData
+						span="L3 M3 S8"
+						linebreakL="true"
+						linebreakM="true"
+						linebreakS="true" />
+				</layoutData>
+			</Image>
+			<VBox>
+				<Text text="{0/FirstName} {0/LastName}" class="nameTitle" />
+				<Text text="{0/Description}" />
+			</VBox>
+			<Image src="{1/ContactPicUrl}" width="100%">
+				<layoutData>
+					<l:GridData
+						span="L3 M3 S8"
+						linebreakL="true"
+						linebreakM="true"
+						linebreakS="true" />
+				</layoutData>
+			</Image>
+			<VBox>
+				<Text text="{1/FirstName} {1/LastName}" class="nameTitle" />
+				<Text text="{1/Description}" />
+			</VBox>
+			<Image src="{2/ContactPicUrl}" width="100%">
+				<layoutData>
+					<l:GridData
+						span="L3 M3 S8"
+						linebreakL="true"
+						linebreakM="true"
+						linebreakS="true" />
+				</layoutData>
+			</Image>
+			<VBox>
+				<Text text="{2/FirstName} {2/LastName}" class="nameTitle" />
+				<Text text="{2/Description}" />
+			</VBox>
+		</l:content>
+	</l:Grid>
 	</Shell>
 </mvc:View>
