@@ -14,24 +14,15 @@
 									title="Title of the Layout"
 									width="50%"
 									scrollable="true"
+									
 								>
 									<layout:content>
 										<Text text="hey there "></Text>
 									</layout:content>
 									<layout:titleLink>
+										<Link text="This is a title link" href="https://openui5.hana.ondemand.com/" target="_blank" />
 									</layout:titleLink>
 								</layout:BlockLayoutCell>
-								<layout:BlockLayoutCell
-								title="Title of the Layout"
-								width="50%"
-								scrollable="true"
-							>
-								<layout:content>
-									<Text text="hey there "></Text>
-								</layout:content>
-								<layout:titleLink>
-								</layout:titleLink>
-							</layout:BlockLayoutCell>
 							</layout:BlockLayoutRow>
 
 						</layout:BlockLayout>
