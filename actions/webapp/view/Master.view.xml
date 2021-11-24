@@ -10,8 +10,10 @@
 				<Page id="page" title="{i18n>title}">
 					<layout:BlockLayout background="Dashboard" >
 						<layout:BlockLayoutRow accentCells="background" scrollable="true">
-							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
-								<Text text="sdfsdfs"></Text>
+							<layout:BlockLayoutCell width="100%" >
+								<layout:titleLink>
+									<Link text="Personal Details" href="www.google.com"></Link>
+								</layout:titleLink>
 							</layout:BlockLayoutCell>
 							<layout:BlockLayoutCell title="Personal Detail" width="100%" >
 								<Text text="sdfsdfs"></Text>
