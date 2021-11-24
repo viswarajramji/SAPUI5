@@ -8,18 +8,14 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-						<layout:DynamicSideContent 	
-						class="sapUiDSCExplored sapUiContentPadding"
-						sideContentFallDown="BelowM"
-						containerQuery="true"
-						breakpointChanged="handleBreakpointChanged">
-							<Title text="Main content Area"></Title>
-							<Text text="hello world this is viswa"></Text>
-							<layout:sideContent>
-								<Title text="this is title content"></Title>
-								<Text text="this is second world"></Text>
-							</layout:sideContent>
-						</layout:DynamicSideContent>
+						<layout:FixFlex vertical="false" >
+							<layout:fixContent>
+								<Text text="hello world"></Text>
+							</layout:fixContent>
+							<layout:fixContent>
+								<Text class="column1" text="This container is flexible and it will adapts its size to fill the remaining size in the FixFlex control" />
+							</layout:fixContent>
+						</layout:FixFlex>
 				</Page>
 			</pages>
 		</App>
