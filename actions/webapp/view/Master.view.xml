@@ -8,54 +8,39 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<layout:Grid >
-							<Image src="../test.jpeg" width="200px" class="sapUiSmallMargin">
-								<layoutData>
-									<layout:GridData span="XL2 L2 M3 S3" ></layout:GridData>
-								</layoutData>
-							</Image>
-							<VBox class="sapUiMediumMargin">
-								<items>
-									<Title text="George Washington" ></Title>
-									<Text text="George Washington was the first President of the United States, the commander-in-chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States."></Text>
-								</items>
-								<layoutData>
-									<layout:GridData span="XL4 L4 M12 S12"></layout:GridData>
-								</layoutData>
-							</VBox>
-					</layout:Grid>
-					<layout:Grid >
-							<Image src="../test.jpeg" width="200px" class="sapUiSmallMargin">
-								<layoutData>
-									<layout:GridData span="XL2 L2 M3 S3" ></layout:GridData>
-								</layoutData>
-							</Image>
-							<VBox class="sapUiMediumMargin">
-								<items>
-									<Title text="George Washington" ></Title>
-									<Text text="George Washington was the first President of the United States, the commander-in-chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States."></Text>
-								</items>
-								<layoutData>
-									<layout:GridData span="XL4 L2 M12 S12"></layout:GridData>
-								</layoutData>
-							</VBox>
-					</layout:Grid>
-					<layout:Grid >
-							<Image src="../test.jpeg" width="200px" class="sapUiSmallMargin">
-								<layoutData>
-									<layout:GridData span="XL2 L2 M3 S3" ></layout:GridData>
-								</layoutData>
-							</Image>
-							<VBox class="sapUiMediumMargin">
-								<items>
-									<Title text="George Washington" ></Title>
-									<Text text="George Washington was the first President of the United States, the commander-in-chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States."></Text>
-								</items>
-								<layoutData>
-									<layout:GridData span="XL4 L4 M12 S12"></layout:GridData>
-								</layoutData>
-							</VBox>
-					</layout:Grid>
+					<layout:ResponsiveSplitter defaultPane="default">
+						<layout:PaneContainer >
+							<layout:SplitPane  requiredParentWidth="400" id="default" >
+								<Panel >
+									<Select forceSelection="true">
+										<core:Item key="1" text="1"></core:Item>
+										<core:Item key="2" text="2"></core:Item>
+										<core:Item key="3" text="3"></core:Item>
+									</Select>
+								</Panel>
+							</layout:SplitPane>
+							<layout:PaneContainer orientation="Vertical">
+								<layout:SplitPane >
+									<Panel >
+										<Select forceSelection="true">
+											<core:Item key="1" text="1"></core:Item>
+											<core:Item key="2" text="2"></core:Item>
+											<core:Item key="3" text="3"></core:Item>
+										</Select>
+									</Panel>
+								</layout:SplitPane>
+								<layout:SplitPane >
+									<Panel >
+										<Select forceSelection="true">
+											<core:Item key="1" text="1"></core:Item>
+											<core:Item key="2" text="2"></core:Item>
+											<core:Item key="3" text="3"></core:Item>
+										</Select>
+									</Panel>
+								</layout:SplitPane>
+							</layout:PaneContainer>
+						</layout:PaneContainer>
+					</layout:ResponsiveSplitter>
 				</Page>
 			</pages>
 		</App>
