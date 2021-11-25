@@ -47,3 +47,11 @@ Revise Diplay
  Progress Indicatro
  Texst and Title
  
+
+25 Nov
+Layout Revise
+Block Layout
+DynamicSideContent
+FixFlex
+Grid
+Horizontal Layout
