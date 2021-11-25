@@ -1,4 +1,4 @@
-<mvc:View xmlns:cards="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+<mvc:View xmlns:filterbar="sap.ui.comp.filterbar" xmlns:cards="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -7,90 +7,33 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<f:DynamicPage toggleHeaderOnTitleClick="true" 	class="sapUiNoContentPadding" stickySubheaderProvider="iconTabBar">
-					<f:title >
-						<f:DynamicPageTitle >
-							<f:breadcrumbs>
-								
-								<Breadcrumbs currentLocationText="My Page">
-									<Link text="Home"></Link>
-								</Breadcrumbs>
-							</f:breadcrumbs>
-							<f:navigationActions>
-								<Button
-								icon="sap-icon://full-screen"
-								type="Transparent" />
-								<Button
-								icon="sap-icon://exit-full-screen"
-								type="Transparent" />
-								<Button
-								icon="sap-icon://decline"
-								type="Transparent" />
-							</f:navigationActions>
-							<f:heading>
-								<Title text="HeaderTitle" level="H1"></Title>
-							</f:heading>
-							<f:content>
-								<GenericTag text="SR" status="Error" design="StatusIconHidden">
-									<ObjectNumber number="2" unit="M" state="Error"></ObjectNumber>
-								</GenericTag>
-							</f:content>
-							<f:expandedContent>
-								<Label text="This is the subheading"></Label>
-							</f:expandedContent>
-							<f:snappedContent>
-								<Label text="This is the subheading"></Label>
-							</f:snappedContent>
-							<f:actions>
-								<Button type="Emphasized" text="Edit" ></Button>
-								<Button type="Transparent" text="Delete" ></Button>
-								<Button type="Transparent" text="Copy" ></Button>
-								<Button type="Transparent" text="Button with Layout" >
-									<layoutData>
-										<OverflowToolbarLayoutData priority="AlwaysOverflow"></OverflowToolbarLayoutData>
-									</layoutData>
-								</Button>
-							</f:actions>
-						</f:DynamicPageTitle>
-					</f:title>
-					<f:header>
-						<f:DynamicPageHeader pinnable="true" >
-							<layout:VerticalLayout >
-								<ObjectAttribute  title="Location" text="Warehouse"></ObjectAttribute>
-								<ObjectAttribute  title="Halway" text="23L"></ObjectAttribute>
-								<ObjectAttribute  title="Rack" text="34"></ObjectAttribute>
-					    	</layout:VerticalLayout>
-							<layout:VerticalLayout class="sapUiSmallMarginBegin">
-								<ObjectAttribute  title="Availability" ></ObjectAttribute>
-								<ObjectStatus state="Success" text="In Stock" ></ObjectStatus>
-					    	</layout:VerticalLayout>
-			
-						</f:DynamicPageHeader>
+					<layout:VerticalLayout
+						width="100%"
 						
-					 </f:header>
-					 <f:content>
-						<IconTabBar  id="iconTabBar">
-							<items>
-								<IconTabFilter text="Products">
-									<content>
-										<Text text="test"></Text>
-									</content>
-								</IconTabFilter>
-								<IconTabFilter text="Attachments">
-									<content>
-										<Text text="test"></Text>
-									</content>
-								</IconTabFilter>
-								<IconTabFilter text="Notes">
-									<content>
-										<Text text="test"></Text>
-									</content>
-								</IconTabFilter>
-							</items>
-		
-						</IconTabBar>
-					 </f:content>
-				</f:DynamicPage>
+					>
+						<layout:content>
+							<filterbar:FilterBar showClearButton="true" considerGroupTitle="true" >
+								
+								<filterbar:filterGroupItems>
+									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Delivery Date" partOfCurrentVariant="true" visibleInFilterBar="true">
+										<filterbar:control>
+											<DatePicker ></DatePicker>
+										</filterbar:control>
+									</filterbar:FilterGroupItem>
+									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Available Date" partOfCurrentVariant="true" visibleInFilterBar="false">
+										<filterbar:control>
+											<DatePicker ></DatePicker>
+										</filterbar:control>
+									</filterbar:FilterGroupItem>
+									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Proccessed Date" partOfCurrentVariant="true" visibleInFilterBar="false">
+										<filterbar:control>
+											<DatePicker ></DatePicker>
+										</filterbar:control>
+									</filterbar:FilterGroupItem>
+								</filterbar:filterGroupItems>
+							</filterbar:FilterBar>
+						</layout:content>
+					</layout:VerticalLayout>
 			</pages>
 		</App>
 	</Shell>
