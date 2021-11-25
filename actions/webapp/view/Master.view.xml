@@ -7,33 +7,67 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-					<layout:VerticalLayout
-						width="100%"
+					<f:DynamicPage >
+						<f:content>
+							
+						</f:content>
+						<f:footer>
+						</f:footer>
+						<f:header>
+							<f:DynamicPageHeader >
+								<filterbar:FilterBar
+									showGoOnFB="true"
+									useToolbar="true"
+									
+								>
+									<filterbar:filterItems>
+										<filterbar:FilterItem
+											label="Product Id"
+											mandatory="true"
+											name="Product Id">
+											<filterbar:control>
+												<Input type="Text"></Input>
+											</filterbar:control>
+										</filterbar:FilterItem>
+
+										<filterbar:FilterItem
+											label="Product Name"
+											mandatory="true"
+											name="Product Name">
+											<filterbar:control>
+												<Input type="Text"></Input>
+											</filterbar:control>
+										</filterbar:FilterItem>
+
+										<filterbar:FilterItem
+											label="Product Type"
+											mandatory="false"
+											name="Product Type"
+											visibleInFilterBar="false">
+											<filterbar:control>
+												<Input type="Text"></Input>
+											</filterbar:control>
+										</filterbar:FilterItem>
+
+
+
+									</filterbar:filterItems>
+								</filterbar:FilterBar>
+							</f:DynamicPageHeader>
+						</f:header>
+						<f:title>
+							<f:DynamicPageTitle >
+								<f:heading>
+									<Title text="My Products" level="H1"></Title>
+								</f:heading>
+								<f:actions>
+									<Button type="Transparent" text="Global Action"></Button>
+									<Button type="Transparent" text="Toggle "></Button>
+								</f:actions>
+							</f:DynamicPageTitle>
+						</f:title>
 						
-					>
-						<layout:content>
-							<filterbar:FilterBar showClearButton="true" considerGroupTitle="true" >
-								
-								<filterbar:filterGroupItems>
-									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Delivery Date" partOfCurrentVariant="true" visibleInFilterBar="true">
-										<filterbar:control>
-											<DatePicker ></DatePicker>
-										</filterbar:control>
-									</filterbar:FilterGroupItem>
-									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Available Date" partOfCurrentVariant="true" visibleInFilterBar="false">
-										<filterbar:control>
-											<DatePicker ></DatePicker>
-										</filterbar:control>
-									</filterbar:FilterGroupItem>
-									<filterbar:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Proccessed Date" partOfCurrentVariant="true" visibleInFilterBar="false">
-										<filterbar:control>
-											<DatePicker ></DatePicker>
-										</filterbar:control>
-									</filterbar:FilterGroupItem>
-								</filterbar:filterGroupItems>
-							</filterbar:FilterBar>
-						</layout:content>
-					</layout:VerticalLayout>
+					</f:DynamicPage>
 			</pages>
 		</App>
 	</Shell>
