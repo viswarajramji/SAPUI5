@@ -13,13 +13,32 @@
 					</headerContent>
 					<subHeader>
 						<Toolbar >
-							<OverflowToolbar >
-								<SearchField ></SearchField>
-							</OverflowToolbar>
+		
+								<SearchField >
+									<layoutData>
+										<ToolbarLayoutData shrinkable="false"></ToolbarLayoutData>
+									</layoutData>
+								</SearchField>
 						</Toolbar>
 					</subHeader>
-					<content>
-						<Text text="skfdshlfdhslkfdslifjlsdi"></Text>
+					<content>	
+						<Toolbar >
+
+							<Label text="This is a long non-shrinkable label.">
+								<layoutData>
+									<ToolbarLayoutData shrinkable="true"></ToolbarLayoutData>
+								</layoutData>
+							</Label>
+						</Toolbar>
+						<Label ></Label>
+						<Bar>
+							<contentLeft>
+								<Label text="This is a long non-shrinkable label."/>
+							</contentLeft>
+						</Bar>
+						<OverflowToolbar >
+							<Label text="This is a long non-shrinkable label."/>
+						</OverflowToolbar>
 					</content>
 					<footer>
 						<OverflowToolbar >
