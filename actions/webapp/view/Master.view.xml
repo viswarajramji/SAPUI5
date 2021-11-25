@@ -7,49 +7,76 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}" showNavButton="true" class="sapUiContentPadding">
-					<headerContent>
-						<Button icon="sap-icon://action"></Button>
-					</headerContent>
-					<subHeader>
-						<Toolbar >
-		
-								<SearchField >
+				<f:DynamicPage toggleHeaderOnTitleClick="true" >
+					<f:title >
+						<f:DynamicPageTitle >
+							<f:breadcrumbs>
+								
+								<Breadcrumbs currentLocationText="My Page">
+									<Link text="Home"></Link>
+								</Breadcrumbs>
+							</f:breadcrumbs>
+							<f:navigationActions>
+								<Button
+								icon="sap-icon://full-screen"
+								type="Transparent" />
+								<Button
+								icon="sap-icon://exit-full-screen"
+								type="Transparent" />
+								<Button
+								icon="sap-icon://decline"
+								type="Transparent" />
+							</f:navigationActions>
+							<f:heading>
+								<Title text="HeaderTitle" level="H1"></Title>
+							</f:heading>
+							<f:content>
+								<GenericTag text="SR" status="Error" design="StatusIconHidden">
+									<ObjectNumber number="2" unit="M" state="Error"></ObjectNumber>
+								</GenericTag>
+							</f:content>
+							<f:expandedContent>
+								<Label text="This is the subheading"></Label>
+							</f:expandedContent>
+							<f:snappedContent>
+								<Label text="This is the subheading"></Label>
+							</f:snappedContent>
+							<f:actions>
+								<Button type="Emphasized" text="Edit" ></Button>
+								<Button type="Transparent" text="Delete" ></Button>
+								<Button type="Transparent" text="Copy" ></Button>
+								<Button type="Transparent" text="Button with Layout" >
 									<layoutData>
-										<ToolbarLayoutData shrinkable="false"></ToolbarLayoutData>
+										<OverflowToolbarLayoutData priority="AlwaysOverflow"></OverflowToolbarLayoutData>
 									</layoutData>
-								</SearchField>
-						</Toolbar>
-					</subHeader>
-					<content>	
-						<Toolbar >
-
-							<Label text="This is a long non-shrinkable label.">
-								<layoutData>
-									<ToolbarLayoutData shrinkable="true"></ToolbarLayoutData>
-								</layoutData>
-							</Label>
-						</Toolbar>
-						<Label ></Label>
-						<Bar>
-							<contentLeft>
-								<Label text="This is a long non-shrinkable label."/>
-							</contentLeft>
-						</Bar>
-						<OverflowToolbar >
-							<Label text="This is a long non-shrinkable label."/>
-						</OverflowToolbar>
-					</content>
-					<footer>
-						<OverflowToolbar >
-							<ToolbarSpacer></ToolbarSpacer>
-							<Button type="Accept" text="Accept"/>
-							<Button type="Reject" text="Reject"/>
-							<Button type="Transparent" text="Edit"/>
-							<Button type="Transparent" text="Delete"/>
-						</OverflowToolbar>
-					</footer>
-				</Page>
+								</Button>
+							</f:actions>
+						</f:DynamicPageTitle>
+					</f:title>
+					<f:header>
+						<f:DynamicPageHeader pinnable="true" >
+							<layout:VerticalLayout >
+								<ObjectAttribute  title="Location" text="Warehouse"></ObjectAttribute>
+								<ObjectAttribute  title="Halway" text="23L"></ObjectAttribute>
+								<ObjectAttribute  title="Rack" text="34"></ObjectAttribute>
+					    	</layout:VerticalLayout>
+							<layout:VerticalLayout class="sapUiSmallMarginBegin">
+								<ObjectAttribute  title="Availability" ></ObjectAttribute>
+								<ObjectStatus state="Success" text="In Stock" ></ObjectStatus>
+					    	</layout:VerticalLayout>
+						</f:DynamicPageHeader>
+					 </f:header>
+					 <f:content>
+						 <Table
+					 		items=""
+							 headerText="Products"
+						 >	
+							<columns>
+								
+							</columns>
+						 </Table>
+					 </f:content>
+				</f:DynamicPage>
 			</pages>
 		</App>
 	</Shell>
