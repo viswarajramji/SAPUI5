@@ -7,24 +7,29 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<layout:Splitter  width="100%">
-						<Button width="100%" text="hello world" >
-							<layoutData>
-								<layout:SplitterLayoutData size="auto" resizable="false"/>
-							</layoutData>
-						</Button>
-						<Button width="100%" text="hello world" >
-							<layoutData>
-								<layout:SplitterLayoutData size="auto" resizable="false"/>
-							</layoutData>
-						</Button>
-						<Button width="100%" text="hello world" >
-							<layoutData>
-								<layout:SplitterLayoutData size="auto"/>
-							</layoutData>
-						</Button>
-					</layout:Splitter>
+				<Page id="page" title="{i18n>title}" showNavButton="true" class="sapUiContentPadding">
+					<headerContent>
+						<Button icon="sap-icon://action"></Button>
+					</headerContent>
+					<subHeader>
+						<Toolbar >
+							<OverflowToolbar >
+								<SearchField ></SearchField>
+							</OverflowToolbar>
+						</Toolbar>
+					</subHeader>
+					<content>
+						<Text text="skfdshlfdhslkfdslifjlsdi"></Text>
+					</content>
+					<footer>
+						<OverflowToolbar >
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button type="Accept" text="Accept"/>
+							<Button type="Reject" text="Reject"/>
+							<Button type="Transparent" text="Edit"/>
+							<Button type="Transparent" text="Delete"/>
+						</OverflowToolbar>
+					</footer>
 				</Page>
 			</pages>
 		</App>
