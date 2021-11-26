@@ -7,71 +7,46 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<ScrollContainer class="sapUiMediumMargin" >
-					<Button text="Reveal Grid"></Button>
-					<Panel headerText="Grid Container Properties" >
-						<content>
-								<HBox  alignItems="Center" >
-									<items>
-										<Text text="Snap to Row" class="sapUiSmallMarginEnd"></Text>
-										<Switch type="AcceptReject" class="sapUiSmallMarginEnd"></Switch>
-										<Text text="(Should the items stretch to fill the rows which they occupy, or not. If turned on the items will stretch.)"></Text>
-									</items>
-								</HBox>
-						</content>
-					</Panel>
-					<Panel >
-						<content>
-							<Label text="Current grid columns count: 11"></Label>
-						</content>
-					</Panel>
-					<f:GridContainer class="sapUiSmallMargin"  >
-						<f:layout>
-							<f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
-						</f:layout>
-						<GenericTile header="Sales Fulfilment" subheader="Subtile">
-							<TileContent unit="EUR" footer="Current Quator"  >
-								<ImageContent  src="sap-icon://world"></ImageContent>
-							</TileContent>
-							<layoutData>
-								<f:GridContainerItemLayoutData minRows="2" columns="2" />
-							</layoutData>
-						</GenericTile>
-
-						<GenericTile header="Sales Fulfilment" subheader="Subtile">
-							<TileContent unit="EUR" footer="Current Quator"  >
-								<ImageContent  src="sap-icon://world"></ImageContent>
-							</TileContent>
-							<layoutData>
-								<f:GridContainerItemLayoutData minRows="2" columns="2" />
-							</layoutData>
-						</GenericTile>
-
-
-						<GenericTile header="Sales Fulfilment" subheader="Subtile">
-							<TileContent unit="EUR" footer="Current Quator"  >
-								<ImageContent  src="sap-icon://world"></ImageContent>
-							</TileContent>
-							<layoutData>
-								<f:GridContainerItemLayoutData minRows="2" columns="2" />
-							</layoutData>
-						</GenericTile>
-
-						<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat">
-							<layoutData>
-								<f:GridContainerItemLayoutData minRows="2" columns="4" />
-							</layoutData>
+				<ScrollContainer >
+					<ObjectHeader title="Notebook Basic 15"
+							number="956"
+							numberUnit="EUR"
+							numberState="Success"
+							backgroundDesign="Translucent"
+							
+							>
+							<attributes>
+								<ObjectAttribute text="Notebook Basic 15 with 2,80 GHz quad core, 15 LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro" ></ObjectAttribute>
+								<ObjectAttribute title="Manufacture" text="Very Best Screens" ></ObjectAttribute>
+							</attributes>
+						
+							<statuses>
+								<ObjectStatus text="Pending" state="Warning" title="Approval"></ObjectStatus>
+							</statuses>
+							<headerContainer>
+								
+							</headerContainer>
+						</ObjectHeader>
+						<HeaderContainer id="headerContainer" orientation="Vertical" height="400px">
+							<Text
+								text="Trst"
+							>
+							
+								
+							</Text>
+							<Text
+							text="Trst"
+						>
+						
+							
 						</Text>
-
-						<GenericTile header="Sales Fulfilment" subheader="Subtile">
-							<TileContent unit="EUR" footer="Current Quator"  >
-								<ImageContent  src="sap-icon://world"></ImageContent>
-							</TileContent>
-							<layoutData>
-								<f:GridContainerItemLayoutData minRows="2" columns="2" />
-							</layoutData>
-						</GenericTile>
-					</f:GridContainer>
+						<Text
+						text="Trst"
+					>
+					
+						
+					</Text>
+						</HeaderContainer>
 				</ScrollContainer>
 			</pages>
 		</App>
