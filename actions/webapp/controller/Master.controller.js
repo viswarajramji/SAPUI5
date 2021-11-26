@@ -10,6 +10,13 @@ sap.ui.define([
 		return Controller.extend("actions.controller.Master", {
 			onInit: function () {
 
+			},
+
+			changePage:function(oEvent){
+			 var oButton=oEvent.getSource();
+			 var targetPage= oButton.data("target");
+			 var nav=this.getView().byId("navContainer");
+			 nav.to(this.getView().byId(targetPage),"fade");
 			}
 		});
 	});
