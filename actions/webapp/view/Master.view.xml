@@ -8,7 +8,7 @@
 		<App id="app">
 			<pages>
 				<ScrollContainer >
-					<MessageStrip  text="Error with default icon and close button:" type="Error" showCloseButton="true" showIcon="true">
+					<MessageStrip  enableFormattedText="true" text="test" type="Error" showCloseButton="true" showIcon="true">
 						<Link text="Open SAP HomePage" href="https://www.google.com" target="_blank" ></Link>
 					</MessageStrip>
 				</ScrollContainer>
