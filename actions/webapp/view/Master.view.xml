@@ -7,88 +7,32 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-					<SplitContainer	 mode="ShowHideMode">
-						<masterPages>
-							<semantic:MasterPage id="MyMaster" title="Master Page" >
-								<semantic:landmarkInfo>
-									<PageAccessibleLandmarkInfo rootLabel="Root label" headerLabel="Header label" footerLabel="Footer label"></PageAccessibleLandmarkInfo>
-								</semantic:landmarkInfo>
-								<semantic:addAction>
-									<semantic:AddAction ></semantic:AddAction>
-								</semantic:addAction>
-								<semantic:sort>
-									<semantic:SortAction></semantic:SortAction>
-								</semantic:sort>
-								<semantic:group>
-									<semantic:GroupAction ></semantic:GroupAction>
-								</semantic:group>
-								<semantic:filter>
-									<semantic:FilterAction ></semantic:FilterAction>
-								</semantic:filter>
-								<semantic:group>
-									<semantic:GroupSelect ></semantic:GroupSelect>
-								</semantic:group>
-								<semantic:multiSelectAction>
-									<semantic:MultiSelectAction ></semantic:MultiSelectAction>
-								</semantic:multiSelectAction>
-								<semantic:content>
-									<ObjectNumber number="123"></ObjectNumber>
-								</semantic:content>
-							</semantic:MasterPage>
-						</masterPages>
-						<detailPages>
-							<semantic:DetailPage title="Details Page">
-								<semantic:content>
-									<ObjectNumber number="123"></ObjectNumber>
-								</semantic:content>
-								<semantic:addAction>
-									<semantic:AddAction ></semantic:AddAction>
-								</semantic:addAction>
-								<semantic:cancelAction>
-								</semantic:cancelAction>
-								<semantic:deleteAction>
-								</semantic:deleteAction>
-								<semantic:discussInJamAction>
-								</semantic:discussInJamAction>
-								<semantic:draftIndicator>
-								</semantic:draftIndicator>
-								<semantic:editAction>
-								</semantic:editAction>
-								<semantic:favoriteAction>
-								</semantic:favoriteAction>
-								<semantic:flagAction>
-								</semantic:flagAction>
-								<semantic:forwardAction>
-								</semantic:forwardAction>
-								<semantic:mainAction>
-								</semantic:mainAction>
-								<semantic:messagesIndicator>
-								</semantic:messagesIndicator>
-								<semantic:negativeAction>
-								</semantic:negativeAction>
-								<semantic:openInAction>
-								</semantic:openInAction>
-								<semantic:pagingAction>
-								</semantic:pagingAction>
-								<semantic:positiveAction>
-								</semantic:positiveAction>
-								<semantic:printAction>
-								</semantic:printAction>
-								<semantic:saveAction>
-								</semantic:saveAction>
-								<semantic:saveAsTileAction>
-								</semantic:saveAsTileAction>
-								<semantic:sendEmailAction>
-								</semantic:sendEmailAction>
-								<semantic:sendMessageAction>
-									<semantic:SendMessageAction ></semantic:SendMessageAction>
-								</semantic:sendMessageAction>
-								<semantic:shareInJamAction>
-								</semantic:shareInJamAction>
-							</semantic:DetailPage>
-						</detailPages>
-					
-					</SplitContainer>
+					<semantic:FullscreenPage title="Full Screen Page" showNavButton="true">
+							<semantic:content>
+								<ObjectHeader title="test" backgroundDesign="Solid"></ObjectHeader>
+							</semantic:content>
+							<semantic:editAction>
+								<semantic:EditAction ></semantic:EditAction>
+							</semantic:editAction>
+							<semantic:deleteAction>
+								<semantic:DeleteAction ></semantic:DeleteAction>
+							</semantic:deleteAction>
+							<semantic:addAction>
+								<semantic:AddAction
+								>
+									
+								</semantic:AddAction>
+							</semantic:addAction>
+							<semantic:favoriteAction>
+								<semantic:FavoriteAction ></semantic:FavoriteAction>
+							</semantic:favoriteAction>
+							<semantic:flagAction>
+								<semantic:FlagAction ></semantic:FlagAction>
+							</semantic:flagAction>
+							<semantic:forwardAction>
+								<semantic:ForwardAction ></semantic:ForwardAction>
+							</semantic:forwardAction>
+					</semantic:FullscreenPage>
 			</pages>
 		</App>
 	</Shell>
