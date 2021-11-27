@@ -17,6 +17,14 @@ sap.ui.define([
 			 var targetPage= oButton.data("target");
 			 var nav=this.getView().byId("navContainer");
 			 nav.to(this.getView().byId(targetPage),"fade");
+			},
+
+			search:function(oEvent){
+				var value=oEvent.getSource().getValue();
+				var draftContainer=this.getView().byId("draftIndicator");
+				draftContainer.showDraftSaving();
+				draftContainer.showDraftSaved();
+				
 			}
 		});
 	});

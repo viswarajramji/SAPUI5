@@ -10,6 +10,10 @@
 					<semantic:FullscreenPage title="Full Screen Page" showNavButton="true">
 							<semantic:content>
 								<ObjectHeader title="test" backgroundDesign="Solid"></ObjectHeader>
+								<HBox>
+									<SearchField id="search" search=".search"></SearchField>
+								</HBox>
+								
 							</semantic:content>
 							<semantic:editAction>
 								<semantic:EditAction ></semantic:EditAction>
@@ -32,6 +36,11 @@
 							<semantic:forwardAction>
 								<semantic:ForwardAction ></semantic:ForwardAction>
 							</semantic:forwardAction>
+							<semantic:draftIndicator>
+								<DraftIndicator id="draftIndicator">
+								
+								</DraftIndicator>
+							</semantic:draftIndicator>
 					</semantic:FullscreenPage>
 			</pages>
 		</App>
