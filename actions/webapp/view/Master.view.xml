@@ -7,30 +7,34 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page title="My Page" showNavButton="true">
-					<headerContent>
-						<Button
-							activeIcon="sap-icon://add"
-							icon="sap-icon://add">
-						</Button>
-					</headerContent>
-					<subHeader>
-						<OverflowToolbar>
-						<SearchField ></SearchField>
-						</OverflowToolbar>
-					</subHeader>
+				<Page title="My Page">
 					<content>
-						
+						<Panel >
+							<headerToolbar>
+								<OverflowToolbar>
+									<Title level="H1" text="Panel With Picture"	></Title>
+								</OverflowToolbar>
+							</headerToolbar>
+							<content>
+								<Text text="test"></Text>
+							</content>
+						</Panel>
+						<Panel >
+							<headerToolbar>
+								<OverflowToolbar>
+									<Title level="H1" text="Panel With Picture"	></Title>
+									<ToolbarSpacer ></ToolbarSpacer>
+									<Button type="Transparent"
+										icon="sap-icon://settings">
+										
+									</Button>
+								</OverflowToolbar>
+							</headerToolbar>
+							<content>
+								<Text text="test"></Text>
+							</content>
+						</Panel>
 					</content>
-					<footer>
-						<OverflowToolbar
-						>
-						<Button
-						activeIcon="sap-icon://add"
-						icon="sap-icon://add">
-					</Button>
-						</OverflowToolbar>
-					</footer>
 				</Page>
 			</pages>
 		</App>
