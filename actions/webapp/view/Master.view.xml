@@ -9,22 +9,25 @@
 			<pages>
 					<Page>
 						<content>
-							<SlideTile transitionTime="1000" displayTime="2000">
-								<GenericTile>
-									<tileContent>
-										<TileContent >
-											<NewsContent contentText="hello new" subheader="sub header"></NewsContent>
-										</TileContent>
-									</tileContent>
-								</GenericTile>
-								<GenericTile>
-									<tileContent>
-										<TileContent >
-											<NewsContent contentText="hello new123" subheader="sub header12313"></NewsContent>
-										</TileContent>
-									</tileContent>
-								</GenericTile>
-							</SlideTile>
+							<TabContainer showAddNewButton="true" selectedItem="BD">
+								<items>
+									<TabContainerItem id="PD" name="Personal Details">
+										<content>
+											<Label text="this is my personal details"/>
+										</content>
+									</TabContainerItem>
+									<TabContainerItem id="BD" name="Bank Details" >
+										<content>
+											<Label text="this is my personal details"/>
+										</content>
+									</TabContainerItem>
+									<TabContainerItem id="AD" name="Address Details">
+										<content>
+											<Label text="this is my personal details"/>
+										</content>
+									</TabContainerItem>
+								</items>
+							</TabContainer>
 						</content>
 						
 					</Page>
