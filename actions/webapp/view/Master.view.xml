@@ -7,52 +7,29 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<uxap:ObjectPageLayout  >
+				<uxap:ObjectPageLayout upperCaseAnchorBar="false" >
 					<uxap:headerTitle>
 						<uxap:ObjectPageHeader  objectTitle="Section Sample"></uxap:ObjectPageHeader>
 					</uxap:headerTitle>
-					<uxap:headerContent>
-						<Text text="This example explains the rules for the rendering of sections"></Text>
-					</uxap:headerContent>
+					
 					<uxap:sections>
 						<uxap:ObjectPageSection title="Section1">
 							<uxap:subSections>
-								<uxap:ObjectPageSubSection title="Section1.1" titleUppercase="true">
+								<uxap:ObjectPageSubSection title="Section1.1" mode="Collapsed" titleUppercase="true">
 									<uxap:blocks>
 										<Text text="block1"></Text>
 									</uxap:blocks>
+									<uxap:moreBlocks>
+										<Text text="block1"></Text>
+									</uxap:moreBlocks>
 								</uxap:ObjectPageSubSection>
 								<uxap:ObjectPageSubSection title="Section1.2" titleUppercase="true">
 									<uxap:blocks>
 										<Text text="block1"></Text>
 									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="Section1">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection title="Section1.1" titleUppercase="true">
-									<uxap:blocks>
+									<uxap:moreBlocks>
 										<Text text="block1"></Text>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-								<uxap:ObjectPageSubSection title="Section1.2" titleUppercase="true">
-									<uxap:blocks>
-										<Text text="block1"></Text>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection><uxap:ObjectPageSection title="Section1">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection title="Section1.1" titleUppercase="true">
-									<uxap:blocks>
-										<Text text="block1"></Text>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-								<uxap:ObjectPageSubSection title="Section1.2" titleUppercase="true">
-									<uxap:blocks>
-										<Text text="block1"></Text>
-									</uxap:blocks>
+									</uxap:moreBlocks>
 								</uxap:ObjectPageSubSection>
 							</uxap:subSections>
 						</uxap:ObjectPageSection>
