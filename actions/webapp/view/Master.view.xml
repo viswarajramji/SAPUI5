@@ -7,41 +7,27 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-					<semantic:FullscreenPage title="Full Screen Page" showNavButton="true">
-							<semantic:content>
-								<ObjectHeader title="test" backgroundDesign="Solid"></ObjectHeader>
-								<HBox>
-									<SearchField id="search" search=".search"></SearchField>
-								</HBox>
-								
-							</semantic:content>
-							<semantic:editAction>
-								<semantic:EditAction ></semantic:EditAction>
-							</semantic:editAction>
-							<semantic:deleteAction>
-								<semantic:DeleteAction ></semantic:DeleteAction>
-							</semantic:deleteAction>
-							<semantic:addAction>
-								<semantic:AddAction
-								>
-									
-								</semantic:AddAction>
-							</semantic:addAction>
-							<semantic:favoriteAction>
-								<semantic:FavoriteAction ></semantic:FavoriteAction>
-							</semantic:favoriteAction>
-							<semantic:flagAction>
-								<semantic:FlagAction ></semantic:FlagAction>
-							</semantic:flagAction>
-							<semantic:forwardAction>
-								<semantic:ForwardAction ></semantic:ForwardAction>
-							</semantic:forwardAction>
-							<semantic:draftIndicator>
-								<DraftIndicator id="draftIndicator">
-								
-								</DraftIndicator>
-							</semantic:draftIndicator>
-					</semantic:FullscreenPage>
+					<Page>
+						<content>
+							<SlideTile transitionTime="1000" displayTime="2000">
+								<GenericTile>
+									<tileContent>
+										<TileContent >
+											<NewsContent contentText="hello new" subheader="sub header"></NewsContent>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+								<GenericTile>
+									<tileContent>
+										<TileContent >
+											<NewsContent contentText="hello new123" subheader="sub header12313"></NewsContent>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+							</SlideTile>
+						</content>
+						
+					</Page>
 			</pages>
 		</App>
 	</Shell>
