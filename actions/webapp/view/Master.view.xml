@@ -9,30 +9,18 @@
 			<pages>
 				<Page title="My Page">
 					<content>
-						<Panel >
+						<Panel expanded="true" expandable="true" headerText="hello world">
 							<headerToolbar>
-								<OverflowToolbar>
-									<Title level="H1" text="Panel With Picture"	></Title>
-								</OverflowToolbar>
+								<Toolbar>
+									<content>
+										<Title text="Hello world" level="H1"></Title>
+									</content>
+								</Toolbar>
 							</headerToolbar>
 							<content>
-								<Text text="test"></Text>
-							</content>
-						</Panel>
-						<Panel >
-							<headerToolbar>
-								<OverflowToolbar>
-									<Title level="H1" text="Panel With Picture"	></Title>
-									<ToolbarSpacer ></ToolbarSpacer>
-									<Button type="Transparent"
-										icon="sap-icon://settings">
-										
-									</Button>
-								</OverflowToolbar>
-							</headerToolbar>
-							<content>
-								<Text text="test"></Text>
-							</content>
+								<Text 	text="hello this is shan ">	
+								</Text>
+							</content> 
 						</Panel>
 					</content>
 				</Page>
