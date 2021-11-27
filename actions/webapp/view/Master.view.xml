@@ -1,4 +1,4 @@
-<mvc:View xmlns:uxap="sap.uxap" xmlns:cssgrid="sap.ui.layout.cssgrid" xmlns:form="sap.ui.layout.form" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:cards="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+<mvc:View xmlns:semantic="sap.m.semantic" xmlns:uxap="sap.uxap" xmlns:cssgrid="sap.ui.layout.cssgrid" xmlns:form="sap.ui.layout.form" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:cards="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
     controllerName="actions.controller.Master"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -7,23 +7,88 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page title="My Page">
-					<content>
-						<Panel expanded="true" expandable="true" headerText="hello world">
-							<headerToolbar>
-								<Toolbar>
-									<content>
-										<Title text="Hello world" level="H1"></Title>
-									</content>
-								</Toolbar>
-							</headerToolbar>
-							<content>
-								<Text 	text="hello this is shan ">	
-								</Text>
-							</content> 
-						</Panel>
-					</content>
-				</Page>
+					<SplitContainer	 mode="ShowHideMode">
+						<masterPages>
+							<semantic:MasterPage id="MyMaster" title="Master Page" >
+								<semantic:landmarkInfo>
+									<PageAccessibleLandmarkInfo rootLabel="Root label" headerLabel="Header label" footerLabel="Footer label"></PageAccessibleLandmarkInfo>
+								</semantic:landmarkInfo>
+								<semantic:addAction>
+									<semantic:AddAction ></semantic:AddAction>
+								</semantic:addAction>
+								<semantic:sort>
+									<semantic:SortAction></semantic:SortAction>
+								</semantic:sort>
+								<semantic:group>
+									<semantic:GroupAction ></semantic:GroupAction>
+								</semantic:group>
+								<semantic:filter>
+									<semantic:FilterAction ></semantic:FilterAction>
+								</semantic:filter>
+								<semantic:group>
+									<semantic:GroupSelect ></semantic:GroupSelect>
+								</semantic:group>
+								<semantic:multiSelectAction>
+									<semantic:MultiSelectAction ></semantic:MultiSelectAction>
+								</semantic:multiSelectAction>
+								<semantic:content>
+									<ObjectNumber number="123"></ObjectNumber>
+								</semantic:content>
+							</semantic:MasterPage>
+						</masterPages>
+						<detailPages>
+							<semantic:DetailPage title="Details Page">
+								<semantic:content>
+									<ObjectNumber number="123"></ObjectNumber>
+								</semantic:content>
+								<semantic:addAction>
+									<semantic:AddAction ></semantic:AddAction>
+								</semantic:addAction>
+								<semantic:cancelAction>
+								</semantic:cancelAction>
+								<semantic:deleteAction>
+								</semantic:deleteAction>
+								<semantic:discussInJamAction>
+								</semantic:discussInJamAction>
+								<semantic:draftIndicator>
+								</semantic:draftIndicator>
+								<semantic:editAction>
+								</semantic:editAction>
+								<semantic:favoriteAction>
+								</semantic:favoriteAction>
+								<semantic:flagAction>
+								</semantic:flagAction>
+								<semantic:forwardAction>
+								</semantic:forwardAction>
+								<semantic:mainAction>
+								</semantic:mainAction>
+								<semantic:messagesIndicator>
+								</semantic:messagesIndicator>
+								<semantic:negativeAction>
+								</semantic:negativeAction>
+								<semantic:openInAction>
+								</semantic:openInAction>
+								<semantic:pagingAction>
+								</semantic:pagingAction>
+								<semantic:positiveAction>
+								</semantic:positiveAction>
+								<semantic:printAction>
+								</semantic:printAction>
+								<semantic:saveAction>
+								</semantic:saveAction>
+								<semantic:saveAsTileAction>
+								</semantic:saveAsTileAction>
+								<semantic:sendEmailAction>
+								</semantic:sendEmailAction>
+								<semantic:sendMessageAction>
+									<semantic:SendMessageAction ></semantic:SendMessageAction>
+								</semantic:sendMessageAction>
+								<semantic:shareInJamAction>
+								</semantic:shareInJamAction>
+							</semantic:DetailPage>
+						</detailPages>
+					
+					</SplitContainer>
 			</pages>
 		</App>
 	</Shell>
