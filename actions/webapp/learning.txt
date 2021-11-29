@@ -59,4 +59,7 @@ Horizontal Layout
 
 
 Complete Revise:
-1. ACtion Sheet 
+1. Action Sheet 
+2. Add Bookmark Button
+3. BreadCrumbs
+4. Button
