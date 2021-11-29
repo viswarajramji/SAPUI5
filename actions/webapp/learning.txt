@@ -63,3 +63,4 @@ Complete Revise:
 2. Add Bookmark Button
 3. BreadCrumbs
 4. Button
+5. Generic Tag
