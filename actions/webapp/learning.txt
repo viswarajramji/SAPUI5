@@ -64,3 +64,4 @@ Complete Revise:
 3. BreadCrumbs
 4. Button
 5. Generic Tag
+6. Icon Tab Header
