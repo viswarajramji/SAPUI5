@@ -65,3 +65,8 @@ Complete Revise:
 4. Button
 5. Generic Tag
 6. Icon Tab Header
+7. Info Label
+8. Link
+9. Menu
+10. MenuEventing
+11. MenuButton
