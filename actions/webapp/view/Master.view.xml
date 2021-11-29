@@ -24,7 +24,7 @@
 									<TabContainerItem id="AD" name="Address Details">
 										<content>
 											<Label text="this is my personal details"/>
-										</content>
+										</content>xa
 									</TabContainerItem>
 								</items>
 							</TabContainer>
