@@ -82,4 +82,7 @@ Complete Revise:
 Data Binding
 1. Currency Type
 2. Date Type
-3. 
+3. DateTime Type
+4. FileSize
+5. Integer Format
+6. 
