@@ -92,3 +92,7 @@ dialog
 1. Busy dialog
 2. dialog
 3. LightBox
+4. MessageBox
+5. MessagePopOver
+6. MessageToast
+7. 
