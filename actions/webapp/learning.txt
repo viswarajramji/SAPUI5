@@ -104,3 +104,9 @@ To Study
 
 P13 dialog
 View Settings
+
+
+Routing
+1. Pattern Matched
+2. All Pattter Matched
+3. Type of target details.
