@@ -87,3 +87,8 @@ Data Binding
 5. Integer Format
 6. Time Type
 7. Tree  Binding
+
+dialog
+1. Busy dialog
+2. dialog
+3. LightBox
