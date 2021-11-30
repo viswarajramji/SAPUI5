@@ -95,4 +95,12 @@ dialog
 4. MessageBox
 5. MessagePopOver
 6. MessageToast
-7. 
+7. PopOver
+8. Quickview
+9. Select dialog
+10. Table Select dialog
+
+To Study 
+
+P13 dialog
+View Settings
