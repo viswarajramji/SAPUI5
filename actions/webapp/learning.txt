@@ -78,4 +78,6 @@ Complete Revise:
 17. Toggle MenuButton
 18. ToolbarHeader
 19. URL helper
-20. 
+
+Data Binding
+1. Currency Type
