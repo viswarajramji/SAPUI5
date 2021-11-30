@@ -85,4 +85,5 @@ Data Binding
 3. DateTime Type
 4. FileSize
 5. Integer Format
-6. 
+6. Time Type
+7. Tree  Binding
