@@ -81,3 +81,5 @@ Complete Revise:
 
 Data Binding
 1. Currency Type
+2. Date Type
+3. 
