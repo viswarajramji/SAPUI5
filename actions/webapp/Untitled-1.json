@@ -1,0 +1,229 @@
+{
+    "@odata.context": "$metadata#PayrollArrangementOrgSupplementViews",
+    "value": [
+        {
+            "Uuid": "2539ce71-da66-4c38-a571-4d4747f986ce",
+            "PayrollArrangementUuid": "4c9dc0e6-7c86-432c-89c4-c1048ab1c316",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "63a608b7-e361-4875-b797-ae95b0f91ea1",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "3c178d71-5b80-42f6-8b9b-0484af3081b5",
+            "PayrollArrangementUuid": "846b475a-de3d-496c-8b54-ec279fe9e1f0",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "ffeada6c-6b7d-49c5-a147-e6f8d67a1146",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "e86d5d13-5b06-49d2-a587-7f8e97407b59",
+            "PayrollArrangementUuid": "6fb57b2f-714c-4d07-b2c3-ef565dec3413",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "f8340667-2642-4448-91f9-fa4a221efb65",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "ASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": "c5406c9e-76d3-4a26-8989-3435b4543941",
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "fe286314-2dd0-44a9-9259-419512babd82",
+            "PayrollArrangementUuid": "c06e3ee4-ea84-45e3-afeb-558a7510603f",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "9ed233da-4c3d-4154-b8db-9472789eb437",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "2ae830fe-f699-4306-a4b5-1a65e08bd024",
+            "PayrollArrangementUuid": "dbd942a3-ed38-4587-a16b-423b7503e7d3",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "541dc8c9-2351-46ed-873c-29f228bfd969",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "ASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": "63ff6129-8528-40fa-bc04-be19c32ea08f",
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "d83d2486-629d-42c1-86f4-e48bf4a6f446",
+            "PayrollArrangementUuid": "9f998be5-2f86-412f-bbcc-c9395c92e2f6",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "5fc29252-1eff-451a-b595-60327dee4216",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "aae7a6f6-d31b-4846-aa4a-e0c1b03f72a2",
+            "PayrollArrangementUuid": "6fb57b2f-714c-4d07-b2c3-ef565dec3413",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "f8340667-2642-4448-91f9-fa4a221efb65",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "2c0f1b21-c755-432f-8b0c-43ad3f0d17f4",
+            "PayrollArrangementUuid": "4c9dc0e6-7c86-432c-89c4-c1048ab1c316",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "63a608b7-e361-4875-b797-ae95b0f91ea1",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "042a9c37-8359-41b4-9aab-fd805d095bde",
+            "PayrollArrangementUuid": "95090f74-d1e9-4e13-a6db-d978c7349205",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "9af52415-a991-4dd0-8eab-684d0070f170",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "5efb20e4-bc75-4d1f-867a-1b0978af37fe",
+            "PayrollArrangementUuid": "95090f74-d1e9-4e13-a6db-d978c7349205",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "9af52415-a991-4dd0-8eab-684d0070f170",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "ASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": "5b780e38-13bc-4df4-99cc-48a2b110a871",
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "72dfee36-b15d-4f32-8eeb-3f550183d214",
+            "PayrollArrangementUuid": "9f998be5-2f86-412f-bbcc-c9395c92e2f6",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "5fc29252-1eff-451a-b595-60327dee4216",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "ASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": "7a9aa4ba-3a42-48d2-8a63-7379e3c23bea",
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "97c8547d-9215-44f8-bda7-c487c894342a",
+            "PayrollArrangementUuid": "c06e3ee4-ea84-45e3-afeb-558a7510603f",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "9ed233da-4c3d-4154-b8db-9472789eb437",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "3b49f32f-aa67-4c4c-9917-6babe5ba4a59",
+            "PayrollArrangementUuid": "dbd942a3-ed38-4587-a16b-423b7503e7d3",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "541dc8c9-2351-46ed-873c-29f228bfd969",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        },
+        {
+            "Uuid": "ca33fae4-0328-4965-877f-f6e3d7d2cce0",
+            "PayrollArrangementUuid": "846b475a-de3d-496c-8b54-ec279fe9e1f0",
+            "PayrollCountryCode": "AUS",
+            "PersonUuid": "ffeada6c-6b7d-49c5-a147-e6f8d67a1146",
+            "HireDate": "2021-12-01",
+            "TerminationDate": "9999-12-31",
+            "PayrollArrangementOrgSupplementAssignmentStatus": "UNASSIGNED",
+            "PayrollArrangementOrgSupplementTimeSlices": [
+                {
+                    "PayrollAreaUuid": null,
+                    "StartDate": "2021-12-01",
+                    "EndDate": "9999-12-31"
+                }
+            ]
+        }
+    ]
+}
