@@ -1,0 +1,30 @@
+{
+    "Id": "FIXED_RATE_AUS_EMP",
+    "Name": "Overtime Rate With Fixed Rate Value for AUS Employees",
+    "Description": "Overtime Rate for All Australia Employees with fixed rate value",
+    "TimeSliceAction": "CORRECT",
+    "RateTimeSlices": [
+        {
+            "OldStartDate": "1900-01-01",
+            "StartDate": "1900-01-01",
+            "EndDate": "9999-12-31",
+            "RateDeterminationRecords": [
+                {
+                    "PredefinedRateRuleType": "MULTIPLE_PCT",
+                    "SelectedPctUuids": [
+                        "ff4415ab-935a-4513-bdc1-bd38c70bb28a"
+                    ],
+                    "RuleImplementationUuid": "b24c6480-9721-4879-83fc-ff5e5ac3d691",
+                    "FormulaRuleDetail": {
+                        "RuleAssignmentUuid": "5734b1a9-6481-4e3e-9183-1d4b721528d6",
+                        "Rank": 1,
+                        "SelectionCriteriaList": []
+                    }
+                }
+            ]
+        }
+    ],
+    "Uuid": "{{$guid}}",
+    "RateTypeUuid": "3ed2dc97-5552-44b2-a329-57e32a60b10b",
+    "Message": []
+}

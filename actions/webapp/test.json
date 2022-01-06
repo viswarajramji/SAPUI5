@@ -1,0 +1,32 @@
+    {
+            "Uuid": "869c57c7-6bc0-49da-a18c-4cc1c9cc6f49",
+            "Id": "RATE_AUS_ABOVE_8HRS",
+            "Name": "Overtime Rate With Fixed Rate Value for AUS Employees Above 8 Hours",
+            "Description": "Overtime Rate for All Australia Employees with fixed rate value above 8 hours",
+            "RuleUsageUuid": "912e019b-8cd2-4386-aad2-1b1df3a51645",
+            "RuleUsageName": "RT_869c57c7_6bc0_49da_a18c_4cc1c9cc6f49",
+            "RateTimeSlices": [
+                {
+                    "Uuid": "8d4e4244-aa27-433d-9eb5-34536d8cd637",
+                    "StartDate": "1900-01-01",
+                    "EndDate": "9999-12-31",
+                    "RateDeterminationRecords": [
+                        {
+                            "Uuid": "0ec4fab1-aa9d-4c58-9254-3ba3944b925d",
+                            "PredefinedRateRuleType": "MULTIPLE_PCT",
+                            "FlatRate": null,
+                            "SelectedPctUuids": "ff4415ab-935a-4513-bdc1-bd38c70bb28a",
+                            "AverageWorkingHours": null,
+                            "SelectionRule": "All Employees",
+                            "FormulaRule": "Sum of(Aus Basic Pay) / Average hours per period",
+                            "RuleImplementationUuid": "22aa2390-22b7-4d70-b517-57063988a08b",
+                            "FormulaRuleDetail": {
+                                "RuleAssignmentUuid": "687ffb28-e138-43a6-a295-25118495dd91",
+                                "Rank": 1,
+                                "SelectionCriteriaList": []
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
